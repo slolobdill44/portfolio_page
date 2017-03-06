@@ -17,6 +17,12 @@ header {
   padding: 0;
 }
 
+marquee {
+  font-size: 22px;
+  width: 320px;
+  margin-bottom: 10px;
+}
+
 .contact-links {
   font-weight: bold;
   margin-bottom: 15px;
@@ -27,12 +33,42 @@ header {
   margin-right: 5px;
 }
 
-marquee {
-  font-size: 22px;
-  width: 320px;
-  margin-bottom: 10px;
+.projects-title {
+  font-weight: bold;
+  font-size: 38px;
+  text-align: center;
 }
 
-.projects-title {
-  font-size: 28px;
+.single-project {
+  margin: 0 auto;
+  height: 325px;
+  width: 90%;
+  border: 1px solid purple;
+  margin-top: 10px;
+}
+
+.single-project h3 {
+  margin-left: 170px;
+}
+
+.single-project-gif {
+  height: 190px;
+  width: 190px;
+  display: inline-block;
+  border: 1px solid black;
+  margin-bottom: 15px;
+}
+
+.single-project-description {
+  height: 220px;
+  width: 820px;
+  display: inline-block;
+  border: 1px solid black;
+}
+
+.single-project-tech-used {
+  height: 55px;
+  width: 720px;
+  border: 1px solid black;
+  margin-left: 150px;
 }
