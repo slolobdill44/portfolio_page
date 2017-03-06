@@ -1,0 +1,38 @@
+body {
+  background-color: #bebebe;
+  color: blue;
+  margin: 0;
+}
+
+header {
+  text-align: center;
+}
+
+.header-name {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.contact-links {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.contact-links a {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+marquee {
+  font-size: 22px;
+  width: 400px;
+  margin-bottom: 10px;
+}
+
+.projects-title {
+  font-size: 28px;
+}
