@@ -13,6 +13,10 @@ header p {
   font-weight: bold;
 }
 
+p {
+  font-style: italic;
+}
+
 .header-name {
   font-size: 28px;
   font-weight: bold;
@@ -52,12 +56,6 @@ marquee {
   margin-top: 22px;
 }
 
-.single-project h3 {
-  font-size: 33px;
-  font-weight: bold;
-  margin-left: 40px;
-}
-
 .single-project-screenshot-container {
   height: 225px;
   width: 348px;
@@ -72,13 +70,28 @@ marquee {
 .single-project-description {
   height: 220px;
   width: 726px;
-  display: inline-block;
-  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 15px;
+}
+
+.single-project-description h3 {
+  font-size: 33px;
+  font-weight: bold;
+}
+
+.single-project-description p {
+  width: 500px;
+  margin-left: 5px;
 }
 
 .single-project-tech-used {
   height: 55px;
   width: 720px;
-  border: 1px solid black;
-  margin-left: 210px;
+}
+
+.banner-ad {
+  cursor: pointer;
+  height: 60px;
 }
