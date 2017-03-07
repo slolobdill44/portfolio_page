@@ -91,7 +91,25 @@ marquee {
   width: 720px;
 }
 
+.banner-row {
+  display: flex;
+  justify-content: space-around;
+  width: 430px;
+  margin: 0 auto;
+  margin-top: 17px;
+  margin-bottom: 30px;
+}
+
 .banner-ad {
   cursor: pointer;
   height: 60px;
+}
+
+.contact-info {
+  border: 1px solid black;
+  height: 90px;
+  width: 1050px;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
 }
