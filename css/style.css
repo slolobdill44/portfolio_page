@@ -37,7 +37,9 @@ marquee {
   margin-bottom: 15px;
 }
 
-.contact-links a {
+.contact-logo {
+  height: 25px;
+  width: 25px;
   margin-left: 5px;
   margin-right: 5px;
 }
@@ -89,6 +91,14 @@ marquee {
 .single-project-tech-used {
   height: 55px;
   width: 720px;
+  display: flex;
+  flex-direction: row;
+}
+
+.single-project-tech-logo {
+  height: 50px;
+  width: 50px;
+  margin-right: 5px;
 }
 
 .banner-row {
