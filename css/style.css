@@ -52,6 +52,9 @@ marquee {
 }
 
 .single-project {
+  border: 8px rgb(220, 245, 243);
+  border-style: ridge;
+  background-image: url("../assets/beige158.gif");
   display: flex;
   width: 90%;
   margin: 0 auto;
