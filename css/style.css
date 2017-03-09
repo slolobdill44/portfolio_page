@@ -51,14 +51,21 @@ marquee {
   margin-bottom: 36px;
 }
 
-.single-project {
+.single-project-container {
+  height: 275px;
+  width: 90%;
   border: 8px rgb(220, 245, 243);
   border-style: ridge;
   background-image: url("../assets/beige158.gif");
-  display: flex;
-  width: 90%;
   margin: 0 auto;
   margin-top: 22px;
+}
+
+.single-project {
+  display: flex;
+  width: 100%;
+  margin-top: 24px;
+  margin-left: 24px;
 }
 
 .single-project-screenshot-container {
@@ -69,16 +76,18 @@ marquee {
 }
 
 .single-project-screenshot {
+  height: 100%;
   width: 100%;
 }
 
 .single-project-description {
-  height: 220px;
+  height: 188px;
   width: 726px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-left: 15px;
+  margin-left: 24px;
+  margin-top: 20px;
 }
 
 .single-project-description h3 {
@@ -87,6 +96,7 @@ marquee {
 }
 
 .single-project-description p {
+  font-size: 18px;
   width: 500px;
   margin-left: 5px;
 }
@@ -102,6 +112,12 @@ marquee {
   height: 50px;
   width: 50px;
   margin-right: 5px;
+}
+
+#matter-js-logo {
+  height: 30px;
+  width: auto;
+  margin-top: 14px;
 }
 
 .banner-row {
