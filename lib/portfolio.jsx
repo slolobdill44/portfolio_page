@@ -4,6 +4,8 @@ import Project from './components/project';
 import BannerAdRow from './components/banner_ad_row';
 import Footer from './components/footer';
 
+// require('../css/style.scss');
+
 class Root extends React.Component {
 
   render() {
@@ -88,7 +90,7 @@ class Root extends React.Component {
           <h1 className='projects-title'>Projects</h1>
 
           <Project
-            props={hamcampInfo} />
+            projectInfo={hamcampInfo} />
 
           <BannerAdRow
             ads = {
@@ -106,7 +108,7 @@ class Root extends React.Component {
              />
 
            <Project
-             props={tweetTheBayInfo} />
+             projectInfo={tweetTheBayInfo} />
 
           <BannerAdRow
             ads = {
@@ -119,7 +121,7 @@ class Root extends React.Component {
             } />
 
            <Project
-             props={hamhuckinInfo} />
+             projectInfo={hamhuckinInfo} />
         </section>
         <br />
 
