@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Header from './components/header';
 import Project from './components/project';
 import BannerAdRow from './components/banner_ad_row';
 import Footer from './components/footer';
-
-// require('../css/style.scss');
 
 class Root extends React.Component {
 
@@ -86,6 +85,9 @@ class Root extends React.Component {
 
     return (
       <div>
+
+        <Header />
+
         <section className='projects-section'>
           <h1 className='projects-title'>Projects</h1>
 

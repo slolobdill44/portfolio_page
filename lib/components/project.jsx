@@ -17,8 +17,12 @@ class Project extends React.Component {
 
   render () {
     const techUsed = this.props.projectInfo.tech.map(tech => {
-      if (tech.link.includes("matter.js")) {
-
+      if (tech.link.includes("matter-js")) {
+        return (
+          <a key={Math.random()} href={`${tech.link}`} target="_blank">
+            <img className='matter-js-logo' src={`${tech.image}`} />
+          </a>
+        )
       }
 
       return (
@@ -51,20 +55,22 @@ class Project extends React.Component {
 
 
     const newLookProject = (
-      <div className='new-single-project-container'>
-        <div className='new-single-project'>
-          <a className='new-single-project-screenshot-container' href={`${this.props.projectInfo.link}`} target="_blank">
-            <img className='new-single-project-screenshot' src={`${this.props.projectInfo.image}`}  />
-          </a>
-          <div className='new-single-project-description'>
-            <a className='new-single-project-description-link' href={`${this.props.projectInfo.link}`} target="_blank">
-              <h3>{ this.props.projectInfo.title }</h3>
+      <div className='new-single-project-frame'>
+        <div className='new-single-project-container'>
+          <div className='new-single-project'>
+            <a className='new-single-project-screenshot-container' href={`${this.props.projectInfo.link}`} target="_blank">
+              <img className='new-single-project-screenshot' src={`${this.props.projectInfo.image}`}  />
             </a>
-            <p>
-              { this.props.projectInfo.description }
-            </p>
-            <div className='new-single-project-tech-used'>
-              {techUsed}
+            <div className='new-single-project-description'>
+              <a className='new-single-project-description-link' href={`${this.props.projectInfo.link}`} target="_blank">
+                <h3>{ this.props.projectInfo.title }</h3>
+              </a>
+              <p>
+                { this.props.projectInfo.description }
+              </p>
+              <div className='new-single-project-tech-used'>
+                {techUsed}
+              </div>
             </div>
           </div>
         </div>
