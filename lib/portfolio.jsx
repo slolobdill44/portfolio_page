@@ -43,7 +43,7 @@ class Root extends React.Component {
       title: "Tweet The Bay",
       link: "http://www.tweetthebay.com/#/",
       image: "./assets/tweetthebaycropped.png",
-      description: "A Twitter mapping application that places tweets on a map as they are live tweeted and also allows the user to search by keyword for recent tweets.",
+      description: "Twitter mapping application that places tweets on a map as they are live tweeted and also allows the user to search by keyword for recent tweets.",
       tech: [
         {
           link: "https://facebook.github.io/react/",

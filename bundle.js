@@ -11478,21 +11478,29 @@ var BannerAdRow = function (_React$Component) {
 
       var oldLookBannerRow = _react2.default.createElement(
         'div',
-        { key: Math.random(), className: 'old-banner-row', onMouseEnter: function onMouseEnter() {
+        { key: Math.random(), className: 'old-banner-row-container', onMouseEnter: function onMouseEnter() {
             return _this2.changeLook();
           } },
-        bannerAds
+        _react2.default.createElement(
+          'div',
+          { className: 'old-banner-row' },
+          bannerAds
+        )
       );
 
       var newLookBannerRow = _react2.default.createElement(
         'div',
-        { key: Math.random(), className: 'new-banner-row' },
-        bannerAds
+        { key: Math.random(), className: 'new-banner-row-container' },
+        _react2.default.createElement(
+          'div',
+          { className: 'new-banner-row' },
+          bannerAds
+        )
       );
 
       return _react2.default.createElement(
         'div',
-        { className: 'banner-row-container' },
+        null,
         _react2.default.createElement(
           _reactAddonsCssTransitionGroup2.default,
           {
@@ -24431,7 +24439,7 @@ var Root = function (_React$Component) {
         title: "Tweet The Bay",
         link: "http://www.tweetthebay.com/#/",
         image: "./assets/tweetthebaycropped.png",
-        description: "A Twitter mapping application that places tweets on a map as they are live tweeted and also allows the user to search by keyword for recent tweets.",
+        description: "Twitter mapping application that places tweets on a map as they are live tweeted and also allows the user to search by keyword for recent tweets.",
         tech: [{
           link: "https://facebook.github.io/react/",
           image: "./assets/react.svg"

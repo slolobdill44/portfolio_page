@@ -21,10 +21,6 @@ p {
   font-style: italic;
 }
 
-.projects-title-container {
-
-}
-
 .fade-enter {
   top: 0px;
   opacity: 0.01;
@@ -174,14 +170,6 @@ marquee {
   margin-left: 5px;
 }
 
-.old-banner-row {
-  display: flex;
-  justify-content: space-around;
-  width: 430px;
-  margin: 0 auto;
-  margin-top: 24px;
-  margin-bottom: 24px;
-}
 
 .old-contact-info {
   height: 90px;
@@ -302,8 +290,12 @@ marquee {
   margin-left: 5px;
 }
 
-.new-banner-row {
-  background-color: #fefefe;
+
+.old-banner-row-container {
+
+}
+
+.old-banner-row {
   display: flex;
   justify-content: space-around;
   width: 430px;
@@ -311,6 +303,23 @@ marquee {
   margin-top: 24px;
   margin-bottom: 24px;
 }
+
+.new-banner-row-container {
+  background-color: #fefefe;
+}
+
+.new-banner-row {
+  display: flex;
+  justify-content: space-around;
+  width: 430px;
+  margin: 0 auto;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+
+
+
 
 .new-contact-info {
   background-color: #fefefe;

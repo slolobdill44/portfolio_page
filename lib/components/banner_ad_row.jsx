@@ -26,19 +26,23 @@ class BannerAdRow extends React.Component {
     });
 
     const oldLookBannerRow = (
-      <div key={Math.random()} className='old-banner-row' onMouseEnter={() => this.changeLook()}>
-        {bannerAds}
+      <div key={Math.random()} className='old-banner-row-container' onMouseEnter={() => this.changeLook()}>
+        <div className='old-banner-row'>
+          {bannerAds}
+        </div>
       </div>
     );
 
     const newLookBannerRow = (
-      <div key={Math.random()} className='new-banner-row'>
-        {bannerAds}
+      <div key={Math.random()} className='new-banner-row-container'>
+        <div className='new-banner-row'>
+          {bannerAds}
+        </div>
       </div>
     );
 
     return (
-      <div className='banner-row-container'>
+      <div>
         <ReactCSSTransitionGroup
           transitionName="fade"
           transitionEnterTimeout={500}
