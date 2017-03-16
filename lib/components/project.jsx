@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class Project extends React.Component {
   constructor(props) {
@@ -33,7 +34,7 @@ class Project extends React.Component {
     });
 
     const oldLookProject = (
-      <div className='old-single-project-container' onMouseEnter={() => this.changeLook()}>
+      <div key={Math.random()} className='old-single-project-container' onMouseEnter={() => this.changeLook()}>
         <div className='old-single-project'>
           <a className='old-single-project-screenshot-container' href={`${this.props.projectInfo.link}`} target="_blank">
             <img className='old-single-project-screenshot' src={`${this.props.projectInfo.image}`}  />
@@ -55,31 +56,34 @@ class Project extends React.Component {
 
 
     const newLookProject = (
-      <div className='new-single-project-frame'>
-        <div className='new-single-project-container'>
-          <div className='new-single-project'>
-            <a className='new-single-project-screenshot-container' href={`${this.props.projectInfo.link}`} target="_blank">
-              <img className='new-single-project-screenshot' src={`${this.props.projectInfo.image}`}  />
-            </a>
-            <div className='new-single-project-description'>
-              <a className='new-single-project-description-link' href={`${this.props.projectInfo.link}`} target="_blank">
-                <h3>{ this.props.projectInfo.title }</h3>
+        <div key={Math.random()} className='new-single-project-frame'>
+          <div className='new-single-project-container'>
+            <div className='new-single-project'>
+              <a className='new-single-project-screenshot-container' href={`${this.props.projectInfo.link}`} target="_blank">
+                <img className='new-single-project-screenshot' src={`${this.props.projectInfo.image}`}  />
               </a>
-              <p>
-                { this.props.projectInfo.description }
-              </p>
-              <div className='new-single-project-tech-used'>
-                {techUsed}
+              <div className='new-single-project-description'>
+                <a className='new-single-project-description-link' href={`${this.props.projectInfo.link}`} target="_blank">
+                  <h3>{ this.props.projectInfo.title }</h3>
+                </a>
+                <p>
+                  { this.props.projectInfo.description }
+                </p>
+                <div className='new-single-project-tech-used'>
+                  {techUsed}
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
     )
 
     return (
     <div>
-      { this.state.hovered ? newLookProject : oldLookProject }
+      <ReactCSSTransitionGroup
+        transitionName="example">
+        { this.state.hovered ? newLookProject : oldLookProject }
+      </ReactCSSTransitionGroup>
     </div>
     )
   }

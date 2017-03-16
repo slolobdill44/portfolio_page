@@ -1,4 +1,6 @@
 import React from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
 
 class Header extends React.Component {
   constructor(props) {
@@ -18,7 +20,7 @@ class Header extends React.Component {
   render() {
 
     const oldLookHeader = (
-      <header onMouseEnter={() => this.changeLook()}>
+      <header className='old-header-container' key={Math.random()} onMouseEnter={() => this.changeLook()}>
         <h1 className='old-header-name'>Adrian Lobdill</h1>
         <div>
           <marquee>Software Developer | QA Advocate</marquee>
@@ -36,7 +38,7 @@ class Header extends React.Component {
     )
 
     const newLookHeader = (
-      <header>
+      <header className='new-header-container' key={Math.random()}>
         <h1 className='new-header-name'>NEWWWW</h1>
         <div>
           <marquee>Software Developer | QA Advocate</marquee>
@@ -55,7 +57,10 @@ class Header extends React.Component {
 
     return (
       <div>
-        { this.state.hovered ? newLookHeader : oldLookHeader }
+        <ReactCSSTransitionGroup
+          transitionName="example">
+          { this.state.hovered ? newLookHeader : oldLookHeader }
+        </ReactCSSTransitionGroup>
       </div>
     )
   }

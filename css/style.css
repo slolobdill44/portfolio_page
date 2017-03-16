@@ -21,6 +21,26 @@ p {
   font-style: italic;
 }
 
+.example-enter {
+  top: -200px;
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+  display: none;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
 .projects-title {
   font-weight: bold;
   font-size: 41px;
