@@ -11616,21 +11616,21 @@ var Header = function (_React$Component) {
         _react2.default.createElement(
           'h1',
           { className: 'new-header-name' },
-          'NEWWWW'
+          'Adrian Lobdill'
         ),
         _react2.default.createElement(
           'div',
           null,
           _react2.default.createElement(
-            'marquee',
-            null,
+            'h4',
+            { className: 'new-header-description' },
             'Software Developer | QA Advocate'
           )
         ),
         _react2.default.createElement(
           'p',
           null,
-          'I love the web!'
+          '~'
         ),
         _react2.default.createElement('br', null),
         _react2.default.createElement(
@@ -11656,7 +11656,9 @@ var Header = function (_React$Component) {
         _react2.default.createElement(
           _reactAddonsCssTransitionGroup2.default,
           {
-            transitionName: 'example' },
+            transitionName: 'example',
+            transitionEnterTimeout: 500,
+            transitionLeaveTimeout: 300 },
           this.state.hovered ? newLookHeader : oldLookHeader
         )
       );
@@ -11825,7 +11827,9 @@ var Project = function (_React$Component) {
         _react2.default.createElement(
           _reactAddonsCssTransitionGroup2.default,
           {
-            transitionName: 'example' },
+            transitionName: 'example',
+            transitionEnterTimeout: 500,
+            transitionLeaveTimeout: 300 },
           this.state.hovered ? newLookProject : oldLookProject
         )
       );
@@ -24246,6 +24250,10 @@ var _header = __webpack_require__(93);
 
 var _header2 = _interopRequireDefault(_header);
 
+var _project_header = __webpack_require__(195);
+
+var _project_header2 = _interopRequireDefault(_project_header);
+
 var _project = __webpack_require__(94);
 
 var _project2 = _interopRequireDefault(_project);
@@ -24345,11 +24353,7 @@ var Root = function (_React$Component) {
         _react2.default.createElement(
           'section',
           { className: 'projects-section' },
-          _react2.default.createElement(
-            'h1',
-            { className: 'projects-title' },
-            'Projects'
-          ),
+          _react2.default.createElement(_project_header2.default, null),
           _react2.default.createElement(_project2.default, {
             projectInfo: hamcampInfo }),
           _react2.default.createElement(_banner_ad_row2.default, {
@@ -24385,6 +24389,91 @@ var Root = function (_React$Component) {
 document.addEventListener('DOMContentLoaded', function () {
   _reactDom2.default.render(_react2.default.createElement(Root, null), document.getElementById('main'));
 });
+
+/***/ }),
+/* 195 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(24);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactAddonsCssTransitionGroup = __webpack_require__(57);
+
+var _reactAddonsCssTransitionGroup2 = _interopRequireDefault(_reactAddonsCssTransitionGroup);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var ProjectHeader = function (_React$Component) {
+  _inherits(ProjectHeader, _React$Component);
+
+  function ProjectHeader(props) {
+    _classCallCheck(this, ProjectHeader);
+
+    var _this = _possibleConstructorReturn(this, (ProjectHeader.__proto__ || Object.getPrototypeOf(ProjectHeader)).call(this, props));
+
+    _this.state = {
+      hovered: false
+    };
+
+    _this.changeLook = _this.changeLook.bind(_this);
+    return _this;
+  }
+
+  _createClass(ProjectHeader, [{
+    key: 'changeLook',
+    value: function changeLook() {
+      this.setState({ hovered: true });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      var oldLookProjectHeader = _react2.default.createElement(
+        'p',
+        { key: Math.random(), className: 'old-projects-title', onMouseEnter: function onMouseEnter() {
+            return _this2.changeLook();
+          } },
+        'Projects'
+      );
+
+      var newLookProjectHeader = _react2.default.createElement(
+        'p',
+        { key: Math.random(), className: 'new-projects-title' },
+        'Projects'
+      );
+
+      return _react2.default.createElement(
+        'div',
+        { className: 'projects-title-container' },
+        _react2.default.createElement(
+          _reactAddonsCssTransitionGroup2.default,
+          {
+            transitionName: 'example',
+            transitionEnterTimeout: 500,
+            transitionLeaveTimeout: 300 },
+          this.state.hovered ? newLookProjectHeader : oldLookProjectHeader
+        )
+      );
+    }
+  }]);
+
+  return ProjectHeader;
+}(_react2.default.Component);
+
+module.exports = ProjectHeader;
 
 /***/ })
 /******/ ]);

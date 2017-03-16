@@ -1,0 +1,43 @@
+import React from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
+class ProjectHeader extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      hovered: false
+    };
+
+    this.changeLook = this.changeLook.bind(this);
+  }
+
+  changeLook() {
+    this.setState({hovered: true})
+  }
+
+  render() {
+
+    const oldLookProjectHeader = (
+      <p key={Math.random()} className='old-projects-title' onMouseEnter={() => this.changeLook()}>Projects</p>
+    )
+
+    const newLookProjectHeader = (
+      <p key={Math.random()} className='new-projects-title'>Projects</p>
+    )
+
+    return (
+      <div className='projects-title-container'>
+        <ReactCSSTransitionGroup
+          transitionName="example"
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={300}>
+          { this.state.hovered ? newLookProjectHeader : oldLookProjectHeader }
+        </ReactCSSTransitionGroup>
+      </div>
+    )
+  }
+
+}
+
+module.exports = ProjectHeader;

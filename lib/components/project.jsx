@@ -81,7 +81,9 @@ class Project extends React.Component {
     return (
     <div>
       <ReactCSSTransitionGroup
-        transitionName="example">
+        transitionName="example"
+        transitionEnterTimeout={500}
+        transitionLeaveTimeout={300}>
         { this.state.hovered ? newLookProject : oldLookProject }
       </ReactCSSTransitionGroup>
     </div>

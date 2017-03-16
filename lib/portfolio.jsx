@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import Header from './components/header';
+import ProjectHeader from './components/project_header';
 import Project from './components/project';
 import BannerAdRow from './components/banner_ad_row';
 import Footer from './components/footer';
@@ -90,7 +91,8 @@ class Root extends React.Component {
         <Header />
 
         <section className='projects-section'>
-          <h1 className='projects-title'>Projects</h1>
+
+          <ProjectHeader />
 
           <Project
             projectInfo={hamcampInfo} />
