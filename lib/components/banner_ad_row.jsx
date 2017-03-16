@@ -40,7 +40,7 @@ class BannerAdRow extends React.Component {
     return (
       <div className='banner-row-container'>
         <ReactCSSTransitionGroup
-          transitionName="example"
+          transitionName="fade"
           transitionEnterTimeout={500}
           transitionLeaveTimeout={300}>
           { this.state.hovered ? newLookBannerRow : oldLookBannerRow }

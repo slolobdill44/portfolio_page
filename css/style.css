@@ -25,33 +25,33 @@ p {
 
 }
 
-.example-enter {
+.fade-enter {
   top: 0px;
   opacity: 0.01;
 }
 
-.example-enter.example-enter-active {
+.fade-enter.fade-enter-active {
   opacity: 1;
   transition: opacity 500ms ease-in;
 }
 
-.example-leave {
+.fade-leave {
   opacity: 1;
   display: none;
 }
 
-.example-leave.example-leave-active {
+.fade-leave.fade-leave-active {
   opacity: 0.01;
   display: none;
   transition: opacity 300ms ease-in;
 }
 
-.example-appear {
+.fade-appear {
   opacity: 0.01;
   display: none;
 }
 
-.example-appear.example-appear-active {
+.fade-appear.fade-appear-active {
   opacity: 1;
   display: none;
   transition: opacity .5s ease-in;
@@ -183,6 +183,15 @@ marquee {
   margin-bottom: 24px;
 }
 
+.old-contact-info {
+  height: 90px;
+  width: 1050px;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+  margin: 0 auto;
+}
+
 /**//**//**//**//**//**/
 
 
@@ -294,7 +303,7 @@ marquee {
 }
 
 .new-banner-row {
-  background-color: white;
+  background-color: #fefefe;
   display: flex;
   justify-content: space-around;
   width: 430px;
@@ -302,6 +311,26 @@ marquee {
   margin-top: 24px;
   margin-bottom: 24px;
 }
+
+.new-contact-info {
+  background-color: #fefefe;
+  height: 120px;
+  width: 1050px;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+  margin: 0 auto;
+}
+
+.new-contact-info h2 {
+  line-height: 4.5;
+  font-size: 22px;
+  font-weight: bold;
+}
+/**//**//**//**//**//**/
+
+
+/**//**//**//**//**//**/
 
 /**//**//**//**//**//**/
 
@@ -311,13 +340,4 @@ marquee {
 .banner-ad {
   cursor: pointer;
   height: 60px;
-}
-
-.contact-info {
-  border: 1px solid black;
-  height: 90px;
-  width: 1050px;
-  display: flex;
-  justify-content: space-around;
-  margin: 0 auto;
 }

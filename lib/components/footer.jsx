@@ -19,27 +19,29 @@ class Footer extends React.Component {
   render() {
 
     const oldLookFooter = (
-      <div key={ Math.random() } className='contact-info' onMouseEnter={() => this.changeLook()}>
+      <div key={ Math.random() } className='old-contact-info' onMouseEnter={() => this.changeLook()}>
         <div className='email'>
-          <h2>E-Mail</h2>
           <img src="./assets/pupemail.gif" />
         </div>
+        <div className='resume'>
+          <img src="./assets/resume.gif" />
+        </div>
         <div className='guest-book'>
-          <h2>Guestbook</h2>
           <img src='./assets/guest_book.gif' />
         </div>
       </div>
     )
 
     const newLookFooter = (
-      <div key={ Math.random() } className='contact-info'>
+      <div key={ Math.random() } className='new-contact-info'>
         <div className='email'>
-          <h2>NEWWWW</h2>
-          <img src="./assets/pupemail.gif" />
+          <h2>E-Mail</h2>
+        </div>
+        <div className='resume'>
+          <h2>Resume</h2>
         </div>
         <div className='guest-book'>
           <h2>Guestbook</h2>
-          <img src='./assets/guest_book.gif' />
         </div>
       </div>
     )
@@ -47,7 +49,7 @@ class Footer extends React.Component {
     return (
       <div>
         <ReactCSSTransitionGroup
-          transitionName="example"
+          transitionName="fade"
           transitionEnterTimeout={500}
           transitionLeaveTimeout={300}>
           { this.state.hovered ? newLookFooter : oldLookFooter }

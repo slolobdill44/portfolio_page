@@ -11496,7 +11496,7 @@ var BannerAdRow = function (_React$Component) {
         _react2.default.createElement(
           _reactAddonsCssTransitionGroup2.default,
           {
-            transitionName: 'example',
+            transitionName: 'fade',
             transitionEnterTimeout: 500,
             transitionLeaveTimeout: 300 },
           this.state.hovered ? newLookBannerRow : oldLookBannerRow
@@ -11563,9 +11563,29 @@ var Footer = function (_React$Component) {
 
       var oldLookFooter = _react2.default.createElement(
         'div',
-        { key: Math.random(), className: 'contact-info', onMouseEnter: function onMouseEnter() {
+        { key: Math.random(), className: 'old-contact-info', onMouseEnter: function onMouseEnter() {
             return _this2.changeLook();
           } },
+        _react2.default.createElement(
+          'div',
+          { className: 'email' },
+          _react2.default.createElement('img', { src: './assets/pupemail.gif' })
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'resume' },
+          _react2.default.createElement('img', { src: './assets/resume.gif' })
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'guest-book' },
+          _react2.default.createElement('img', { src: './assets/guest_book.gif' })
+        )
+      );
+
+      var newLookFooter = _react2.default.createElement(
+        'div',
+        { key: Math.random(), className: 'new-contact-info' },
         _react2.default.createElement(
           'div',
           { className: 'email' },
@@ -11573,8 +11593,16 @@ var Footer = function (_React$Component) {
             'h2',
             null,
             'E-Mail'
-          ),
-          _react2.default.createElement('img', { src: './assets/pupemail.gif' })
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'resume' },
+          _react2.default.createElement(
+            'h2',
+            null,
+            'Resume'
+          )
         ),
         _react2.default.createElement(
           'div',
@@ -11583,33 +11611,7 @@ var Footer = function (_React$Component) {
             'h2',
             null,
             'Guestbook'
-          ),
-          _react2.default.createElement('img', { src: './assets/guest_book.gif' })
-        )
-      );
-
-      var newLookFooter = _react2.default.createElement(
-        'div',
-        { key: Math.random(), className: 'contact-info' },
-        _react2.default.createElement(
-          'div',
-          { className: 'email' },
-          _react2.default.createElement(
-            'h2',
-            null,
-            'NEWWWW'
-          ),
-          _react2.default.createElement('img', { src: './assets/pupemail.gif' })
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'guest-book' },
-          _react2.default.createElement(
-            'h2',
-            null,
-            'Guestbook'
-          ),
-          _react2.default.createElement('img', { src: './assets/guest_book.gif' })
+          )
         )
       );
 
@@ -11619,7 +11621,7 @@ var Footer = function (_React$Component) {
         _react2.default.createElement(
           _reactAddonsCssTransitionGroup2.default,
           {
-            transitionName: 'example',
+            transitionName: 'fade',
             transitionEnterTimeout: 500,
             transitionLeaveTimeout: 300 },
           this.state.hovered ? newLookFooter : oldLookFooter
@@ -11772,7 +11774,7 @@ var Header = function (_React$Component) {
         _react2.default.createElement(
           _reactAddonsCssTransitionGroup2.default,
           {
-            transitionName: 'example',
+            transitionName: 'fade',
             transitionEnterTimeout: 500,
             transitionLeaveTimeout: 300 },
           this.state.hovered ? newLookHeader : oldLookHeader
@@ -11943,7 +11945,7 @@ var Project = function (_React$Component) {
         _react2.default.createElement(
           _reactAddonsCssTransitionGroup2.default,
           {
-            transitionName: 'example',
+            transitionName: 'fade',
             transitionEnterTimeout: 500,
             transitionLeaveTimeout: 300 },
           this.state.hovered ? newLookProject : oldLookProject
@@ -24577,7 +24579,7 @@ var ProjectHeader = function (_React$Component) {
         _react2.default.createElement(
           _reactAddonsCssTransitionGroup2.default,
           {
-            transitionName: 'example',
+            transitionName: 'fade',
             transitionEnterTimeout: 500,
             transitionLeaveTimeout: 300 },
           this.state.hovered ? newLookProjectHeader : oldLookProjectHeader

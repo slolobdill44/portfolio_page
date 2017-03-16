@@ -29,7 +29,7 @@ class ProjectHeader extends React.Component {
     return (
       <div className='projects-title-container'>
         <ReactCSSTransitionGroup
-          transitionName="example"
+          transitionName="fade"
           transitionEnterTimeout={500}
           transitionLeaveTimeout={300}>
           { this.state.hovered ? newLookProjectHeader : oldLookProjectHeader }
