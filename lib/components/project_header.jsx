@@ -19,11 +19,11 @@ class ProjectHeader extends React.Component {
   render() {
 
     const oldLookProjectHeader = (
-      <p key={Math.random()} className='old-projects-title' onMouseEnter={() => this.changeLook()}>Projects</p>
+      <h4 key={Math.random()} className='old-projects-title' onMouseEnter={() => this.changeLook()}>Projects</h4>
     )
 
     const newLookProjectHeader = (
-      <p key={Math.random()} className='new-projects-title'>Projects</p>
+      <h4 key={Math.random()} className='new-projects-title'>Projects</h4>
     )
 
     return (

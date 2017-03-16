@@ -11430,6 +11430,10 @@ var _react = __webpack_require__(24);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactAddonsCssTransitionGroup = __webpack_require__(57);
+
+var _reactAddonsCssTransitionGroup2 = _interopRequireDefault(_reactAddonsCssTransitionGroup);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -11444,12 +11448,26 @@ var BannerAdRow = function (_React$Component) {
   function BannerAdRow(props) {
     _classCallCheck(this, BannerAdRow);
 
-    return _possibleConstructorReturn(this, (BannerAdRow.__proto__ || Object.getPrototypeOf(BannerAdRow)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (BannerAdRow.__proto__ || Object.getPrototypeOf(BannerAdRow)).call(this, props));
+
+    _this.state = {
+      hovered: false
+    };
+
+    _this.changeLook = _this.changeLook.bind(_this);
+    return _this;
   }
 
   _createClass(BannerAdRow, [{
+    key: 'changeLook',
+    value: function changeLook() {
+      this.setState({ hovered: true });
+    }
+  }, {
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       var bannerAds = this.props.ads.map(function (ad) {
         return _react2.default.createElement(
           'a',
@@ -11458,10 +11476,31 @@ var BannerAdRow = function (_React$Component) {
         );
       });
 
+      var oldLookBannerRow = _react2.default.createElement(
+        'div',
+        { key: Math.random(), className: 'old-banner-row', onMouseEnter: function onMouseEnter() {
+            return _this2.changeLook();
+          } },
+        bannerAds
+      );
+
+      var newLookBannerRow = _react2.default.createElement(
+        'div',
+        { key: Math.random(), className: 'new-banner-row' },
+        bannerAds
+      );
+
       return _react2.default.createElement(
         'div',
-        { className: 'banner-row' },
-        bannerAds
+        { className: 'banner-row-container' },
+        _react2.default.createElement(
+          _reactAddonsCssTransitionGroup2.default,
+          {
+            transitionName: 'example',
+            transitionEnterTimeout: 500,
+            transitionLeaveTimeout: 300 },
+          this.state.hovered ? newLookBannerRow : oldLookBannerRow
+        )
       );
     }
   }]);
@@ -11478,44 +11517,121 @@ exports.default = BannerAdRow;
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(24);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactAddonsCssTransitionGroup = __webpack_require__(57);
+
+var _reactAddonsCssTransitionGroup2 = _interopRequireDefault(_reactAddonsCssTransitionGroup);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Footer = function Footer() {
-  return _react2.default.createElement(
-    'div',
-    { className: 'contact-info' },
-    _react2.default.createElement(
-      'div',
-      { className: 'email' },
-      _react2.default.createElement(
-        'h2',
-        null,
-        'E-Mail'
-      ),
-      _react2.default.createElement('img', { src: './assets/pupemail.gif' })
-    ),
-    _react2.default.createElement(
-      'div',
-      { className: 'guest-book' },
-      _react2.default.createElement(
-        'h2',
-        null,
-        'Guestbook'
-      ),
-      _react2.default.createElement('img', { src: './assets/guest_book.gif' })
-    )
-  );
-};
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-exports.default = Footer;
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Footer = function (_React$Component) {
+  _inherits(Footer, _React$Component);
+
+  function Footer(props) {
+    _classCallCheck(this, Footer);
+
+    var _this = _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).call(this, props));
+
+    _this.state = {
+      hovered: false
+    };
+
+    _this.changeLook = _this.changeLook.bind(_this);
+    return _this;
+  }
+
+  _createClass(Footer, [{
+    key: 'changeLook',
+    value: function changeLook() {
+      this.setState({ hovered: true });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      var oldLookFooter = _react2.default.createElement(
+        'div',
+        { key: Math.random(), className: 'contact-info', onMouseEnter: function onMouseEnter() {
+            return _this2.changeLook();
+          } },
+        _react2.default.createElement(
+          'div',
+          { className: 'email' },
+          _react2.default.createElement(
+            'h2',
+            null,
+            'E-Mail'
+          ),
+          _react2.default.createElement('img', { src: './assets/pupemail.gif' })
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'guest-book' },
+          _react2.default.createElement(
+            'h2',
+            null,
+            'Guestbook'
+          ),
+          _react2.default.createElement('img', { src: './assets/guest_book.gif' })
+        )
+      );
+
+      var newLookFooter = _react2.default.createElement(
+        'div',
+        { key: Math.random(), className: 'contact-info' },
+        _react2.default.createElement(
+          'div',
+          { className: 'email' },
+          _react2.default.createElement(
+            'h2',
+            null,
+            'NEWWWW'
+          ),
+          _react2.default.createElement('img', { src: './assets/pupemail.gif' })
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'guest-book' },
+          _react2.default.createElement(
+            'h2',
+            null,
+            'Guestbook'
+          ),
+          _react2.default.createElement('img', { src: './assets/guest_book.gif' })
+        )
+      );
+
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          _reactAddonsCssTransitionGroup2.default,
+          {
+            transitionName: 'example',
+            transitionEnterTimeout: 500,
+            transitionLeaveTimeout: 300 },
+          this.state.hovered ? newLookFooter : oldLookFooter
+        )
+      );
+    }
+  }]);
+
+  return Footer;
+}(_react2.default.Component);
+
+module.exports = Footer;
 
 /***/ }),
 /* 93 */
@@ -24442,7 +24558,7 @@ var ProjectHeader = function (_React$Component) {
       var _this2 = this;
 
       var oldLookProjectHeader = _react2.default.createElement(
-        'p',
+        'h4',
         { key: Math.random(), className: 'old-projects-title', onMouseEnter: function onMouseEnter() {
             return _this2.changeLook();
           } },
@@ -24450,7 +24566,7 @@ var ProjectHeader = function (_React$Component) {
       );
 
       var newLookProjectHeader = _react2.default.createElement(
-        'p',
+        'h4',
         { key: Math.random(), className: 'new-projects-title' },
         'Projects'
       );

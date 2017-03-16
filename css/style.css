@@ -26,7 +26,7 @@ p {
 }
 
 .example-enter {
-  top: -200px;
+  top: 0px;
   opacity: 0.01;
 }
 
@@ -42,7 +42,19 @@ p {
 
 .example-leave.example-leave-active {
   opacity: 0.01;
+  display: none;
   transition: opacity 300ms ease-in;
+}
+
+.example-appear {
+  opacity: 0.01;
+  display: none;
+}
+
+.example-appear.example-appear-active {
+  opacity: 1;
+  display: none;
+  transition: opacity .5s ease-in;
 }
 
 .single-project-tech-used {
@@ -162,7 +174,14 @@ marquee {
   margin-left: 5px;
 }
 
-
+.old-banner-row {
+  display: flex;
+  justify-content: space-around;
+  width: 430px;
+  margin: 0 auto;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
 
 /**//**//**//**//**//**/
 
@@ -274,13 +293,8 @@ marquee {
   margin-left: 5px;
 }
 
-/**//**//**//**//**//**/
-
-
-/**//**//**//**//**//**/
-
-
-.banner-row {
+.new-banner-row {
+  background-color: white;
   display: flex;
   justify-content: space-around;
   width: 430px;
@@ -288,6 +302,11 @@ marquee {
   margin-top: 24px;
   margin-bottom: 24px;
 }
+
+/**//**//**//**//**//**/
+
+
+/**//**//**//**//**//**/
 
 .banner-ad {
   cursor: pointer;
