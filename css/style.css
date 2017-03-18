@@ -116,7 +116,7 @@ marquee {
   font-weight: bold;
   font-size: 41px;
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   margin-top: 26px;
 }
 
@@ -133,7 +133,7 @@ marquee {
   display: flex;
   width: 100%;
   margin-top: 24px;
-  margin-left: 24px;
+  margin-left: 100px;
 }
 
 .old-single-project-screenshot-container {
@@ -200,7 +200,7 @@ marquee {
 /**//**//**//**//**//**/
 
 .new-header-container {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   background-color: #fefefe;
   padding-top: 3px;
 }
@@ -216,7 +216,7 @@ marquee {
 
 .new-header-description {
   font-size: 22px;
-  width: 320px;
+  width: 345px;
   margin: 0 auto;
   margin-bottom: 10px;
 }
@@ -227,12 +227,13 @@ marquee {
 }
 
 .new-projects-title {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: bold;
-  font-size: 41px;
+  font-size: 39px;
+  color: #333333;
   text-align: center;
-  padding-bottom: 24px;
-  padding-top: 26px;
+  padding-top: 24px;
+  padding-bottom: 16px;
   background-color: #fefefe;
 }
 
@@ -251,6 +252,8 @@ marquee {
 }
 
 .new-single-project-container {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #333333;
   height: 100%;
   width: 90%;
   border-radius: 5px;
@@ -262,8 +265,8 @@ marquee {
 .new-single-project {
   display: flex;
   width: 100%;
-  padding-top: 32px;
-  margin-left: 24px;
+  padding-top: 24px;
+  margin-left: 100px;
 }
 
 .new-single-project-screenshot-container {
@@ -272,6 +275,36 @@ marquee {
   display: inline-block;
   margin-bottom: 15px;
 }
+
+.new-external-link-image {
+  display: none;
+}
+
+.new-single-project-screenshot-container:hover .new-external-link-overlay {
+  position: absolute;
+  opacity: .6;
+  height: 225px;
+  width: 350px;
+  background-color: #bebebe;
+  cursor: pointer;
+}
+
+.new-single-project-screenshot-container:hover .new-external-link-image {
+  position: absolute;
+  opacity: .6;
+  height: 150px;
+  width: 150px;
+  display: inline;
+  cursor: pointer;
+  left: 29%;
+  top: 15%;
+}
+
+.new-single-project-screenshot-container:hover .new-single-project-description {
+
+}
+
+
 
 .new-single-project-screenshot {
   height: 100%;
@@ -288,11 +321,15 @@ marquee {
   margin-top: 20px;
 }
 
+.new-single-project-description-link {
+  color: #333333;
+  text-decoration: none;
+}
+
 .new-single-project-description-link h3 {
   font-size: 33px;
   font-weight: bold;
   font-style: normal;
-  text-decoration: none;
 }
 
 .new-single-project-description p {
