@@ -128,7 +128,6 @@ class Root extends React.Component {
            <Project
              projectInfo={hamhuckinInfo} />
         </section>
-        <br />
 
         <Footer />
       </div>

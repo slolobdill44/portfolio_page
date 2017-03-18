@@ -24501,7 +24501,6 @@ var Root = function (_React$Component) {
           _react2.default.createElement(_project2.default, {
             projectInfo: hamhuckinInfo })
         ),
-        _react2.default.createElement('br', null),
         _react2.default.createElement(_footer2.default, null)
       );
     }

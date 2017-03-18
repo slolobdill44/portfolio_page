@@ -18,7 +18,7 @@ a {
 }
 
 p {
-  font-style: italic;
+  /*font-style: italic;*/
 }
 
 .fade-enter {
@@ -127,7 +127,6 @@ marquee {
   border-style: ridge;
   background-image: url("../assets/beige158.gif");
   margin: 0 auto;
-  margin-top: 22px;
 }
 
 .old-single-project {
@@ -170,6 +169,14 @@ marquee {
   margin-left: 5px;
 }
 
+.old-banner-row {
+  display: flex;
+  justify-content: space-around;
+  width: 430px;
+  margin: 0 auto;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
 
 .old-contact-info {
   height: 90px;
@@ -193,8 +200,9 @@ marquee {
 /**//**//**//**//**//**/
 
 .new-header-container {
+  font-family: 'Nunito', sans-serif;
   background-color: #fefefe;
-  padding-top: 1px;
+  padding-top: 3px;
 }
 
 .new-header-name {
@@ -219,6 +227,7 @@ marquee {
 }
 
 .new-projects-title {
+  font-family: 'Nunito', sans-serif;
   font-weight: bold;
   font-size: 41px;
   text-align: center;
@@ -235,25 +244,25 @@ marquee {
 }
 
 .new-single-project-frame {
+  font-family: 'Nunito', sans-serif;
   width: 100%;
   height: 279px;
   background-color: white;
 }
 
 .new-single-project-container {
-  height: 275px;
+  height: 100%;
   width: 90%;
-  border: 3px solid #fefefe;
   border-radius: 5px;
   background-color: white;
   margin: 0 auto;
-  padding-top: 22px;
+  /*padding-top: 22px;*/
 }
 
 .new-single-project {
   display: flex;
   width: 100%;
-  margin-top: 24px;
+  padding-top: 32px;
   margin-left: 24px;
 }
 
@@ -279,9 +288,11 @@ marquee {
   margin-top: 20px;
 }
 
-.new-single-project-description h3 {
+.new-single-project-description-link h3 {
   font-size: 33px;
   font-weight: bold;
+  font-style: normal;
+  text-decoration: none;
 }
 
 .new-single-project-description p {
@@ -290,22 +301,10 @@ marquee {
   margin-left: 5px;
 }
 
-
-.old-banner-row-container {
-
-}
-
-.old-banner-row {
-  display: flex;
-  justify-content: space-around;
-  width: 430px;
-  margin: 0 auto;
-  margin-top: 24px;
-  margin-bottom: 24px;
-}
-
 .new-banner-row-container {
   background-color: #fefefe;
+  padding-top: 5px;
+  padding-bottom: 5px
 }
 
 .new-banner-row {
@@ -313,18 +312,14 @@ marquee {
   justify-content: space-around;
   width: 430px;
   margin: 0 auto;
-  margin-top: 24px;
-  margin-bottom: 24px;
+  margin-top: 18px;
+  margin-bottom: 18px;
 }
-
-
-
-
 
 .new-contact-info {
   background-color: #fefefe;
   height: 120px;
-  width: 1050px;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   padding-top: 20px;
