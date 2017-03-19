@@ -106,7 +106,7 @@ class Root extends React.Component {
                 },
                 {
                   link: 'https://en.wikipedia.org/wiki/MSN_TV',
-                  image: './assets/advertisements/webtvlogo.gif'
+                  image: './assets/webtvlogo.gif'
                 },
               ]
             }
@@ -120,7 +120,7 @@ class Root extends React.Component {
               [
                 {
                   link: 'https://en.wikipedia.org/wiki/Napster',
-                  image: './assets/advertisements/napster_premium.gif'
+                  image: './assets/napster_premium.gif'
                 }
               ]
             } />

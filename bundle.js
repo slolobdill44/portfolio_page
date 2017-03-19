@@ -24594,7 +24594,7 @@ var Root = function (_React$Component) {
               image: './assets/altavista.gif'
             }, {
               link: 'https://en.wikipedia.org/wiki/MSN_TV',
-              image: './assets/advertisements/webtvlogo.gif'
+              image: './assets/webtvlogo.gif'
             }]
           }),
           _react2.default.createElement(_project2.default, {
@@ -24602,7 +24602,7 @@ var Root = function (_React$Component) {
           _react2.default.createElement(_banner_ad_row2.default, {
             ads: [{
               link: 'https://en.wikipedia.org/wiki/Napster',
-              image: './assets/advertisements/napster_premium.gif'
+              image: './assets/napster_premium.gif'
             }] }),
           _react2.default.createElement(_project2.default, {
             projectInfo: hamhuckinInfo })
