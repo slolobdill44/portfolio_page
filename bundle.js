@@ -11915,7 +11915,7 @@ var Project = function (_React$Component) {
             ),
             _react2.default.createElement(
               'div',
-              { className: 'old-single-project-tech-used' },
+              { className: 'single-project-tech-used' },
               techUsed
             )
           )
@@ -11960,7 +11960,7 @@ var Project = function (_React$Component) {
               ),
               _react2.default.createElement(
                 'div',
-                { className: 'new-single-project-tech-used' },
+                { className: 'single-project-tech-used' },
                 techUsed
               )
             )

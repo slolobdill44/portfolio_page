@@ -56,7 +56,7 @@ p {
 
 .single-project-tech-used {
   height: 55px;
-  width: 720px;
+  width: 100%;
   display: flex;
   flex-direction: row;
 }
@@ -132,9 +132,9 @@ marquee {
 
 .old-single-project {
   display: flex;
-  width: 100%;
+  width: 90%;
   margin-top: 24px;
-  margin-left: 131px;
+  margin-left: 12%;
 }
 
 .old-single-project-screenshot-container {
@@ -151,7 +151,7 @@ marquee {
 
 .old-single-project-description {
   height: 193px;
-  width: 726px;
+  width: 62%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -205,7 +205,7 @@ marquee {
   font-family: 'Source Sans Pro', sans-serif;
   background-color: #fefefe;
   padding-top: 3px;
-  width: 101%;
+  width: 100%;
 }
 
 .new-header-name {
@@ -238,7 +238,7 @@ marquee {
   padding-top: 24px;
   padding-bottom: 16px;
   background-color: #fefefe;
-  width: 101%;
+  width: 100%;
 }
 
 .new-contact-logo {
@@ -250,7 +250,7 @@ marquee {
 
 .new-single-project-frame {
   font-family: 'Nunito', sans-serif;
-  width: 101%;
+  width: 100%;
   height: 279px;
   background-color: white;
 }
@@ -267,9 +267,9 @@ marquee {
 
 .new-single-project {
   display: flex;
-  width: 100%;
+  width: 90%;
   padding-top: 24px;
-  margin-left: 131px;
+  margin-left: 12%;
 }
 
 .new-single-project-screenshot-container {
@@ -314,7 +314,7 @@ marquee {
 
 .new-single-project-description {
   height: 193px;
-  width: 726px;
+  width: 62%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -344,7 +344,7 @@ marquee {
   background-color: #fefefe;
   padding-top: 5px;
   padding-bottom: 5px;
-  width: 101%;
+  width: 100%;
 }
 
 .new-banner-row {
@@ -357,7 +357,7 @@ marquee {
 }
 
 .new-footer-container {
-  width: 101%;
+  width: 100%;
   height: 92px;
   padding-top: 20px;
   background-color: #fefefe;

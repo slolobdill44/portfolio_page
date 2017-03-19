@@ -46,7 +46,7 @@ class Project extends React.Component {
             <p>
               { this.props.projectInfo.description }
             </p>
-            <div className='old-single-project-tech-used'>
+            <div className='single-project-tech-used'>
               {techUsed}
             </div>
           </div>
@@ -72,7 +72,7 @@ class Project extends React.Component {
                 <p>
                   { this.props.projectInfo.description }
                 </p>
-                <div className='new-single-project-tech-used'>
+                <div className='single-project-tech-used'>
                   {techUsed}
                 </div>
               </div>
