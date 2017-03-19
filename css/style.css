@@ -203,6 +203,7 @@ marquee {
   font-family: 'Source Sans Pro', sans-serif;
   background-color: #fefefe;
   padding-top: 3px;
+  width: 101%;
 }
 
 .new-header-name {
@@ -235,6 +236,7 @@ marquee {
   padding-top: 24px;
   padding-bottom: 16px;
   background-color: #fefefe;
+  width: 101%;
 }
 
 .new-contact-logo {
@@ -246,7 +248,7 @@ marquee {
 
 .new-single-project-frame {
   font-family: 'Nunito', sans-serif;
-  width: 100%;
+  width: 101%;
   height: 279px;
   background-color: white;
 }
@@ -259,7 +261,6 @@ marquee {
   border-radius: 5px;
   background-color: white;
   margin: 0 auto;
-  /*padding-top: 22px;*/
 }
 
 .new-single-project {
@@ -335,7 +336,8 @@ marquee {
 .new-banner-row-container {
   background-color: #fefefe;
   padding-top: 5px;
-  padding-bottom: 5px
+  padding-bottom: 5px;
+  width: 101%;
 }
 
 .new-banner-row {
@@ -348,7 +350,7 @@ marquee {
 }
 
 .new-footer-container {
-  width: 100%;
+  width: 101%;
   height: 92px;
   padding-top: 20px;
   background-color: #fefefe;
