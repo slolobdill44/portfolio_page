@@ -35,12 +35,16 @@ class Footer extends React.Component {
     const newLookFooter = (
       <div key={ Math.random() } className='new-footer-container'>
         <section className='new-contact-info'>
-          <div className='new-email'>
-            <p>E-Mail</p>
-          </div>
-          <div className='new-resume'>
-            <p>Resume</p>
-          </div>
+          <a href="mailto:adrian@lobdill.com" target="_top">
+            <div className='new-email'>
+              <p>E-Mail</p>
+            </div>
+          </a>
+          <a href="./assets/Adrian_Lobdill_Resume_2017.pdf" target="_blank">
+            <div className='new-resume'>
+              <p>Resume</p>
+            </div>
+          </a>
           <a href="http://pub38.bravenet.com/guestbook/3253034921/" target="_blank">
             <div className='new-guest-book'>
               <p>Guestbook</p>

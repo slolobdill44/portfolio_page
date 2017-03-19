@@ -11598,21 +11598,29 @@ var Footer = function (_React$Component) {
           'section',
           { className: 'new-contact-info' },
           _react2.default.createElement(
-            'div',
-            { className: 'new-email' },
+            'a',
+            { href: 'mailto:adrian@lobdill.com', target: '_top' },
             _react2.default.createElement(
-              'p',
-              null,
-              'E-Mail'
+              'div',
+              { className: 'new-email' },
+              _react2.default.createElement(
+                'p',
+                null,
+                'E-Mail'
+              )
             )
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'new-resume' },
+            'a',
+            { href: './assets/Adrian_Lobdill_Resume_2017.pdf', target: '_blank' },
             _react2.default.createElement(
-              'p',
-              null,
-              'Resume'
+              'div',
+              { className: 'new-resume' },
+              _react2.default.createElement(
+                'p',
+                null,
+                'Resume'
+              )
             )
           ),
           _react2.default.createElement(
