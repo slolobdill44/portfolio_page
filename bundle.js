@@ -11616,12 +11616,16 @@ var Footer = function (_React$Component) {
             )
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'new-guest-book' },
+            'a',
+            { href: 'http://pub38.bravenet.com/guestbook/3253034921/', target: '_blank' },
             _react2.default.createElement(
-              'p',
-              null,
-              'Guestbook'
+              'div',
+              { className: 'new-guest-book' },
+              _react2.default.createElement(
+                'p',
+                null,
+                'Guestbook'
+              )
             )
           )
         )

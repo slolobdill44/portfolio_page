@@ -41,10 +41,12 @@ class Footer extends React.Component {
           <div className='new-resume'>
             <p>Resume</p>
           </div>
-          <div className='new-guest-book'>
-            <p>Guestbook</p>
-          </div>
-        </section>
+          <a href="http://pub38.bravenet.com/guestbook/3253034921/" target="_blank">
+            <div className='new-guest-book'>
+              <p>Guestbook</p>
+            </div>
+          </a>
+      </section>
       </div>
     )
 

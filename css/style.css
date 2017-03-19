@@ -15,6 +15,7 @@ header p {
 
 a {
   cursor: pointer;
+  text-decoration: none;
 }
 
 p {
@@ -86,18 +87,18 @@ p {
 /**//**//**//**//**//**/
 
 .old-header-name {
-  font-size: 28px;
+  font-size: 42px;
   font-weight: bold;
   text-align: center;
-  margin-top: 15px;
-  margin-bottom: 10px;
+  margin-top: 19px;
+  margin-bottom: 15px;
   padding: 0;
 }
 
 marquee {
   font-size: 22px;
   width: 320px;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 
 .old-contact-links {
@@ -133,7 +134,7 @@ marquee {
   display: flex;
   width: 100%;
   margin-top: 24px;
-  margin-left: 100px;
+  margin-left: 131px;
 }
 
 .old-single-project-screenshot-container {
@@ -208,11 +209,11 @@ marquee {
 }
 
 .new-header-name {
-  font-size: 28px;
+  font-size: 42px;
   font-weight: bold;
   text-align: center;
   margin-top: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   padding: 0;
 }
 
@@ -220,7 +221,7 @@ marquee {
   font-size: 22px;
   width: 345px;
   margin: 0 auto;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 
 .new-contact-links {
@@ -268,12 +269,13 @@ marquee {
   display: flex;
   width: 100%;
   padding-top: 24px;
-  margin-left: 100px;
+  margin-left: 131px;
 }
 
 .new-single-project-screenshot-container {
   height: 225px;
   width: 348px;
+  border-radius: 2px;
   display: inline-block;
   margin-bottom: 15px;
 }
@@ -283,15 +285,17 @@ marquee {
 }
 
 .new-single-project-screenshot-container:hover .new-external-link-overlay {
+  border-radius: 4px;
   position: absolute;
   opacity: .6;
   height: 225px;
-  width: 350px;
+  width: 348px;
   background-color: #bebebe;
   cursor: pointer;
 }
 
 .new-single-project-screenshot-container:hover .new-external-link-image {
+  border-radius: 4px;
   position: absolute;
   opacity: .6;
   height: 150px;
@@ -303,6 +307,7 @@ marquee {
 }
 
 .new-single-project-screenshot {
+  border-radius: 4px;
   height: 100%;
   width: 100%;
 }
@@ -393,6 +398,10 @@ marquee {
 
 .new-guest-book {
   width: 170px;
+}
+
+.new-guest-book p {
+  text-decoration: none;
 }
 
 /**//**//**//**//**//**/
