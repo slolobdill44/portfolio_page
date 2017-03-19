@@ -24591,7 +24591,7 @@ var Root = function (_React$Component) {
           _react2.default.createElement(_banner_ad_row2.default, {
             ads: [{
               link: 'https://en.wikipedia.org/wiki/AltaVista',
-              image: './assets/advertisements/altavista.gif'
+              image: './assets/altavista.gif'
             }, {
               link: 'https://en.wikipedia.org/wiki/MSN_TV',
               image: './assets/advertisements/webtvlogo.gif'

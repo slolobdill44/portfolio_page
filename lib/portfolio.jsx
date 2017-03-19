@@ -102,7 +102,7 @@ class Root extends React.Component {
               [
                 {
                   link: 'https://en.wikipedia.org/wiki/AltaVista',
-                  image: './assets/advertisements/altavista.gif'
+                  image: './assets/altavista.gif'
                 },
                 {
                   link: 'https://en.wikipedia.org/wiki/MSN_TV',
