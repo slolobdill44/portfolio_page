@@ -300,12 +300,6 @@ marquee {
   top: 15%;
 }
 
-.new-single-project-screenshot-container:hover .new-single-project-description {
-
-}
-
-
-
 .new-single-project-screenshot {
   height: 100%;
   width: 100%;
@@ -353,21 +347,50 @@ marquee {
   margin-bottom: 18px;
 }
 
-.new-contact-info {
-  background-color: #fefefe;
-  height: 120px;
+.new-footer-container {
   width: 100%;
+  height: 92px;
+  padding-top: 20px;
+  background-color: #fefefe;
+}
+
+.new-contact-info {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #fefefe;
+  height: 100%;
+  width: 93%;
   display: flex;
   justify-content: space-around;
-  padding-top: 20px;
   margin: 0 auto;
 }
 
-.new-contact-info h2 {
-  line-height: 4.5;
+.new-contact-info div p {
+  border: 2px solid #bebebe;
+  border-radius: 4px;
+  color: #333333;
   font-size: 22px;
   font-weight: bold;
+  text-align: center;
+  line-height: 2;
+  height: 48px;
 }
+
+.new-contact-info div p:hover {
+  cursor: pointer;
+}
+
+.new-email {
+  width: 143px;
+}
+
+.new-resume {
+  width: 143px;
+}
+
+.new-guest-book {
+  width: 170px;
+}
+
 /**//**//**//**//**//**/
 
 

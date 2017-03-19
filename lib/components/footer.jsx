@@ -33,16 +33,18 @@ class Footer extends React.Component {
     )
 
     const newLookFooter = (
-      <div key={ Math.random() } className='new-contact-info'>
-        <div className='email'>
-          <h2>E-Mail</h2>
-        </div>
-        <div className='resume'>
-          <h2>Resume</h2>
-        </div>
-        <div className='guest-book'>
-          <h2>Guestbook</h2>
-        </div>
+      <div key={ Math.random() } className='new-footer-container'>
+        <section className='new-contact-info'>
+          <div className='new-email'>
+            <p>E-Mail</p>
+          </div>
+          <div className='new-resume'>
+            <p>Resume</p>
+          </div>
+          <div className='new-guest-book'>
+            <p>Guestbook</p>
+          </div>
+        </section>
       </div>
     )
 

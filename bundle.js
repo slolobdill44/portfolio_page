@@ -11593,32 +11593,36 @@ var Footer = function (_React$Component) {
 
       var newLookFooter = _react2.default.createElement(
         'div',
-        { key: Math.random(), className: 'new-contact-info' },
+        { key: Math.random(), className: 'new-footer-container' },
         _react2.default.createElement(
-          'div',
-          { className: 'email' },
+          'section',
+          { className: 'new-contact-info' },
           _react2.default.createElement(
-            'h2',
-            null,
-            'E-Mail'
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'resume' },
+            'div',
+            { className: 'new-email' },
+            _react2.default.createElement(
+              'p',
+              null,
+              'E-Mail'
+            )
+          ),
           _react2.default.createElement(
-            'h2',
-            null,
-            'Resume'
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'guest-book' },
+            'div',
+            { className: 'new-resume' },
+            _react2.default.createElement(
+              'p',
+              null,
+              'Resume'
+            )
+          ),
           _react2.default.createElement(
-            'h2',
-            null,
-            'Guestbook'
+            'div',
+            { className: 'new-guest-book' },
+            _react2.default.createElement(
+              'p',
+              null,
+              'Guestbook'
+            )
           )
         )
       );
