@@ -11494,7 +11494,7 @@ var BannerAdRow = function (_React$Component) {
         _react2.default.createElement(
           'div',
           { className: 'new-banner-row' },
-          bannerAds
+          _react2.default.createElement('div', { className: 'new-banner-row-divider' })
         )
       );
 
@@ -11885,7 +11885,9 @@ var Project = function (_React$Component) {
 
       var oldLookProject = _react2.default.createElement(
         'div',
-        { key: Math.random(), className: 'old-single-project-container', onMouseEnter: function onMouseEnter() {
+        { key: Math.random(),
+          className: 'old-single-project-container',
+          onMouseEnter: function onMouseEnter() {
             return _this2.changeLook();
           } },
         _react2.default.createElement(

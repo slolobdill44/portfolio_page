@@ -34,7 +34,9 @@ class Project extends React.Component {
     });
 
     const oldLookProject = (
-      <div key={Math.random()} className='old-single-project-container' onMouseEnter={() => this.changeLook()}>
+      <div key={Math.random()}
+          className='old-single-project-container'
+          onMouseEnter={() => this.changeLook()}>
         <div className='old-single-project'>
           <a className='old-single-project-screenshot-container' href={`${this.props.projectInfo.link}`} target="_blank">
             <img className='old-single-project-screenshot' src={`${this.props.projectInfo.image}`}  />

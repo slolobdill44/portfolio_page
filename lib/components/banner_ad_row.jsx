@@ -36,7 +36,7 @@ class BannerAdRow extends React.Component {
     const newLookBannerRow = (
       <div key={Math.random()} className='new-banner-row-container'>
         <div className='new-banner-row'>
-          {bannerAds}
+          <div className='new-banner-row-divider'></div>
         </div>
       </div>
     );

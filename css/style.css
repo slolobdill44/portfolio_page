@@ -203,7 +203,7 @@ marquee {
 
 .new-header-container {
   font-family: 'Source Sans Pro', sans-serif;
-  background-color: #fefefe;
+  background-color: #99C3EF;
   padding-top: 3px;
   width: 100%;
 }
@@ -237,7 +237,7 @@ marquee {
   text-align: center;
   padding-top: 24px;
   padding-bottom: 16px;
-  background-color: #fefefe;
+  background-color: #99C3EF;
   width: 100%;
 }
 
@@ -252,7 +252,7 @@ marquee {
   font-family: 'Nunito', sans-serif;
   width: 100%;
   height: 279px;
-  background-color: white;
+  background-color: #99C3EF;
 }
 
 .new-single-project-container {
@@ -261,7 +261,7 @@ marquee {
   height: 100%;
   width: 90%;
   border-radius: 5px;
-  background-color: white;
+  background-color: #91B8E2;
   margin: 0 auto;
 }
 
@@ -273,8 +273,8 @@ marquee {
 }
 
 .new-single-project-screenshot-container {
-  height: 225px;
-  width: 348px;
+  height: 100%;
+  width: 35%;
   border-radius: 2px;
   display: inline-block;
   margin-bottom: 15px;
@@ -350,10 +350,15 @@ marquee {
 .new-banner-row {
   display: flex;
   justify-content: space-around;
-  width: 430px;
+  width: 90%;
   margin: 0 auto;
   margin-top: 18px;
   margin-bottom: 18px;
+}
+
+.new-banner-row-divider {
+  width: 90%;
+  border-top: 2px solid #bebebe;
 }
 
 .new-footer-container {
