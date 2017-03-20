@@ -32,7 +32,7 @@ class Header extends React.Component {
           <a href='https://github.com/slolobdill44' target="_blank"><img className='old-contact-logo' src='./assets/GitHub-Mark-64px.png' /></a>
           <a href='http://www.linkedin.com/in/lobdill' target="_blank"><img className='old-contact-logo' src='./assets/linked_in.png' /></a>
         </div>
-        <img className='header-palms' src='./assets/banner_palm.gif' />
+        <img className='header-palms' src='./assets/divideflashing.gif' />
       </header>
     )
 

@@ -203,7 +203,7 @@ marquee {
 
 .new-header-container {
   font-family: 'Source Sans Pro', sans-serif;
-  background-color: #99C3EF;
+  background-color: #FBFBFB;
   padding-top: 3px;
   width: 100%;
 }
@@ -233,11 +233,11 @@ marquee {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: bold;
   font-size: 39px;
-  color: #333333;
+  color: #252627;
   text-align: center;
   padding-top: 24px;
   padding-bottom: 16px;
-  background-color: #99C3EF;
+  background-color: #FBFBFB;
   width: 100%;
 }
 
@@ -252,16 +252,16 @@ marquee {
   font-family: 'Nunito', sans-serif;
   width: 100%;
   height: 279px;
-  background-color: #99C3EF;
+  background-color: #FBFBFB;
 }
 
 .new-single-project-container {
   font-family: 'Source Sans Pro', sans-serif;
-  color: #333333;
+  color: #252627;
   height: 100%;
   width: 90%;
   border-radius: 5px;
-  background-color: #91B8E2;
+  background-color: #92AFD7;
   margin: 0 auto;
 }
 
@@ -323,7 +323,7 @@ marquee {
 }
 
 .new-single-project-description-link {
-  color: #333333;
+  color: #252627;
   text-decoration: none;
 }
 
@@ -341,7 +341,7 @@ marquee {
 }
 
 .new-banner-row-container {
-  background-color: #fefefe;
+  background-color: #FBFBFB;
   padding-top: 5px;
   padding-bottom: 5px;
   width: 100%;
@@ -365,12 +365,12 @@ marquee {
   width: 100%;
   height: 92px;
   padding-top: 20px;
-  background-color: #fefefe;
+  background-color: #FBFBFB;
 }
 
 .new-contact-info {
   font-family: 'Source Sans Pro', sans-serif;
-  background-color: #fefefe;
+  background-color: #FBFBFB;
   height: 100%;
   width: 93%;
   display: flex;
@@ -381,7 +381,7 @@ marquee {
 .new-contact-info div p {
   border: 2px solid #bebebe;
   border-radius: 4px;
-  color: #333333;
+  color: #252627;
   font-size: 22px;
   font-weight: bold;
   text-align: center;

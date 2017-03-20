@@ -11749,7 +11749,7 @@ var Header = function (_React$Component) {
             _react2.default.createElement('img', { className: 'old-contact-logo', src: './assets/linked_in.png' })
           )
         ),
-        _react2.default.createElement('img', { className: 'header-palms', src: './assets/banner_palm.gif' })
+        _react2.default.createElement('img', { className: 'header-palms', src: './assets/divideflashing.gif' })
       );
 
       var newLookHeader = _react2.default.createElement(
