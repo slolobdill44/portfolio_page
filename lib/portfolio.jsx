@@ -8,6 +8,23 @@ import BannerAdRow from './components/banner_ad_row';
 import Footer from './components/footer';
 
 class Root extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      pageStyle: "new"
+    };
+
+    this.switchStyles = this.switchStyles.bind(this);
+  }
+
+  switchStyles() {
+    if (this.state.pageStyle === "new") {
+      this.setState({pageStyle: "old"});
+    } else {
+      this.setState({pageStyle: "new"});
+    }
+  }
 
   render() {
     const hamcampInfo = {
@@ -88,48 +105,62 @@ class Root extends React.Component {
     return (
       <div>
 
-        <Header />
+        {
+          this.state.pageStyle === "new" ? (
+            <button className='style-switch-button' onClick={() => this.switchStyles()}>GO OLD SCHOOL</button>
+          ) : (
+            <button className='style-switch-button' onClick={() => this.switchStyles()}>GO NEW SCHOOL</button>
+          )
+        }
+
+
+        <Header style={this.state.pageStyle} />
 
         <section className='projects-section'>
 
-          <ProjectHeader />
+          <ProjectHeader style={this.state.pageStyle} />
 
           <Project
-            projectInfo={hamcampInfo} />
+            projectInfo={hamcampInfo}
+            style={this.state.pageStyle} />
 
           <BannerAdRow
             ads = {
               [
                 {
                   link: 'https://en.wikipedia.org/wiki/AltaVista',
-                  image: './assets/altavista.gif'
+                  image: './assets/advertisements/altavista.gif'
                 },
                 {
                   link: 'https://en.wikipedia.org/wiki/MSN_TV',
-                  image: './assets/webtvlogo.gif'
+                  image: './assets/advertisements/webtvlogo.gif'
                 },
               ]
             }
-             />
+            style={this.state.pageStyle} />
 
            <Project
-             projectInfo={tweetTheBayInfo} />
+             projectInfo={tweetTheBayInfo}
+             style={this.state.pageStyle} />
 
           <BannerAdRow
             ads = {
               [
                 {
                   link: 'https://en.wikipedia.org/wiki/Napster',
-                  image: './assets/napster_premium.gif'
+                  image: './assets/advertisements/napster_premium.gif'
                 }
               ]
-            } />
+            }
+            style={this.state.pageStyle} />
 
            <Project
-             projectInfo={hamhuckinInfo} />
+             projectInfo={hamhuckinInfo}
+             style={this.state.pageStyle} />
+
         </section>
 
-        <Footer />
+        <Footer style={this.state.pageStyle} />
       </div>
     )
   };

@@ -54,6 +54,14 @@ p {
   transition: opacity .5s ease-in;
 }
 
+.style-switch-button {
+  position: fixed;
+  height: 30px;
+  width: 140px;
+  margin-left: 37px;
+  margin-top: 30px;
+}
+
 .single-project-tech-used {
   height: 55px;
   width: 100%;
@@ -203,7 +211,7 @@ marquee {
 
 .new-header-container {
   font-family: 'Source Sans Pro', sans-serif;
-  background-color: #FBFBFB;
+  background-color: #BED8F4;
   padding-top: 3px;
   width: 100%;
 }
@@ -237,7 +245,7 @@ marquee {
   text-align: center;
   padding-top: 24px;
   padding-bottom: 16px;
-  background-color: #FBFBFB;
+  background-color: #BED8F4;
   width: 100%;
 }
 
@@ -252,7 +260,7 @@ marquee {
   font-family: 'Nunito', sans-serif;
   width: 100%;
   height: 279px;
-  background-color: #FBFBFB;
+  background-color: #BED8F4;
 }
 
 .new-single-project-container {
@@ -261,7 +269,7 @@ marquee {
   height: 100%;
   width: 90%;
   border-radius: 5px;
-  background-color: #92AFD7;
+  background-color: #EFDED0;
   margin: 0 auto;
 }
 
@@ -341,7 +349,7 @@ marquee {
 }
 
 .new-banner-row-container {
-  background-color: #FBFBFB;
+  background-color: #BED8F4;
   padding-top: 5px;
   padding-bottom: 5px;
   width: 100%;
@@ -365,12 +373,12 @@ marquee {
   width: 100%;
   height: 92px;
   padding-top: 20px;
-  background-color: #FBFBFB;
+  background-color: #BED8F4;
 }
 
 .new-contact-info {
   font-family: 'Source Sans Pro', sans-serif;
-  background-color: #FBFBFB;
+  background-color: #BED8F4;
   height: 100%;
   width: 93%;
   display: flex;

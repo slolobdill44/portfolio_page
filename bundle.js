@@ -11690,31 +11690,26 @@ var Header = function (_React$Component) {
   function Header(props) {
     _classCallCheck(this, Header);
 
-    var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this, props));
+    return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this, props));
 
-    _this.state = {
-      hovered: false
-    };
-
-    _this.changeLook = _this.changeLook.bind(_this);
-    return _this;
+    // this.state = {
+    //   hovered: false
+    // };
+    //
+    // this.changeLook = this.changeLook.bind(this);
   }
 
+  // changeLook() {
+  //   this.setState({hovered: true})
+  // }
+
   _createClass(Header, [{
-    key: 'changeLook',
-    value: function changeLook() {
-      this.setState({ hovered: true });
-    }
-  }, {
     key: 'render',
     value: function render() {
-      var _this2 = this;
 
       var oldLookHeader = _react2.default.createElement(
         'header',
-        { className: 'old-header-container', key: Math.random(), onMouseEnter: function onMouseEnter() {
-            return _this2.changeLook();
-          } },
+        { className: 'old-header-container', key: Math.random() },
         _react2.default.createElement(
           'h1',
           { className: 'old-header-name' },
@@ -11801,7 +11796,7 @@ var Header = function (_React$Component) {
             transitionName: 'fade',
             transitionEnterTimeout: 500,
             transitionLeaveTimeout: 300 },
-          this.state.hovered ? newLookHeader : oldLookHeader
+          this.props.style === "new" ? newLookHeader : oldLookHeader
         )
       );
     }
@@ -24511,15 +24506,33 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Root = function (_React$Component) {
   _inherits(Root, _React$Component);
 
-  function Root() {
+  function Root(props) {
     _classCallCheck(this, Root);
 
-    return _possibleConstructorReturn(this, (Root.__proto__ || Object.getPrototypeOf(Root)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (Root.__proto__ || Object.getPrototypeOf(Root)).call(this, props));
+
+    _this.state = {
+      pageStyle: "new"
+    };
+
+    _this.switchStyles = _this.switchStyles.bind(_this);
+    return _this;
   }
 
   _createClass(Root, [{
+    key: 'switchStyles',
+    value: function switchStyles() {
+      if (this.state.pageStyle === "new") {
+        this.setState({ pageStyle: "old" });
+      } else {
+        this.setState({ pageStyle: "new" });
+      }
+    }
+  }, {
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       var hamcampInfo = {
         title: "Hamcamp",
         link: "http://www.hamcamp.co/#/",
@@ -24583,33 +24596,50 @@ var Root = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         null,
-        _react2.default.createElement(_header2.default, null),
+        this.state.pageStyle === "new" ? _react2.default.createElement(
+          'button',
+          { className: 'style-switch-button', onClick: function onClick() {
+              return _this2.switchStyles();
+            } },
+          'GO OLD SCHOOL'
+        ) : _react2.default.createElement(
+          'button',
+          { className: 'style-switch-button', onClick: function onClick() {
+              return _this2.switchStyles();
+            } },
+          'GO NEW SCHOOL'
+        ),
+        _react2.default.createElement(_header2.default, { style: this.state.pageStyle }),
         _react2.default.createElement(
           'section',
           { className: 'projects-section' },
-          _react2.default.createElement(_project_header2.default, null),
+          _react2.default.createElement(_project_header2.default, { style: this.state.pageStyle }),
           _react2.default.createElement(_project2.default, {
-            projectInfo: hamcampInfo }),
+            projectInfo: hamcampInfo,
+            style: this.state.pageStyle }),
           _react2.default.createElement(_banner_ad_row2.default, {
             ads: [{
               link: 'https://en.wikipedia.org/wiki/AltaVista',
-              image: './assets/altavista.gif'
+              image: './assets/advertisements/altavista.gif'
             }, {
               link: 'https://en.wikipedia.org/wiki/MSN_TV',
-              image: './assets/webtvlogo.gif'
-            }]
-          }),
+              image: './assets/advertisements/webtvlogo.gif'
+            }],
+            style: this.state.pageStyle }),
           _react2.default.createElement(_project2.default, {
-            projectInfo: tweetTheBayInfo }),
+            projectInfo: tweetTheBayInfo,
+            style: this.state.pageStyle }),
           _react2.default.createElement(_banner_ad_row2.default, {
             ads: [{
               link: 'https://en.wikipedia.org/wiki/Napster',
-              image: './assets/napster_premium.gif'
-            }] }),
+              image: './assets/advertisements/napster_premium.gif'
+            }],
+            style: this.state.pageStyle }),
           _react2.default.createElement(_project2.default, {
-            projectInfo: hamhuckinInfo })
+            projectInfo: hamhuckinInfo,
+            style: this.state.pageStyle })
         ),
-        _react2.default.createElement(_footer2.default, null)
+        _react2.default.createElement(_footer2.default, { style: this.state.pageStyle })
       );
     }
   }]);

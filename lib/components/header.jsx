@@ -5,21 +5,21 @@ class Header extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      hovered: false
-    };
-
-    this.changeLook = this.changeLook.bind(this);
+    // this.state = {
+    //   hovered: false
+    // };
+    //
+    // this.changeLook = this.changeLook.bind(this);
   }
 
-  changeLook() {
-    this.setState({hovered: true})
-  }
+  // changeLook() {
+  //   this.setState({hovered: true})
+  // }
 
   render() {
 
     const oldLookHeader = (
-      <header className='old-header-container' key={Math.random()} onMouseEnter={() => this.changeLook()}>
+      <header className='old-header-container' key={Math.random()} >
         <h1 className='old-header-name'>Adrian Lobdill</h1>
         <div>
           <marquee>Software Developer | QA Advocate</marquee>
@@ -58,7 +58,7 @@ class Header extends React.Component {
           transitionName="fade"
           transitionEnterTimeout={500}
           transitionLeaveTimeout={300}>
-          { this.state.hovered ? newLookHeader : oldLookHeader }
+          { this.props.style === "new" ? newLookHeader : oldLookHeader }
         </ReactCSSTransitionGroup>
       </div>
     )
