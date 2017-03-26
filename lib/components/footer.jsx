@@ -5,21 +5,21 @@ class Footer extends React.Component {
   constructor(props){
     super(props);
 
-    this.state = {
-      hovered: false
-    }
-
-    this.changeLook = this.changeLook.bind(this);
+    // this.state = {
+    //   hovered: false
+    // }
+    //
+    // this.changeLook = this.changeLook.bind(this);
   }
 
-  changeLook() {
-    this.setState({ hovered: true })
-  }
+  // changeLook() {
+  //   this.setState({ hovered: true })
+  // }
 
   render() {
 
     const oldLookFooter = (
-      <div key={ Math.random() } className='old-contact-info' onMouseEnter={() => this.changeLook()}>
+      <div key={ Math.random() } className='old-contact-info'>
         <div className='email'>
           <img src="./assets/pupemail.gif" />
         </div>
@@ -60,7 +60,7 @@ class Footer extends React.Component {
           transitionName="fade"
           transitionEnterTimeout={500}
           transitionLeaveTimeout={300}>
-          { this.state.hovered ? newLookFooter : oldLookFooter }
+          { this.props.style === "new" ? newLookFooter : oldLookFooter }
         </ReactCSSTransitionGroup>
       </div>
     )

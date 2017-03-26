@@ -5,21 +5,21 @@ class ProjectHeader extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      hovered: false
-    };
+    // this.state = {
+    //   hovered: false
+    // };
 
-    this.changeLook = this.changeLook.bind(this);
+    // this.changeLook = this.changeLook.bind(this);
   }
 
-  changeLook() {
-    this.setState({hovered: true})
-  }
+  // changeLook() {
+  //   this.setState({hovered: true})
+  // }
 
   render() {
 
     const oldLookProjectHeader = (
-      <h4 key={Math.random()} className='old-projects-title' onMouseEnter={() => this.changeLook()}>Projects</h4>
+      <h4 key={Math.random()} className='old-projects-title'>Projects</h4>
     )
 
     const newLookProjectHeader = (
@@ -32,7 +32,7 @@ class ProjectHeader extends React.Component {
           transitionName="fade"
           transitionEnterTimeout={500}
           transitionLeaveTimeout={300}>
-          { this.state.hovered ? newLookProjectHeader : oldLookProjectHeader }
+          { this.props.style === "new" ? newLookProjectHeader : oldLookProjectHeader }
         </ReactCSSTransitionGroup>
       </div>
     )

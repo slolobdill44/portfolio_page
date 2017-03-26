@@ -5,16 +5,16 @@ class Project extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      hovered: false
-    };
-
-    this.changeLook = this.changeLook.bind(this);
+    // this.state = {
+    //   hovered: false
+    // };
+    //
+    // this.changeLook = this.changeLook.bind(this);
   }
 
-  changeLook() {
-    this.setState({hovered: true})
-  }
+  // changeLook() {
+  //   this.setState({hovered: true})
+  // }
 
   render () {
     const techUsed = this.props.projectInfo.tech.map(tech => {
@@ -35,8 +35,7 @@ class Project extends React.Component {
 
     const oldLookProject = (
       <div key={Math.random()}
-          className='old-single-project-container'
-          onMouseEnter={() => this.changeLook()}>
+          className='old-single-project-container'>
         <div className='old-single-project'>
           <a className='old-single-project-screenshot-container' href={`${this.props.projectInfo.link}`} target="_blank">
             <img className='old-single-project-screenshot' src={`${this.props.projectInfo.image}`}  />
@@ -89,7 +88,7 @@ class Project extends React.Component {
         transitionName="fade"
         transitionEnterTimeout={500}
         transitionLeaveTimeout={300}>
-        { this.state.hovered ? newLookProject : oldLookProject }
+        { this.props.style === "new" ? newLookProject : oldLookProject }
       </ReactCSSTransitionGroup>
     </div>
     )

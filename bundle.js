@@ -11448,26 +11448,22 @@ var BannerAdRow = function (_React$Component) {
   function BannerAdRow(props) {
     _classCallCheck(this, BannerAdRow);
 
-    var _this = _possibleConstructorReturn(this, (BannerAdRow.__proto__ || Object.getPrototypeOf(BannerAdRow)).call(this, props));
+    return _possibleConstructorReturn(this, (BannerAdRow.__proto__ || Object.getPrototypeOf(BannerAdRow)).call(this, props));
 
-    _this.state = {
-      hovered: false
-    };
+    // this.state = {
+    //   hovered: false
+    // };
 
-    _this.changeLook = _this.changeLook.bind(_this);
-    return _this;
+    // this.changeLook = this.changeLook.bind(this);
   }
 
+  // changeLook() {
+  //   this.setState({ hovered: true })
+  // }
+
   _createClass(BannerAdRow, [{
-    key: 'changeLook',
-    value: function changeLook() {
-      this.setState({ hovered: true });
-    }
-  }, {
     key: 'render',
     value: function render() {
-      var _this2 = this;
-
       var bannerAds = this.props.ads.map(function (ad) {
         return _react2.default.createElement(
           'a',
@@ -11478,9 +11474,7 @@ var BannerAdRow = function (_React$Component) {
 
       var oldLookBannerRow = _react2.default.createElement(
         'div',
-        { key: Math.random(), className: 'old-banner-row-container', onMouseEnter: function onMouseEnter() {
-            return _this2.changeLook();
-          } },
+        { key: Math.random(), className: 'old-banner-row-container' },
         _react2.default.createElement(
           'div',
           { className: 'old-banner-row' },
@@ -11507,7 +11501,7 @@ var BannerAdRow = function (_React$Component) {
             transitionName: 'fade',
             transitionEnterTimeout: 500,
             transitionLeaveTimeout: 300 },
-          this.state.hovered ? newLookBannerRow : oldLookBannerRow
+          this.props.style === "new" ? newLookBannerRow : oldLookBannerRow
         )
       );
     }
@@ -11549,31 +11543,26 @@ var Footer = function (_React$Component) {
   function Footer(props) {
     _classCallCheck(this, Footer);
 
-    var _this = _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).call(this, props));
+    return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).call(this, props));
 
-    _this.state = {
-      hovered: false
-    };
-
-    _this.changeLook = _this.changeLook.bind(_this);
-    return _this;
+    // this.state = {
+    //   hovered: false
+    // }
+    //
+    // this.changeLook = this.changeLook.bind(this);
   }
 
+  // changeLook() {
+  //   this.setState({ hovered: true })
+  // }
+
   _createClass(Footer, [{
-    key: 'changeLook',
-    value: function changeLook() {
-      this.setState({ hovered: true });
-    }
-  }, {
     key: 'render',
     value: function render() {
-      var _this2 = this;
 
       var oldLookFooter = _react2.default.createElement(
         'div',
-        { key: Math.random(), className: 'old-contact-info', onMouseEnter: function onMouseEnter() {
-            return _this2.changeLook();
-          } },
+        { key: Math.random(), className: 'old-contact-info' },
         _react2.default.createElement(
           'div',
           { className: 'email' },
@@ -11648,7 +11637,7 @@ var Footer = function (_React$Component) {
             transitionName: 'fade',
             transitionEnterTimeout: 500,
             transitionLeaveTimeout: 300 },
-          this.state.hovered ? newLookFooter : oldLookFooter
+          this.props.style === "new" ? newLookFooter : oldLookFooter
         )
       );
     }
@@ -11842,26 +11831,22 @@ var Project = function (_React$Component) {
   function Project(props) {
     _classCallCheck(this, Project);
 
-    var _this = _possibleConstructorReturn(this, (Project.__proto__ || Object.getPrototypeOf(Project)).call(this, props));
+    return _possibleConstructorReturn(this, (Project.__proto__ || Object.getPrototypeOf(Project)).call(this, props));
 
-    _this.state = {
-      hovered: false
-    };
-
-    _this.changeLook = _this.changeLook.bind(_this);
-    return _this;
+    // this.state = {
+    //   hovered: false
+    // };
+    //
+    // this.changeLook = this.changeLook.bind(this);
   }
 
+  // changeLook() {
+  //   this.setState({hovered: true})
+  // }
+
   _createClass(Project, [{
-    key: 'changeLook',
-    value: function changeLook() {
-      this.setState({ hovered: true });
-    }
-  }, {
     key: 'render',
     value: function render() {
-      var _this2 = this;
-
       var techUsed = this.props.projectInfo.tech.map(function (tech) {
         if (tech.link.includes("matter-js")) {
           return _react2.default.createElement(
@@ -11881,10 +11866,7 @@ var Project = function (_React$Component) {
       var oldLookProject = _react2.default.createElement(
         'div',
         { key: Math.random(),
-          className: 'old-single-project-container',
-          onMouseEnter: function onMouseEnter() {
-            return _this2.changeLook();
-          } },
+          className: 'old-single-project-container' },
         _react2.default.createElement(
           'div',
           { className: 'old-single-project' },
@@ -11974,7 +11956,7 @@ var Project = function (_React$Component) {
             transitionName: 'fade',
             transitionEnterTimeout: 500,
             transitionLeaveTimeout: 300 },
-          this.state.hovered ? newLookProject : oldLookProject
+          this.props.style === "new" ? newLookProject : oldLookProject
         )
       );
     }
@@ -12016,31 +11998,26 @@ var ProjectHeader = function (_React$Component) {
   function ProjectHeader(props) {
     _classCallCheck(this, ProjectHeader);
 
-    var _this = _possibleConstructorReturn(this, (ProjectHeader.__proto__ || Object.getPrototypeOf(ProjectHeader)).call(this, props));
+    return _possibleConstructorReturn(this, (ProjectHeader.__proto__ || Object.getPrototypeOf(ProjectHeader)).call(this, props));
 
-    _this.state = {
-      hovered: false
-    };
+    // this.state = {
+    //   hovered: false
+    // };
 
-    _this.changeLook = _this.changeLook.bind(_this);
-    return _this;
+    // this.changeLook = this.changeLook.bind(this);
   }
 
+  // changeLook() {
+  //   this.setState({hovered: true})
+  // }
+
   _createClass(ProjectHeader, [{
-    key: 'changeLook',
-    value: function changeLook() {
-      this.setState({ hovered: true });
-    }
-  }, {
     key: 'render',
     value: function render() {
-      var _this2 = this;
 
       var oldLookProjectHeader = _react2.default.createElement(
         'h4',
-        { key: Math.random(), className: 'old-projects-title', onMouseEnter: function onMouseEnter() {
-            return _this2.changeLook();
-          } },
+        { key: Math.random(), className: 'old-projects-title' },
         'Projects'
       );
 
@@ -12059,7 +12036,7 @@ var ProjectHeader = function (_React$Component) {
             transitionName: 'fade',
             transitionEnterTimeout: 500,
             transitionLeaveTimeout: 300 },
-          this.state.hovered ? newLookProjectHeader : oldLookProjectHeader
+          this.props.style === "new" ? newLookProjectHeader : oldLookProjectHeader
         )
       );
     }
@@ -24601,13 +24578,13 @@ var Root = function (_React$Component) {
           { className: 'style-switch-button', onClick: function onClick() {
               return _this2.switchStyles();
             } },
-          'GO OLD SCHOOL'
+          'GO OLD SCHOOL!'
         ) : _react2.default.createElement(
           'button',
           { className: 'style-switch-button', onClick: function onClick() {
               return _this2.switchStyles();
             } },
-          'GO NEW SCHOOL'
+          'TAKE ME BACK!'
         ),
         _react2.default.createElement(_header2.default, { style: this.state.pageStyle }),
         _react2.default.createElement(

@@ -107,9 +107,9 @@ class Root extends React.Component {
 
         {
           this.state.pageStyle === "new" ? (
-            <button className='style-switch-button' onClick={() => this.switchStyles()}>GO OLD SCHOOL</button>
+            <button className='style-switch-button' onClick={() => this.switchStyles()}>GO OLD SCHOOL!</button>
           ) : (
-            <button className='style-switch-button' onClick={() => this.switchStyles()}>GO NEW SCHOOL</button>
+            <button className='style-switch-button' onClick={() => this.switchStyles()}>TAKE ME BACK!</button>
           )
         }
 
