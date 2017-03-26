@@ -11742,7 +11742,7 @@ var Header = function (_React$Component) {
         _react2.default.createElement(
           'h1',
           { className: 'new-header-name' },
-          'Adrian Lobdill'
+          'ADRIAN LOBDILL'
         ),
         _react2.default.createElement(
           'div',
@@ -11750,15 +11750,14 @@ var Header = function (_React$Component) {
           _react2.default.createElement(
             'h4',
             { className: 'new-header-description' },
-            'Software Developer | QA Advocate'
+            'SOFTWARE DEVELOPER'
           )
         ),
         _react2.default.createElement(
           'p',
           null,
-          '~'
+          ' '
         ),
-        _react2.default.createElement('br', null),
         _react2.default.createElement(
           'div',
           { className: 'new-contact-links' },
@@ -11772,8 +11771,7 @@ var Header = function (_React$Component) {
             { href: 'http://www.linkedin.com/in/lobdill', target: '_blank' },
             _react2.default.createElement('img', { className: 'new-contact-logo', src: './assets/linked_in.png' })
           )
-        ),
-        _react2.default.createElement('img', { className: 'header-palms', src: './assets/banner_palm.gif' })
+        )
       );
 
       return _react2.default.createElement(
@@ -24545,7 +24543,7 @@ var Root = function (_React$Component) {
         title: "Tweet The Bay",
         link: "http://www.tweetthebay.com/#/",
         image: "./assets/tweetthebaycropped.png",
-        description: "Twitter mapping application that places tweets on a map as they are live tweeted and also allows the user to search by keyword for recent tweets.",
+        description: "Twitter mapping application that places tweets on a map as they are live tweeted and also allows searching by keyword.",
         tech: [{
           link: "https://facebook.github.io/react/",
           image: "./assets/react.svg"
@@ -24599,7 +24597,6 @@ var Root = function (_React$Component) {
         _react2.default.createElement(
           'div',
           { className: 'project-body-container' },
-          _react2.default.createElement('div', { className: 'page-clear' }),
           _react2.default.createElement(
             'main',
             { className: 'new-project-body-background' },
@@ -24634,8 +24631,7 @@ var Root = function (_React$Component) {
                 style: this.state.pageStyle })
             ),
             _react2.default.createElement(_footer2.default, { style: this.state.pageStyle })
-          ),
-          _react2.default.createElement('div', { className: 'page-clear' })
+          )
         )
       );
     }

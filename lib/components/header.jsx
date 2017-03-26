@@ -38,17 +38,15 @@ class Header extends React.Component {
 
     const newLookHeader = (
       <header className='new-header-container' key={Math.random()}>
-        <h1 className='new-header-name'>Adrian Lobdill</h1>
+        <h1 className='new-header-name'>ADRIAN LOBDILL</h1>
         <div>
-          <h4 className='new-header-description'>Software Developer | QA Advocate</h4>
+          <h4 className='new-header-description'>SOFTWARE DEVELOPER</h4>
         </div>
-        <p>&#126;</p>
-        <br  />
+        <p> </p>
         <div className='new-contact-links'>
           <a href='https://github.com/slolobdill44' target="_blank"><img className='new-contact-logo' src='./assets/GitHub-Mark-64px.png' /></a>
           <a href='http://www.linkedin.com/in/lobdill' target="_blank"><img className='new-contact-logo' src='./assets/linked_in.png' /></a>
         </div>
-        <img className='header-palms' src='./assets/banner_palm.gif' />
       </header>
     )
 

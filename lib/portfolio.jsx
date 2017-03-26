@@ -60,7 +60,7 @@ class Root extends React.Component {
       title: "Tweet The Bay",
       link: "http://www.tweetthebay.com/#/",
       image: "./assets/tweetthebaycropped.png",
-      description: "Twitter mapping application that places tweets on a map as they are live tweeted and also allows the user to search by keyword for recent tweets.",
+      description: "Twitter mapping application that places tweets on a map as they are live tweeted and also allows searching by keyword.",
       tech: [
         {
           link: "https://facebook.github.io/react/",
@@ -117,7 +117,6 @@ class Root extends React.Component {
 
 
 
-          <div className='page-clear'></div>
           <main className='new-project-body-background'>
 
 
@@ -170,7 +169,6 @@ class Root extends React.Component {
             <Footer style={this.state.pageStyle} />
 
           </main>
-          <div className='page-clear'></div>
 
         </div>
       </div>
