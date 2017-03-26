@@ -226,6 +226,13 @@ marquee {
 
 /**//**//**//**//**//**/
 
+.new-project-body-background {
+  background-color: rgba(190,190,190,0.7);
+  margin: 0 auto;
+  width: 90%;
+  height: 100%;
+}
+
 .new-header-container {
   font-family: 'Source Sans Pro', sans-serif;
   /*background-color: #BED8F4;*/
