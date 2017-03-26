@@ -24582,54 +24582,60 @@ var Root = function (_React$Component) {
 
       return _react2.default.createElement(
         'div',
-        { className: 'project-body-container' },
+        null,
+        this.state.pageStyle === "new" ? _react2.default.createElement(
+          'button',
+          { className: 'style-switch-button', onClick: function onClick() {
+              return _this2.switchStyles();
+            } },
+          'GO OLD SCHOOL!'
+        ) : _react2.default.createElement(
+          'button',
+          { className: 'style-switch-button', onClick: function onClick() {
+              return _this2.switchStyles();
+            } },
+          'TAKE ME BACK!'
+        ),
         _react2.default.createElement(
-          'main',
-          { className: 'new-project-body-background' },
-          this.state.pageStyle === "new" ? _react2.default.createElement(
-            'button',
-            { className: 'style-switch-button', onClick: function onClick() {
-                return _this2.switchStyles();
-              } },
-            'GO OLD SCHOOL!'
-          ) : _react2.default.createElement(
-            'button',
-            { className: 'style-switch-button', onClick: function onClick() {
-                return _this2.switchStyles();
-              } },
-            'TAKE ME BACK!'
-          ),
-          _react2.default.createElement(_header2.default, { style: this.state.pageStyle }),
+          'div',
+          { className: 'project-body-container' },
+          _react2.default.createElement('div', { className: 'page-clear' }),
           _react2.default.createElement(
-            'section',
-            { className: 'projects-section' },
-            _react2.default.createElement(_project_header2.default, { style: this.state.pageStyle }),
-            _react2.default.createElement(_project2.default, {
-              projectInfo: hamcampInfo,
-              style: this.state.pageStyle }),
-            _react2.default.createElement(_banner_ad_row2.default, {
-              ads: [{
-                link: 'https://en.wikipedia.org/wiki/AltaVista',
-                image: './assets/advertisements/altavista.gif'
-              }, {
-                link: 'https://en.wikipedia.org/wiki/MSN_TV',
-                image: './assets/advertisements/webtvlogo.gif'
-              }],
-              style: this.state.pageStyle }),
-            _react2.default.createElement(_project2.default, {
-              projectInfo: tweetTheBayInfo,
-              style: this.state.pageStyle }),
-            _react2.default.createElement(_banner_ad_row2.default, {
-              ads: [{
-                link: 'https://en.wikipedia.org/wiki/Napster',
-                image: './assets/advertisements/napster_premium.gif'
-              }],
-              style: this.state.pageStyle }),
-            _react2.default.createElement(_project2.default, {
-              projectInfo: hamhuckinInfo,
-              style: this.state.pageStyle })
+            'main',
+            { className: 'new-project-body-background' },
+            _react2.default.createElement(_header2.default, { style: this.state.pageStyle }),
+            _react2.default.createElement(
+              'section',
+              { className: 'projects-section' },
+              _react2.default.createElement(_project_header2.default, { style: this.state.pageStyle }),
+              _react2.default.createElement(_project2.default, {
+                projectInfo: hamcampInfo,
+                style: this.state.pageStyle }),
+              _react2.default.createElement(_banner_ad_row2.default, {
+                ads: [{
+                  link: 'https://en.wikipedia.org/wiki/AltaVista',
+                  image: './assets/advertisements/altavista.gif'
+                }, {
+                  link: 'https://en.wikipedia.org/wiki/MSN_TV',
+                  image: './assets/advertisements/webtvlogo.gif'
+                }],
+                style: this.state.pageStyle }),
+              _react2.default.createElement(_project2.default, {
+                projectInfo: tweetTheBayInfo,
+                style: this.state.pageStyle }),
+              _react2.default.createElement(_banner_ad_row2.default, {
+                ads: [{
+                  link: 'https://en.wikipedia.org/wiki/Napster',
+                  image: './assets/advertisements/napster_premium.gif'
+                }],
+                style: this.state.pageStyle }),
+              _react2.default.createElement(_project2.default, {
+                projectInfo: hamhuckinInfo,
+                style: this.state.pageStyle })
+            ),
+            _react2.default.createElement(_footer2.default, { style: this.state.pageStyle })
           ),
-          _react2.default.createElement(_footer2.default, { style: this.state.pageStyle })
+          _react2.default.createElement('div', { className: 'page-clear' })
         )
       );
     }

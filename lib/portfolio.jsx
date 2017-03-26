@@ -105,66 +105,74 @@ class Root extends React.Component {
     //potentially have project-body-background class be dependent on 'new' or 'old' state
 
     return (
-      <div className='project-body-container'>
-        <main className='new-project-body-background'>
-          {
-            this.state.pageStyle === "new" ? (
-              <button className='style-switch-button' onClick={() => this.switchStyles()}>GO OLD SCHOOL!</button>
-            ) : (
-              <button className='style-switch-button' onClick={() => this.switchStyles()}>TAKE ME BACK!</button>
-            )
-          }
+      <div>
+        {
+          this.state.pageStyle === "new" ? (
+            <button className='style-switch-button' onClick={() => this.switchStyles()}>GO OLD SCHOOL!</button>
+          ) : (
+            <button className='style-switch-button' onClick={() => this.switchStyles()}>TAKE ME BACK!</button>
+          )
+        }
+        <div className='project-body-container'>
 
 
-          <Header style={this.state.pageStyle} />
 
-          <section className='projects-section'>
+          <div className='page-clear'></div>
+          <main className='new-project-body-background'>
 
-            <ProjectHeader style={this.state.pageStyle} />
 
-            <Project
-              projectInfo={hamcampInfo}
-              style={this.state.pageStyle} />
+            <Header style={this.state.pageStyle} />
 
-            <BannerAdRow
-              ads = {
-                [
-                  {
-                    link: 'https://en.wikipedia.org/wiki/AltaVista',
-                    image: './assets/advertisements/altavista.gif'
-                  },
-                  {
-                    link: 'https://en.wikipedia.org/wiki/MSN_TV',
-                    image: './assets/advertisements/webtvlogo.gif'
-                  },
-                ]
-              }
-              style={this.state.pageStyle} />
+            <section className='projects-section'>
 
-            <Project
-              projectInfo={tweetTheBayInfo}
-              style={this.state.pageStyle} />
+              <ProjectHeader style={this.state.pageStyle} />
 
-            <BannerAdRow
-              ads = {
-                [
-                  {
-                    link: 'https://en.wikipedia.org/wiki/Napster',
-                    image: './assets/advertisements/napster_premium.gif'
-                  }
-                ]
-              }
-              style={this.state.pageStyle} />
+              <Project
+                projectInfo={hamcampInfo}
+                style={this.state.pageStyle} />
 
-            <Project
-              projectInfo={hamhuckinInfo}
-              style={this.state.pageStyle} />
+              <BannerAdRow
+                ads = {
+                  [
+                    {
+                      link: 'https://en.wikipedia.org/wiki/AltaVista',
+                      image: './assets/advertisements/altavista.gif'
+                    },
+                    {
+                      link: 'https://en.wikipedia.org/wiki/MSN_TV',
+                      image: './assets/advertisements/webtvlogo.gif'
+                    },
+                  ]
+                }
+                style={this.state.pageStyle} />
 
-          </section>
+              <Project
+                projectInfo={tweetTheBayInfo}
+                style={this.state.pageStyle} />
 
-          <Footer style={this.state.pageStyle} />
-        </main>
+              <BannerAdRow
+                ads = {
+                  [
+                    {
+                      link: 'https://en.wikipedia.org/wiki/Napster',
+                      image: './assets/advertisements/napster_premium.gif'
+                    }
+                  ]
+                }
+                style={this.state.pageStyle} />
 
+              <Project
+                projectInfo={hamhuckinInfo}
+                style={this.state.pageStyle} />
+
+            </section>
+
+            <Footer style={this.state.pageStyle} />
+
+          </main>
+          <div className='page-clear'></div>
+
+        </div>
       </div>
     )
   };
