@@ -23,7 +23,11 @@ class ProjectHeader extends React.Component {
     )
 
     const newLookProjectHeader = (
-      <h4 key={Math.random()} className='new-projects-title'>Projects</h4>
+      <div key={Math.random()} className='new-projects-title-border-container'>
+        <div className='new-projects-title-border'>
+          <h4 className='new-projects-title'>Projects</h4>
+        </div>
+      </div>
     )
 
     return (

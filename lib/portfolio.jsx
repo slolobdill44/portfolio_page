@@ -103,7 +103,7 @@ class Root extends React.Component {
     };
 
     return (
-      <div>
+      <div className='project-body-container'>
 
         {
           this.state.pageStyle === "new" ? (

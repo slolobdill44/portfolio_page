@@ -12022,9 +12022,17 @@ var ProjectHeader = function (_React$Component) {
       );
 
       var newLookProjectHeader = _react2.default.createElement(
-        'h4',
-        { key: Math.random(), className: 'new-projects-title' },
-        'Projects'
+        'div',
+        { key: Math.random(), className: 'new-projects-title-border-container' },
+        _react2.default.createElement(
+          'div',
+          { className: 'new-projects-title-border' },
+          _react2.default.createElement(
+            'h4',
+            { className: 'new-projects-title' },
+            'Projects'
+          )
+        )
       );
 
       return _react2.default.createElement(
@@ -24572,7 +24580,7 @@ var Root = function (_React$Component) {
 
       return _react2.default.createElement(
         'div',
-        null,
+        { className: 'project-body-container' },
         this.state.pageStyle === "new" ? _react2.default.createElement(
           'button',
           { className: 'style-switch-button', onClick: function onClick() {
