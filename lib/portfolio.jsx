@@ -8,6 +8,23 @@ import BannerAdRow from './components/banner_ad_row';
 import Footer from './components/footer';
 
 class Root extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      pageStyle: "new"
+    };
+
+    this.switchStyles = this.switchStyles.bind(this);
+  }
+
+  switchStyles() {
+    if (this.state.pageStyle === "new") {
+      this.setState({pageStyle: "old"});
+    } else {
+      this.setState({pageStyle: "new"});
+    }
+  }
 
   render() {
     const hamcampInfo = {
@@ -43,7 +60,7 @@ class Root extends React.Component {
       title: "Tweet The Bay",
       link: "http://www.tweetthebay.com/#/",
       image: "./assets/tweetthebaycropped.png",
-      description: "Twitter mapping application that places tweets on a map as they are live tweeted and also allows the user to search by keyword for recent tweets.",
+      description: "Twitter mapping application that places tweets on a map as they are live tweeted and also allows searching by keyword.",
       tech: [
         {
           link: "https://facebook.github.io/react/",
@@ -85,51 +102,69 @@ class Root extends React.Component {
       ]
     };
 
+    //potentially have project-body-background class be dependent on 'new' or 'old' state
+
     return (
       <div>
 
-        <Header />
+        <div className='project-body-container'>
 
-        <section className='projects-section'>
 
-          <ProjectHeader />
 
-          <Project
-            projectInfo={hamcampInfo} />
+          <main className='new-project-body-background'>
 
-          <BannerAdRow
-            ads = {
-              [
-                {
-                  link: 'https://en.wikipedia.org/wiki/AltaVista',
-                  image: './assets/altavista.gif'
-                },
-                {
-                  link: 'https://en.wikipedia.org/wiki/MSN_TV',
-                  image: './assets/webtvlogo.gif'
-                },
-              ]
-            }
-             />
 
-           <Project
-             projectInfo={tweetTheBayInfo} />
+            <Header style={this.state.pageStyle} />
 
-          <BannerAdRow
-            ads = {
-              [
-                {
-                  link: 'https://en.wikipedia.org/wiki/Napster',
-                  image: './assets/napster_premium.gif'
+            <section className='projects-section'>
+
+              <ProjectHeader style={this.state.pageStyle} />
+
+              <Project
+                projectInfo={hamcampInfo}
+                style={this.state.pageStyle} />
+
+              <BannerAdRow
+                ads = {
+                  [
+                    {
+                      link: 'https://en.wikipedia.org/wiki/AltaVista',
+                      image: './assets/advertisements/altavista.gif'
+                    },
+                    {
+                      link: 'https://en.wikipedia.org/wiki/MSN_TV',
+                      image: './assets/advertisements/webtvlogo.gif'
+                    },
+                  ]
                 }
-              ]
-            } />
+                style={this.state.pageStyle} />
 
-           <Project
-             projectInfo={hamhuckinInfo} />
-        </section>
+              <Project
+                projectInfo={tweetTheBayInfo}
+                style={this.state.pageStyle} />
 
-        <Footer />
+              <BannerAdRow
+                ads = {
+                  [
+                    {
+                      link: 'https://en.wikipedia.org/wiki/Napster',
+                      image: './assets/advertisements/napster_premium.gif'
+                    }
+                  ]
+                }
+                style={this.state.pageStyle} />
+
+              <Project
+                projectInfo={hamhuckinInfo}
+                style={this.state.pageStyle} />
+
+            </section>
+
+            <Footer style={this.state.pageStyle} />
+
+          </main>
+
+        </div>
       </div>
     )
   };

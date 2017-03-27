@@ -5,16 +5,16 @@ class BannerAdRow extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      hovered: false
-    };
+    // this.state = {
+    //   hovered: false
+    // };
 
-    this.changeLook = this.changeLook.bind(this);
+    // this.changeLook = this.changeLook.bind(this);
   }
 
-  changeLook() {
-    this.setState({ hovered: true })
-  }
+  // changeLook() {
+  //   this.setState({ hovered: true })
+  // }
 
   render () {
     const bannerAds = this.props.ads.map(ad => {
@@ -26,7 +26,7 @@ class BannerAdRow extends React.Component {
     });
 
     const oldLookBannerRow = (
-      <div key={Math.random()} className='old-banner-row-container' onMouseEnter={() => this.changeLook()}>
+      <div key={Math.random()} className='old-banner-row-container'>
         <div className='old-banner-row'>
           {bannerAds}
         </div>
@@ -36,7 +36,7 @@ class BannerAdRow extends React.Component {
     const newLookBannerRow = (
       <div key={Math.random()} className='new-banner-row-container'>
         <div className='new-banner-row'>
-          {bannerAds}
+          <div className='new-banner-row-divider'></div>
         </div>
       </div>
     );
@@ -47,7 +47,7 @@ class BannerAdRow extends React.Component {
           transitionName="fade"
           transitionEnterTimeout={500}
           transitionLeaveTimeout={300}>
-          { this.state.hovered ? newLookBannerRow : oldLookBannerRow }
+          { this.props.style === "new" ? newLookBannerRow : oldLookBannerRow }
         </ReactCSSTransitionGroup>
       </div>
     )
