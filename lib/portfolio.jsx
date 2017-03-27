@@ -106,13 +106,7 @@ class Root extends React.Component {
 
     return (
       <div>
-        {
-          this.state.pageStyle === "new" ? (
-            <button className='style-switch-button' onClick={() => this.switchStyles()}>GO OLD SCHOOL!</button>
-          ) : (
-            <button className='style-switch-button' onClick={() => this.switchStyles()}>TAKE ME BACK!</button>
-          )
-        }
+
         <div className='project-body-container'>
 
 

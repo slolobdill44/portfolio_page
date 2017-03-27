@@ -11611,19 +11611,6 @@ var Footer = function (_React$Component) {
                 'Resume'
               )
             )
-          ),
-          _react2.default.createElement(
-            'a',
-            { href: 'http://pub38.bravenet.com/guestbook/3253034921/', target: '_blank' },
-            _react2.default.createElement(
-              'div',
-              { className: 'new-guest-book' },
-              _react2.default.createElement(
-                'p',
-                null,
-                'Guestbook'
-              )
-            )
           )
         )
       );
@@ -24576,8 +24563,6 @@ var Root = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _this2 = this;
-
       var hamcampInfo = {
         title: "Hamcamp",
         link: "http://www.hamcamp.co/#/",
@@ -24643,19 +24628,6 @@ var Root = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         null,
-        this.state.pageStyle === "new" ? _react2.default.createElement(
-          'button',
-          { className: 'style-switch-button', onClick: function onClick() {
-              return _this2.switchStyles();
-            } },
-          'GO OLD SCHOOL!'
-        ) : _react2.default.createElement(
-          'button',
-          { className: 'style-switch-button', onClick: function onClick() {
-              return _this2.switchStyles();
-            } },
-          'TAKE ME BACK!'
-        ),
         _react2.default.createElement(
           'div',
           { className: 'project-body-container' },

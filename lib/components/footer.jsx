@@ -45,11 +45,7 @@ class Footer extends React.Component {
               <p>Resume</p>
             </div>
           </a>
-          <a href="http://pub38.bravenet.com/guestbook/3253034921/" target="_blank">
-            <div className='new-guest-book'>
-              <p>Guestbook</p>
-            </div>
-          </a>
+
       </section>
       </div>
     )
