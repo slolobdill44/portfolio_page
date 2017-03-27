@@ -55,7 +55,7 @@ class Footer extends React.Component {
     )
 
     return (
-      <div>
+      <div id="main-footer">
         <ReactCSSTransitionGroup
           transitionName="fade"
           transitionEnterTimeout={500}

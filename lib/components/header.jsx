@@ -1,5 +1,9 @@
 import React from 'react';
+import Scroll from 'react-scroll';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
+const Events = Scroll.Events;
+const scroll     = Scroll.animateScroll;
 
 class Header extends React.Component {
   constructor(props) {
@@ -10,11 +14,40 @@ class Header extends React.Component {
     // };
     //
     // this.changeLook = this.changeLook.bind(this);
+    this.scrollToContacts = this.scrollToContacts.bind(this);
+    this.scrollToBottom = this.scrollToBottom.bind(this);
+    this.events = Scroll.Events;
+    this.scroll = Scroll.animateScroll;
   }
+
+  componentDidMount() {
+
+    this.events.scrollEvent.register('begin', function(to, element) {
+      console.log("begin", arguments);
+    });
+
+    this.events.scrollEvent.register('end', function(to, element) {
+      console.log("end", arguments);
+    });
+
+    // scrollSpy.update();
+
+  };
 
   // changeLook() {
   //   this.setState({hovered: true})
   // }
+
+  scrollToBottom() {
+      this.scroll.scrollToBottom();
+  };
+
+  scrollToContacts() {
+    // const contactSection = document.getElementById("main-footer");
+    //
+    // contactSection.scrollIntoView();
+    this.scroll.scrollToBottom();
+  }
 
   render() {
 
@@ -51,7 +84,7 @@ class Header extends React.Component {
             <h4 className='new-header-description'>Software Developer</h4>
             <h4 className='new-header-description'>Project Portfolio</h4>
           </div>
-          <div className='new-header-contact-scroll-button'>
+          <div className='new-header-contact-scroll-button' onClick={() => this.scrollToContacts()}>
             <p>Contact</p>
           </div>
         </div>

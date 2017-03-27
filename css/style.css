@@ -305,7 +305,7 @@ marquee {
   transition: background-color 0.4s;
   /* transition: color 0.35s; */
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 300;
   text-align: center;
   line-height: 1.4;
 }
@@ -493,7 +493,7 @@ marquee {
   /* background-color: #BED8F4; */
   /* min-width: 912px; */
   border-radius: 5px;
-  background-color: rgba(244,239,231,0.6);
+  /*background-color: rgba(244,239,231,0.6);*/
 }
 
 .new-contact-info {
@@ -513,6 +513,8 @@ marquee {
   /* transition: 0.4s border, color 0.4s; */
   transition: background-color 0.4s;
   /* transition: color 0.35s; */
+  background-color: rgba(244,239,231,0.8);
+
   font-size: 24px;
   font-weight: 300;
   text-align: center;
