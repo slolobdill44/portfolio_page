@@ -11740,36 +11740,54 @@ var Header = function (_React$Component) {
         'header',
         { className: 'new-header-container', key: Math.random() },
         _react2.default.createElement(
-          'h1',
-          { className: 'new-header-name' },
-          'ADRIAN LOBDILL'
-        ),
-        _react2.default.createElement(
           'div',
-          null,
+          { className: 'new-header-profile-photo-container' },
+          _react2.default.createElement('img', { className: 'new-header-profile-photo', src: './assets/circular_headshot.png' }),
           _react2.default.createElement(
-            'h4',
-            { className: 'new-header-description' },
-            'SOFTWARE DEVELOPER'
+            'div',
+            { className: 'new-contact-links' },
+            _react2.default.createElement(
+              'a',
+              { href: 'https://github.com/slolobdill44', target: '_blank' },
+              _react2.default.createElement('img', { className: 'new-contact-logo', src: './assets/GitHub-Mark-64px.png' })
+            ),
+            _react2.default.createElement(
+              'a',
+              { href: 'http://www.linkedin.com/in/lobdill', target: '_blank' },
+              _react2.default.createElement('img', { className: 'new-contact-logo', src: './assets/linked_in.png' })
+            )
           )
         ),
         _react2.default.createElement(
-          'p',
-          null,
-          ' '
-        ),
-        _react2.default.createElement(
           'div',
-          { className: 'new-contact-links' },
+          null,
           _react2.default.createElement(
-            'a',
-            { href: 'https://github.com/slolobdill44', target: '_blank' },
-            _react2.default.createElement('img', { className: 'new-contact-logo', src: './assets/GitHub-Mark-64px.png' })
+            'div',
+            { className: 'new-header-info-container' },
+            _react2.default.createElement(
+              'h1',
+              { className: 'new-header-name' },
+              'ADRIAN LOBDILL'
+            ),
+            _react2.default.createElement(
+              'h4',
+              { className: 'new-header-description' },
+              'Software Developer'
+            ),
+            _react2.default.createElement(
+              'h4',
+              { className: 'new-header-description' },
+              'Project Portfolio'
+            )
           ),
           _react2.default.createElement(
-            'a',
-            { href: 'http://www.linkedin.com/in/lobdill', target: '_blank' },
-            _react2.default.createElement('img', { className: 'new-contact-logo', src: './assets/linked_in.png' })
+            'div',
+            { className: 'new-header-contact-scroll-button' },
+            _react2.default.createElement(
+              'p',
+              null,
+              'Contact'
+            )
           )
         )
       );
@@ -12028,7 +12046,7 @@ var ProjectHeader = function (_React$Component) {
           _react2.default.createElement(
             'h4',
             { className: 'new-projects-title' },
-            'Projects'
+            ' '
           )
         )
       );

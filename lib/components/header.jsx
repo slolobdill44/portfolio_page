@@ -38,14 +38,22 @@ class Header extends React.Component {
 
     const newLookHeader = (
       <header className='new-header-container' key={Math.random()}>
-        <h1 className='new-header-name'>ADRIAN LOBDILL</h1>
-        <div>
-          <h4 className='new-header-description'>SOFTWARE DEVELOPER</h4>
+        <div className='new-header-profile-photo-container'>
+          <img className='new-header-profile-photo' src='./assets/circular_headshot.png' />
+          <div className='new-contact-links'>
+            <a href='https://github.com/slolobdill44' target="_blank"><img className='new-contact-logo' src='./assets/GitHub-Mark-64px.png' /></a>
+            <a href='http://www.linkedin.com/in/lobdill' target="_blank"><img className='new-contact-logo' src='./assets/linked_in.png' /></a>
+          </div>
         </div>
-        <p> </p>
-        <div className='new-contact-links'>
-          <a href='https://github.com/slolobdill44' target="_blank"><img className='new-contact-logo' src='./assets/GitHub-Mark-64px.png' /></a>
-          <a href='http://www.linkedin.com/in/lobdill' target="_blank"><img className='new-contact-logo' src='./assets/linked_in.png' /></a>
+        <div>
+          <div className='new-header-info-container'>
+            <h1 className='new-header-name'>ADRIAN LOBDILL</h1>
+            <h4 className='new-header-description'>Software Developer</h4>
+            <h4 className='new-header-description'>Project Portfolio</h4>
+          </div>
+          <div className='new-header-contact-scroll-button'>
+            <p>Contact</p>
+          </div>
         </div>
       </header>
     )
