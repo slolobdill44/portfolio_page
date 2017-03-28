@@ -455,8 +455,8 @@ marquee {
 }
 
 .new-single-project-description-link h3 {
-  border: 2px solid #252627;
-  border-radius: 4px;
+  /*border: 2px solid #252627;
+  border-radius: 4px;*/
   font-size: 32px;
   font-weight: 300;
   font-style: normal;
