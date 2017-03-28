@@ -11784,6 +11784,11 @@ var Header = function (_React$Component) {
               'a',
               { href: 'http://www.linkedin.com/in/lobdill', target: '_blank' },
               _react2.default.createElement('img', { className: 'new-contact-logo', src: './assets/linked_in.png' })
+            ),
+            _react2.default.createElement(
+              'a',
+              { href: 'https://twitter.com/slolobdill44', target: '_blank' },
+              _react2.default.createElement('img', { className: 'new-contact-logo', src: './assets/twitter-64.png' })
             )
           )
         ),

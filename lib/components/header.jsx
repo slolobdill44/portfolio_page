@@ -76,6 +76,7 @@ class Header extends React.Component {
           <div className='new-contact-links'>
             <a href='https://github.com/slolobdill44' target="_blank"><img className='new-contact-logo' src='./assets/GitHub-Mark-64px.png' /></a>
             <a href='http://www.linkedin.com/in/lobdill' target="_blank"><img className='new-contact-logo' src='./assets/linked_in.png' /></a>
+            <a href='https://twitter.com/slolobdill44' target="_blank"><img className='new-contact-logo' src='./assets/twitter-64.png' /></a>
           </div>
         </div>
         <div>

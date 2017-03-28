@@ -304,7 +304,7 @@ marquee {
   color: #252627;
   /* transition: 0.4s border, color 0.4s; */
 
-  background-color: rgba(244,239,231,0.8);
+  /*background-color: rgba(244,239,231,0.8);*/
 
   transition: background-color 0.4s;
   /* transition: color 0.35s; */
@@ -320,7 +320,7 @@ marquee {
   color: #5F0A87;*/
 
   background-color: rgba(249,246,241,0.9);
-  
+
 
   /*background-color: rgba(244,239,231,0.6);*/
 }
@@ -385,7 +385,7 @@ marquee {
 }
 
 .new-single-project-container:hover {
-  background-color: rgba(244,239,231,0.8);
+  background-color: rgba(249,246,241,0.9);
 }
 
 .new-single-project {
@@ -455,6 +455,8 @@ marquee {
 }
 
 .new-single-project-description-link h3 {
+  border: 2px solid #252627;
+  border-radius: 4px;
   font-size: 32px;
   font-weight: 300;
   font-style: normal;
