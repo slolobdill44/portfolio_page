@@ -30,8 +30,6 @@ class Header extends React.Component {
       console.log("end", arguments);
     });
 
-    // scrollSpy.update();
-
   };
 
   // changeLook() {
