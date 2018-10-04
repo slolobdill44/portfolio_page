@@ -70,7 +70,7 @@ class Header extends React.Component {
     const newLookHeader = (
       <header className='new-header-container' key={Math.random()}>
         <div className='new-header-profile-photo-container'>
-          <img className='new-header-profile-photo' src='./assets/circular_headshot.png' />
+          <img className='new-header-profile-photo' src='./assets/circular_headshot.png?auto=webp' />
           <div className='new-contact-links'>
             <a href='https://github.com/slolobdill44' target="_blank"><img className='new-contact-logo' src='./assets/GitHub-Mark-64px.png' /></a>
             <a href='http://www.linkedin.com/in/lobdill' target="_blank"><img className='new-contact-logo' src='./assets/linked_in.png' /></a>

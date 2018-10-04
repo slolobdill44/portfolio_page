@@ -30,7 +30,7 @@ class Root extends React.Component {
     const hamcampInfo = {
       title: "Hamcamp",
       link: "http://www.hamcamp.co/#/",
-      image: "./assets/hamcampscreenshot.png",
+      image: "./assets/hamcampscreenshot.png?quality=70&auto=webp",
       description: "Full-stack Bandcamp clone that allows users to upload albums and play them in a convenient music player.",
       tech: [
         {
@@ -39,19 +39,19 @@ class Root extends React.Component {
         },
         {
           link: "http://redux.js.org/",
-          image: "./assets/redux_logo.png"
+          image: "./assets/redux_logo.png?quality=70&auto=webp"
         },
         {
           link: "http://rubyonrails.org/",
-          image: "./assets/Ruby_on_Rails_logo.png"
+          image: "./assets/Ruby_on_Rails_logo.png?quality=70&auto=webp"
         },
         {
           link: "https://www.postgresql.org/",
-          image: "./assets/PostgreSQL-96.png"
+          image: "./assets/PostgreSQL-96.png?quality=70&auto=webp"
         },
         {
           link: "https://en.wikipedia.org/wiki/HTML5",
-          image: "./assets/HTML5_Logo_64.png"
+          image: "./assets/HTML5_Logo_64.png?quality=70&auto=webp"
         },
       ]
     };
@@ -59,7 +59,7 @@ class Root extends React.Component {
     const tweetTheBayInfo = {
       title: "Tweet The Bay",
       link: "http://www.tweetthebay.com/#/",
-      image: "./assets/tweetthebaycropped.png",
+      image: "./assets/tweetthebaycropped.png?quality=70&auto=webp",
       description: "Twitter mapping application that places tweets on a map as they are live tweeted and also allows searching by keyword.",
       tech: [
         {
@@ -68,19 +68,19 @@ class Root extends React.Component {
         },
         {
           link: "http://redux.js.org/",
-          image: "./assets/redux_logo.png"
+          image: "./assets/redux_logo.png?quality=70&auto=webp"
         },
         {
           link: "http://rubyonrails.org/",
-          image: "./assets/Ruby_on_Rails_logo.png"
+          image: "./assets/Ruby_on_Rails_logo.png?quality=70&auto=webp"
         },
         {
           link: "https://www.postgresql.org/",
-          image: "./assets/PostgreSQL-96.png"
+          image: "./assets/PostgreSQL-96.png?quality=70&auto=webp"
         },
         {
           link: "https://en.wikipedia.org/wiki/HTML5",
-          image: "./assets/HTML5_Logo_64.png"
+          image: "./assets/HTML5_Logo_64.png?quality=70&auto=webp"
         },
       ]
     };
@@ -88,12 +88,12 @@ class Root extends React.Component {
     const hamhuckinInfo = {
       title: "Ham Huckin'",
       link: "https://slolobdill44.github.io/hamhuckin/",
-      image: "./assets/hamhuckinscreenshot.png",
+      image: "./assets/hamhuckinscreenshot.png?quality=70&auto=webp",
       description: "A simple JavaScript projectile game that employs the matter.js library to render realistic 2D physics.",
       tech: [
         {
           link: "https://en.wikipedia.org/wiki/JavaScript",
-          image: "./assets/js_logo.png"
+          image: "./assets/js_logo.png?quality=70&auto=webp"
         },
         {
           link: "http://brm.io/matter-js/",

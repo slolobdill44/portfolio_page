@@ -60,12 +60,11 @@ p {
 }
 
 .project-body-container {
-  background-image: url("../assets/background_imgs/IMG_1264.jpg");
+  background-image: url("../assets/background_imgs/IMG_1264.jpg?format=jpeg&auto=webp&quality=80");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  /*background-color: #485B66;*/
   height: 100%;
   /*width: 100%;*/
   -webkit-transform: translateZ(0);
