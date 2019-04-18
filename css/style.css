@@ -1,6 +1,9 @@
 body {
-  color: black;
   margin: 0;
+  color: black;
+  background-color: rgba(252,252,252,0.5);
+  
+
 }
 
 header {
@@ -116,7 +119,7 @@ p {
   padding: 0;
 }
 
-marquee {
+.marquee {
   font-size: 22px;
   width: 320px;
   margin-bottom: 16px;
@@ -232,7 +235,7 @@ marquee {
 }
 
 .new-header-container {
-   font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
   padding-top: 32px;
   width: 55%;
   display: flex;
