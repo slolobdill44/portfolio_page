@@ -62,7 +62,7 @@ class Project extends React.Component {
             <div className='new-single-project'>
               <a className='new-single-project-screenshot-container' href={`${this.props.projectInfo.link}`} target="_blank">
                 <div className='new-external-link-overlay'>
-                  <img className='new-external-link-image' src='./assets/new_tab.png' />
+                  <img className='new-external-link-image' src={`${this.props.projectInfo.overlayImage}`} />
                 </div>
                 <img className='new-single-project-screenshot' src={`${this.props.projectInfo.image}`}  />
               </a>

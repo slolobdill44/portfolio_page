@@ -11836,7 +11836,7 @@ var Project = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 { className: 'new-external-link-overlay' },
-                _react2.default.createElement('img', { className: 'new-external-link-image', src: './assets/new_tab.png' })
+                _react2.default.createElement('img', { className: 'new-external-link-image', src: '' + this.props.projectInfo.overlayImage })
               ),
               _react2.default.createElement('img', { className: 'new-single-project-screenshot', src: '' + this.props.projectInfo.image })
             ),
@@ -12052,6 +12052,7 @@ var Root = function (_React$Component) {
         title: "Hamcamp",
         link: "http://www.hamcamp.co/#/",
         image: "./assets/hamcampscreenshot.png?quality=70&auto=webp",
+        overlayImage: "./assets/new_tab.png",
         description: "Full-stack Bandcamp clone that allows users to upload albums and play them in a convenient music player.",
         tech: [{
           link: "https://facebook.github.io/react/",
@@ -12075,6 +12076,7 @@ var Root = function (_React$Component) {
         title: "Tweet The Bay",
         link: "http://www.tweetthebay.com/#/",
         image: "./assets/tweetthebaycropped.png?quality=70&auto=webp",
+        overlayImage: "./assets/maintenance.svg",
         description: "Twitter mapping application that places tweets on a map as they are live tweeted and also allows searching by keyword.",
         tech: [{
           link: "https://facebook.github.io/react/",
@@ -12098,6 +12100,7 @@ var Root = function (_React$Component) {
         title: "Ham Huckin'",
         link: "https://slolobdill44.github.io/hamhuckin/",
         image: "./assets/hamhuckinscreenshot.png?quality=70&auto=webp",
+        overlayImage: "./assets/new_tab.png",
         description: "A simple JavaScript projectile game that employs the matter.js library to render realistic 2D physics.",
         tech: [{
           link: "https://en.wikipedia.org/wiki/JavaScript",
