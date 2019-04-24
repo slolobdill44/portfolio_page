@@ -61,13 +61,13 @@ class Project extends React.Component {
           <div className='new-single-project-container'>
             <div className='new-single-project'>
               <a className='new-single-project-screenshot-container' href={`${this.props.projectInfo.link}`} target="_blank">
-                <div className='new-external-link-overlay'>
+                <div className={`${this.props.projectInfo.overlayImageCSS}`}>
                   <img className='new-external-link-image' src={`${this.props.projectInfo.overlayImage}`} />
                 </div>
                 <img className='new-single-project-screenshot' src={`${this.props.projectInfo.image}`}  />
               </a>
               <div className='new-single-project-description'>
-                <a className='new-single-project-description-link' href={`${this.props.projectInfo.link}`} target="_blank">
+                <a className='new-single-project-description-link' href={this.props.projectInfo.link || null /* null here is set to blank out link under maintenance */} target="_blank">
                   <h3>{ this.props.projectInfo.title }</h3>
                 </a>
                 <p>

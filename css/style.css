@@ -379,10 +379,22 @@ p {
   display: none;
 }
 
-.new-single-project-screenshot-container:hover .new-external-link-overlay {
+.new-single-project-screenshot-container:hover .new-external-link-overlay-green {
   border-radius: 4px;
   position: absolute;
   background-color: rgba(39, 70, 144, 0.6);
+  cursor: pointer;
+  opacity: .6;
+  height: 100%;
+  width: 100%;
+  max-width: 360px;
+  max-height: 224px;
+}
+
+.new-single-project-screenshot-container:hover .new-external-link-overlay-red {
+  border-radius: 4px;
+  position: absolute;
+  background-color: rgba(242, 66, 19, 0.6);
   cursor: pointer;
   opacity: .6;
   height: 100%;
@@ -421,6 +433,15 @@ p {
 .new-single-project-description-link {
   color: #252627;
   text-decoration: none;
+}
+
+.new-single-project-description-link-maintenance {
+  color: #252627;
+  text-decoration: none;
+}
+
+.new-single-project-description-link :hover {
+  cursor: pointer;
 }
 
 .new-single-project-description-link h3 {

@@ -32,6 +32,7 @@ class Root extends React.Component {
       link: "http://www.hamcamp.co/#/",
       image: "./assets/hamcampscreenshot.png?quality=70&auto=webp",
       overlayImage: "./assets/new_tab.png",
+      overlayImageCSS: "new-external-link-overlay-green",
       description: "Full-stack Bandcamp clone that allows users to upload albums and play them in a convenient music player.",
       tech: [
         {
@@ -59,9 +60,9 @@ class Root extends React.Component {
 
     const tweetTheBayInfo = {
       title: "Tweet The Bay",
-      link: "http://www.tweetthebay.com/#/",
       image: "./assets/tweetthebaycropped.png?quality=70&auto=webp",
       overlayImage: "./assets/maintenance.svg",
+      overlayImageCSS: "new-external-link-overlay-red",
       description: "Twitter mapping application that places tweets on a map as they are live tweeted and also allows searching by keyword.",
       tech: [
         {
@@ -92,6 +93,7 @@ class Root extends React.Component {
       link: "https://slolobdill44.github.io/hamhuckin/",
       image: "./assets/hamhuckinscreenshot.png?quality=70&auto=webp",
       overlayImage: "./assets/new_tab.png",
+      overlayImageCSS: "new-external-link-overlay-green",
       description: "A simple JavaScript projectile game that employs the matter.js library to render realistic 2D physics.",
       tech: [
         {
