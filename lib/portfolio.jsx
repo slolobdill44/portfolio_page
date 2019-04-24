@@ -30,6 +30,7 @@ class Root extends React.Component {
     const hamcampInfo = {
       title: "Hamcamp",
       link: "http://www.hamcamp.co/#/",
+      linkColor: "new-single-project-description-link",
       image: "./assets/hamcampscreenshot.png?quality=70&auto=webp",
       overlayImage: "./assets/new_tab.png",
       overlayImageCSS: "new-external-link-overlay-green",
@@ -60,6 +61,7 @@ class Root extends React.Component {
 
     const tweetTheBayInfo = {
       title: "Tweet The Bay",
+      linkColor: "new-single-project-description-link-maintenance",
       image: "./assets/tweetthebaycropped.png?quality=70&auto=webp",
       overlayImage: "./assets/maintenance.svg",
       overlayImageCSS: "new-external-link-overlay-red",
@@ -91,6 +93,7 @@ class Root extends React.Component {
     const hamhuckinInfo = {
       title: "Ham Huckin'",
       link: "https://slolobdill44.github.io/hamhuckin/",
+      linkColor: 'new-single-project-description-link',
       image: "./assets/hamhuckinscreenshot.png?quality=70&auto=webp",
       overlayImage: "./assets/new_tab.png",
       overlayImageCSS: "new-external-link-overlay-green",

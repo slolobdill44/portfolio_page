@@ -435,11 +435,6 @@ p {
   text-decoration: none;
 }
 
-.new-single-project-description-link-maintenance {
-  color: #252627;
-  text-decoration: none;
-}
-
 .new-single-project-description-link :hover {
   cursor: pointer;
 }
@@ -453,6 +448,26 @@ p {
 
 .new-single-project-description-link h3:hover {
   color: #274690;
+}
+
+.new-single-project-description-link-maintenance {
+  color: #252627;
+  text-decoration: none;
+}
+
+.new-single-project-description-link-maintenance :hover {
+  cursor: pointer;
+}
+
+.new-single-project-description-link-maintenance h3 {
+  font-size: 32px;
+  font-weight: 300;
+  font-style: normal;
+  transform: color 0.2s;
+}
+
+.new-single-project-description-link-maintenance h3:hover {
+  color: rgba(242, 66, 19);
 }
 
 .new-single-project-description p {

@@ -11832,7 +11832,7 @@ var Project = function (_React$Component) {
             { className: 'new-single-project' },
             _react2.default.createElement(
               'a',
-              { className: 'new-single-project-screenshot-container', href: '' + this.props.projectInfo.link, target: '_blank' },
+              { className: 'new-single-project-screenshot-container', href: this.props.projectInfo.link || null /* null here is set to blank out link under maintenance */, target: '_blank' },
               _react2.default.createElement(
                 'div',
                 { className: '' + this.props.projectInfo.overlayImageCSS },
@@ -11845,7 +11845,7 @@ var Project = function (_React$Component) {
               { className: 'new-single-project-description' },
               _react2.default.createElement(
                 'a',
-                { className: 'new-single-project-description-link', href: this.props.projectInfo.link || null /* null here is set to blank out link under maintenance */, target: '_blank' },
+                { className: '' + this.props.projectInfo.linkColor, href: this.props.projectInfo.link || null /* null here is set to blank out link under maintenance */, target: '_blank' },
                 _react2.default.createElement(
                   'h3',
                   null,
@@ -12051,6 +12051,7 @@ var Root = function (_React$Component) {
       var hamcampInfo = {
         title: "Hamcamp",
         link: "http://www.hamcamp.co/#/",
+        linkColor: "new-single-project-description-link",
         image: "./assets/hamcampscreenshot.png?quality=70&auto=webp",
         overlayImage: "./assets/new_tab.png",
         overlayImageCSS: "new-external-link-overlay-green",
@@ -12075,6 +12076,7 @@ var Root = function (_React$Component) {
 
       var tweetTheBayInfo = {
         title: "Tweet The Bay",
+        linkColor: "new-single-project-description-link-maintenance",
         image: "./assets/tweetthebaycropped.png?quality=70&auto=webp",
         overlayImage: "./assets/maintenance.svg",
         overlayImageCSS: "new-external-link-overlay-red",
@@ -12100,6 +12102,7 @@ var Root = function (_React$Component) {
       var hamhuckinInfo = {
         title: "Ham Huckin'",
         link: "https://slolobdill44.github.io/hamhuckin/",
+        linkColor: 'new-single-project-description-link',
         image: "./assets/hamhuckinscreenshot.png?quality=70&auto=webp",
         overlayImage: "./assets/new_tab.png",
         overlayImageCSS: "new-external-link-overlay-green",
