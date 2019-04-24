@@ -11674,12 +11674,12 @@ var Header = function (_React$Component) {
             _react2.default.createElement(
               'h4',
               { className: 'new-header-description' },
-              'Software Developer'
+              'Currently: Support Engineer'
             ),
             _react2.default.createElement(
               'h4',
               { className: 'new-header-description' },
-              'Project Portfolio'
+              'At: Fastly'
             )
           ),
           _react2.default.createElement(
