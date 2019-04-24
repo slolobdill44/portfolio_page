@@ -40,7 +40,7 @@ class Footer extends React.Component {
               <p>E-Mail</p>
             </div>
           </a>
-          <a href="./assets/Adrian_Lobdill_Resume_2017.pdf" target="_blank">
+          <a href="./assets/Adrian_Lobdill_Dev_Resume_2017.pdf" target="_blank">
             <div className='new-resume'>
               <p>Resume</p>
             </div>
