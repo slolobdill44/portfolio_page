@@ -11471,7 +11471,7 @@ var Footer = function (_React$Component) {
           ),
           _react2.default.createElement(
             'a',
-            { href: './assets/Adrian_Lobdill_Dev_Resume_2017.pdf', target: '_blank' },
+            { href: './assets/Adrian_Lobdill_Dev_Resume.pdf', target: '_blank' },
             _react2.default.createElement(
               'div',
               { className: 'new-resume' },
