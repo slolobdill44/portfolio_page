@@ -1,4 +1,10 @@
 @media only screen and (max-device-width:812px) {
+	.project-body-container{
+		height: none;
+	}
+	.new-project-body-background {
+		height: none;
+	}
 	.new-header-container {
 	    font-family: "Source Sans Pro", Helvetica, sans-serif;
 	    padding-top: 32px;
@@ -56,7 +62,20 @@
 	    margin-left: 10px;
 	    margin-right: 10px;
 	}
-	.new-header-contact-scroll-button p {
-	  display: none;
+	.new-header-contact-scroll-button {
+		display: none;
+	}
+	.new-single-project-frame {
+	  font-family: "Source Sans Pro", Helvetica, sans-serif;
+	  width: 100%;
+	  height: none;	
+	}
+	.new-single-project {
+	    display: flex;
+	    flex-direction: column;
+	    /* justify-content: space-between; */
+	    width: 83%;
+	    padding-top: 34px;
+	    margin: 0 auto;
 	}
 }
