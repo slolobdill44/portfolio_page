@@ -2,7 +2,7 @@
 	.new-header-container {
 	    font-family: "Source Sans Pro", Helvetica, sans-serif;
 	    padding-top: 32px;
-	    width: 80%;
+	    width: 90%;
 	    display: flex;
 	    flex-direction: column-reverse;
 	    /* justify-content: space-between; */
@@ -27,7 +27,8 @@
 	  color: #252627;
 	  letter-spacing: 1px;
 	  width: 75%;
-	  margin-top: 5%;
+	  margin-top: 10%;
+	  margin-left: 4%;
 	}
 	.new-header-description-location {
 	  /*align-self: flex-end;*/
@@ -37,6 +38,7 @@
 	  letter-spacing: 1px;
 	  width: 75%;
 	  margin-top: 5%;
+	  margin-left: 4%;
 	}
 	.new-header-profile-photo-container {
 	  height: 100%;
@@ -47,6 +49,12 @@
 	.new-header-profile-photo {
 	  height: 100%;
 	  width: 100%;
+	}
+	.new-contact-logo {
+	    height: 23%;
+	    width: 23%;
+	    margin-left: 10px;
+	    margin-right: 10px;
 	}
 	.new-header-contact-scroll-button p {
 	  display: none;
