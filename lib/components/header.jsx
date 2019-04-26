@@ -80,8 +80,8 @@ class Header extends React.Component {
         <div>
           <div className='new-header-info-container'>
             <h1 className='new-header-name'>ADRIAN LOBDILL</h1>
-            <h4 className='new-header-description'>Currently: Support Engineer</h4>
-            <h4 className='new-header-description'>At: Fastly</h4>
+            <h4 className='new-header-description-position'>Currently: Support Engineer</h4>
+            <h4 className='new-header-description-location'>At: Fastly</h4>
           </div>
           <div className='new-header-contact-scroll-button' onClick={() => this.scrollToContacts()}>
             <p>Contact</p>

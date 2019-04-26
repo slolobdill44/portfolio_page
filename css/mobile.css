@@ -1,0 +1,54 @@
+@media only screen and (max-device-width:812px) {
+	.new-header-container {
+	    font-family: "Source Sans Pro", Helvetica, sans-serif;
+	    padding-top: 32px;
+	    width: 80%;
+	    display: flex;
+	    flex-direction: column-reverse;
+	    /* justify-content: space-between; */
+	    margin: 0 auto;
+	}
+	.new-header-info-container {
+		text-align: left;
+		display: flex;
+		/*flex-direction: column;*/
+		justify-content: space-between;
+		margin-top: 8px;
+		/*border: 2px solid red;*/
+	}
+	.new-header-name {
+		font-size: 5em;
+		font-weight: 400;
+	}
+	.new-header-description-position {
+	  /*align-self: flex-end;*/
+	  font-size: 4em;
+	  font-weight: 300;
+	  color: #252627;
+	  letter-spacing: 1px;
+	  width: 75%;
+	  margin-top: 5%;
+	}
+	.new-header-description-location {
+	  /*align-self: flex-end;*/
+	  font-size: 4em;
+	  font-weight: 300;
+	  color: #252627;
+	  letter-spacing: 1px;
+	  width: 75%;
+	  margin-top: 5%;
+	}
+	.new-header-profile-photo-container {
+	  height: 100%;
+	  max-width: 350px;
+	  align-self: flex-end;
+
+	}
+	.new-header-profile-photo {
+	  height: 100%;
+	  width: 100%;
+	}
+	.new-header-contact-scroll-button p {
+	  display: none;
+	}
+}

@@ -11673,12 +11673,12 @@ var Header = function (_React$Component) {
             ),
             _react2.default.createElement(
               'h4',
-              { className: 'new-header-description' },
+              { className: 'new-header-description-position' },
               'Currently: Support Engineer'
             ),
             _react2.default.createElement(
               'h4',
-              { className: 'new-header-description' },
+              { className: 'new-header-description-location' },
               'At: Fastly'
             )
           ),

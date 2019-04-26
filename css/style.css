@@ -238,6 +238,7 @@ p {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   padding-top: 32px;
   width: 55%;
+
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -272,7 +273,15 @@ p {
   padding: 0;
 }
 
-.new-header-description {
+.new-header-description-position {
+  font-size: 28px;
+  font-weight: 300;
+  color: #252627;
+  letter-spacing: 1px;
+  width: 398px;
+}
+
+.new-header-description-location {
   font-size: 28px;
   font-weight: 300;
   color: #252627;
