@@ -133,4 +133,16 @@
 	.matter-js-logo {
 		height: 75px;
 	}
+	.new-contact-info div p {
+		font-size: 3em;
+		line-height: 1.5;
+		height: 70px;
+	}
+	.new-email {
+		width: 275px;
+
+	}
+	.new-resume {
+		width: 275px;
+	}
 }
