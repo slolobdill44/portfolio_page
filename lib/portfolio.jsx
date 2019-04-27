@@ -65,7 +65,7 @@ class Root extends React.Component {
       image: "./assets/tweetthebaycropped.png?quality=70&auto=webp",
       overlayImage: "./assets/maintenance.svg",
       overlayImageCSS: "new-external-link-overlay-red",
-      description: "Twitter mapping application that places tweets on a map as they are live tweeted and also allows searching by keyword.",
+      description: "Mapping application that places live tweets on a map and allows geo-searching by keyword.",
       tech: [
         {
           link: "https://facebook.github.io/react/",
