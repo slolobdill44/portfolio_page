@@ -24,7 +24,7 @@
 	}
 	.new-header-name {
 		font-size: 5em;
-		font-weight: 400;
+		font-weight: lighter;
 	}
 	.new-header-description-position {
 	  /*align-self: flex-end;*/
