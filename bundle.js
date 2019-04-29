@@ -11639,7 +11639,7 @@ var Header = function (_React$Component) {
         _react2.default.createElement(
           'div',
           { className: 'new-header-profile-photo-container' },
-          _react2.default.createElement('img', { className: 'new-header-profile-photo', src: './assets/circular_headshot.png?auto=webp' }),
+          _react2.default.createElement('img', { className: 'new-header-profile-photo', src: './assets/new_self_photo_circular.png?auto=webp' }),
           _react2.default.createElement(
             'div',
             { className: 'new-contact-links' },

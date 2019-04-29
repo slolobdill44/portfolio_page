@@ -8,7 +8,7 @@
 	.new-header-container {
 	    font-family: "Source Sans Pro", Helvetica, sans-serif;
 	    padding-top: 32px;
-	    width: 82%;
+	    width: 85%;
 	    display: flex;
 	    flex-direction: column-reverse;
 	    /* justify-content: space-between; */
