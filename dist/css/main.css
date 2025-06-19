@@ -329,35 +329,34 @@ section {
 
 /* Resume Highlights */
 .highlights-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+    display: block;
 }
 
 .highlight-card {
-    background: var(--background);
-    border-radius: 12px;
-    padding: 20px 24px;
-    box-shadow: var(--shadow-md);
-    transition: all 0.3s ease;
-    border: 1px solid var(--border-color);
-    min-height: 120px;
+    background: transparent;
+    border-radius: 0;
+    padding: var(--space-6) 0;
+    box-shadow: none;
+    transition: none;
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    min-height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+}
+
+.highlight-card:last-child {
+    border-bottom: none;
 }
 
 .highlight-header {
     display: flex;
     align-items: center;
     gap: var(--space-3);
-    margin-bottom: var(--space-3);
+    margin-bottom: var(--space-2);
 }
 
-.highlight-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-xl);
-}
 
 .highlight-icon {
     width: 36px;
@@ -374,7 +373,7 @@ section {
 
 .highlight-title {
     font-size: 1.1rem;
-    font-weight: 600;
+    font-weight: 450;
     margin: 0;
     color: var(--text-primary);
     line-height: 1.3;
@@ -383,21 +382,142 @@ section {
 .highlight-company {
     color: var(--primary-color);
     font-weight: 500;
-    margin-bottom: 2px;
+    margin-bottom: var(--space-1);
     font-size: 0.95rem;
 }
 
 .highlight-period {
     color: var(--text-light);
     font-size: 0.85rem;
-    margin-bottom: 8px;
+    margin-bottom: var(--space-3);
 }
 
 .highlight-description {
     color: var(--text-secondary);
-    line-height: 1.5;
-    font-size: 0.9rem;
-    flex-grow: 1;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Experience Toggle Buttons */
+.experience-toggle {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--space-8);
+    gap: var(--space-3);
+}
+
+.experience-toggle .btn {
+    align-items: center;
+    gap: var(--space-2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+/* Ensure show-less buttons start hidden */
+.show-less-btn {
+    display: none !important;
+}
+
+.show-more-btn {
+    display: inline-flex !important;
+}
+
+/* When toggled, override the defaults */
+.show-less-btn.active {
+    display: inline-flex !important;
+}
+
+.show-more-btn.hidden {
+    display: none !important;
+}
+
+.experience-toggle .btn:hover {
+    transform: translateY(-2px);
+}
+
+.experience-toggle .btn svg {
+    transition: transform 0.3s ease;
+    pointer-events: none;
+}
+
+.experience-toggle .show-more-btn svg {
+    transform: rotate(180deg);
+}
+
+.experience-toggle .show-less-btn svg {
+    transform: rotate(0deg);
+}
+
+/* Additional experience items start hidden */
+.additional-experience {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.4s ease;
+}
+
+.additional-experience.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* LinkedIn Connect Button */
+.linkedin-connect {
+    display: flex;
+    justify-content: center;
+    padding: var(--space-6) 0 var(--space-16) 0;
+}
+
+.linkedin-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-4) var(--space-8);
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+}
+
+.linkedin-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
+}
+
+.linkedin-btn .external-icon {
+    transition: transform 0.3s ease;
+    opacity: 0.8;
+}
+
+.linkedin-btn:hover .external-icon {
+    transform: translateX(2px) translateY(-2px);
+    opacity: 1;
+}
+
+/* Desktop contact section styling */
+@media (min-width: 901px) {
+    .contact-section .section-title {
+        font-size: 2.5rem;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: var(--space-8);
+        color: var(--text-primary);
+    }
+}
+
+/* Remove old contact card styles */
+.contact-card {
+    display: none;
+}
+
+.contact-title,
+.contact-description,
+.contact-email {
+    display: none;
 }
 
 /* Enhanced Projects */
@@ -731,12 +851,11 @@ section {
     }
 
     .highlights-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
+        display: block;
     }
     
     .highlight-card {
-        padding: 28px;
+        padding: var(--space-5) 0;
     }
 
     .project-card {
@@ -835,7 +954,7 @@ section {
     }
     
     .highlight-card {
-        padding: 24px;
+        padding: var(--space-4) 0;
     }
     
     .highlight-title {
@@ -956,7 +1075,7 @@ section {
     }
     
     .highlight-card {
-        padding: 20px;
+        padding: var(--space-4) 0;
     }
     
     .highlight-icon {
@@ -1075,7 +1194,7 @@ section {
     }
     
     .highlight-card {
-        padding: 18px;
+        padding: var(--space-3) 0;
     }
     
     .project-content {
