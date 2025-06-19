@@ -31,9 +31,6 @@
           footer, header, hgroup, menu, nav, section {
             display: block;
           }
-          body {
-            line-height: 1;
-          }
           ol, ul {
             list-style: none;
           }
@@ -54,7 +51,7 @@
         margin: 0;
         color: black;
         background-color: rgba(252,252,252,0.5);
-
+        line-height: 1;
         }
 
         header {
@@ -74,41 +71,6 @@
           text-decoration: none;
         }
 
-        .fade-enter {
-          top: 0px;
-          opacity: 0.01;
-        }
-
-        .fade-enter.fade-enter-active {
-          opacity: 1;
-          transition: opacity 500ms ease-in;
-        }
-
-        .fade-leave {
-          opacity: 1;
-          display: none;
-        }
-
-        .fade-leave.fade-leave-active {
-          opacity: 0.01;
-          display: none;
-          transition: opacity 300ms ease-in;
-        }
-
-        .fade-appear {
-          opacity: 0.01;
-          display: none;
-        }
-
-        .fade-appear.fade-appear-active {
-          opacity: 1;
-          display: none;
-          transition: opacity .5s ease-in;
-        }
-
-        .page-clear {
-          height: 27px;
-        }
 
         .project-body-container {
           background-position: center center;
@@ -119,21 +81,9 @@
           -webkit-transform: translateZ(0);
         }
 
-        /* .style-switch-button {
-          position: fixed;
-          height: 30px;
-          width: 140px;
-          margin-left: 36px;
-          margin-top: 36px;
-          z-index: 5;
-        } */
 
         .single-project-tech-used {
           height: 55px;
-        /*   width: 65%; */
-          /*display: flex;*/
-          /*flex-direction: row;*/
-          /*justify-content: space-around;*/
         }
 
         .single-project-tech-logo {
@@ -152,7 +102,6 @@
 
         .new-project-body-background {
           position: relative;
-          /*border-radius: 4px;*/
           margin: 0 auto;
           width: 90%;
           min-width: 1140px;
@@ -185,7 +134,6 @@
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          /*margin-top: 8px;*/
           height: 144px;
         }
 
@@ -244,9 +192,6 @@
           margin-right: 5px;
         }
 
-        .new-contact-logo hover {
-          box-shadow: 0 5px 15px rgba(42, 73, 199, .25);
-        }
 
         .new-contact-links {
           font-weight: 300;
@@ -361,7 +306,6 @@
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-      /*     width: 52%; */
           margin-left: 34px;
           margin-top: 24px;
         }
@@ -386,25 +330,6 @@
           color: #274690;
         }
 
-        .new-single-project-description-link-maintenance {
-          color: #252627;
-          text-decoration: none;
-        }
-
-        .new-single-project-description-link-maintenance :hover {
-          cursor: pointer;
-        }
-
-        .new-single-project-description-link-maintenance h3 {
-          font-size: 32px;
-          font-weight: 300;
-          font-style: normal;
-          transform: color 0.2s;
-        }
-
-        .new-single-project-description-link-maintenance h3:hover {
-          color: rgba(242, 66, 19);
-        }
 
         .new-single-project-description p {
           letter-spacing: 0.25px;
@@ -476,24 +401,13 @@
           width: 143px;
         }
 
-        .new-resume {
-          width: 143px;
-        }
-
-        .new-guest-book {
-          width: 170px;
-        }
-
-        .new-guest-book p {
-          text-decoration: none;
-        }
 
         @media only screen and (max-device-width:812px) {
         .project-body-container{
-          height: none;
+          height: auto;
         }
         .new-project-body-background {
-          height: none;
+          height: auto;
         }
         .new-header-container {
             font-family: "Source Sans Pro", Helvetica, sans-serif;
@@ -501,23 +415,19 @@
             width: 85%;
             display: flex;
             flex-direction: column-reverse;
-            /* justify-content: space-between; */
             margin: 0 auto;
         }
         .new-header-info-container {
           text-align: left;
           display: flex;
-          /*flex-direction: column;*/
           justify-content: space-between;
           margin-top: 8px;
-          /*border: 2px solid red;*/
         }
         .new-header-name {
           font-size: 5em;
           font-weight: lighter;
         }
         .new-header-description-position {
-          /*align-self: flex-end;*/
           font-size: 4em;
           font-weight: 300;
           color: #252627;
@@ -527,7 +437,6 @@
           margin-left: 4%;
         }
         .new-header-description-location {
-          /*align-self: flex-end;*/
           font-size: 4em;
           font-weight: 300;
           color: #252627;
@@ -569,14 +478,11 @@
           font-family: "Source Sans Pro", Helvetica, sans-serif;
           width: 100%;
           height: 100%;
-          height: none;	
+          height: auto;	
         }
         .new-single-project {
             display: flex;
             flex-direction: column;
-            /* justify-content: space-between; */
-            /*width: 83%;*/
-            /*padding-top: 34px;*/
             margin: 0 auto;
         }
         .new-single-project-screenshot {
@@ -596,10 +502,6 @@
 
         }
         .new-single-project-description-link h3 {
-            font-size: 4em;
-            font-weight: 500;
-        }
-        .new-single-project-description-link-maintenance h3 {
             font-size: 4em;
             font-weight: 500;
         }
@@ -641,7 +543,6 @@
 
     <link rel="icon" type="image/png" href="favicon.ico">
 
-<!--     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet"> -->
 
     <script>
         function scrollToBottom () {
