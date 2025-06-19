@@ -1,719 +1,604 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Adrian Lobdill</title>
-    
-    <style>
-          html, body, div, span, applet, object, iframe,
-          h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-          a, abbr, acronym, address, big, cite, code,
-          del, dfn, em, img, ins, kbd, q, s, samp,
-          small, strike, strong, sub, sup, tt, var,
-          b, u, i, center,
-          dl, dt, dd, ol, ul, li,
-          fieldset, form, label, legend,
-          table, caption, tbody, tfoot, thead, tr, th, td,
-          article, aside, canvas, details, embed,
-          figure, figcaption, footer, header, hgroup,
-          menu, nav, output, ruby, section, summary,
-          time, mark, audio, video {
-            margin: 0;
-            padding: 0;
-            border: 0;
-            font-size: 100%;
-            font: inherit;
-            vertical-align: baseline;
-          }
-          /* HTML5 display-role reset for older browsers */
-          article, aside, details, figcaption, figure,
-          footer, header, hgroup, menu, nav, section {
-            display: block;
-          }
-          ol, ul {
-            list-style: none;
-          }
-          blockquote, q {
-            quotes: none;
-          }
-          blockquote:before, blockquote:after,
-          q:before, q:after {
-            content: '';
-            content: none;
-          }
-          table {
-            border-collapse: collapse;
-            border-spacing: 0;
-          }
-
-          body {
-        margin: 0;
-        color: black;
-        background-color: rgba(252,252,252,0.5);
-        line-height: 1;
-        }
-
-        header {
-          text-align: center;
-        }
-
-        p {
-          font-size: 18px;
-        }
-
-        header p {
-          font-weight: bold;
-        }
-
-        a {
-          cursor: pointer;
-          text-decoration: none;
-        }
-
-
-        .project-body-container {
-          background-position: center center;
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-attachment: fixed;
-          height: 100%;
-          -webkit-transform: translateZ(0);
-        }
-
-
-        .single-project-tech-used {
-          height: 55px;
-        }
-
-        .single-project-tech-logo {
-          height: 48px;
-          width: 48px;
-          margin-right: 25px;
-        }
-
-        .matter-js-logo {
-          height: 30px;
-          width: auto;
-          margin-top: 16px;
-          margin-left: 7px;
-        }
-
-
-        .new-project-body-background {
-          position: relative;
-          margin: 0 auto;
-          width: 90%;
-          min-width: 1140px;
-          height: 100%;
-        }
-
-        .new-header-container {
-          font-family: "Source Sans Pro", Helvetica, sans-serif;
-          padding-top: 32px;
-          width: 55%;
-
-          display: flex;
-          justify-content: space-between;
-          margin: 0 auto;
-          margin-left: 30%;
-        }
-
-        .new-header-profile-photo-container {
-          height: 100%;
-          max-width: 150px;
-        }
-
-        .new-header-profile-photo {
-          height: 100%;
-          width: 100%;
-        }
-
-        .new-header-info-container {
-          text-align: left;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          height: 144px;
-        }
-
-        .new-header-name {
-          color: #252627;
-          font-size: 48px;
-          font-weight: 300;
-          letter-spacing: 3px;
-          text-align: center;
-          padding: 0;
-        }
-
-        .new-header-description-position {
-          font-size: 28px;
-          font-weight: 300;
-          color: #252627;
-          letter-spacing: 1px;
-          width: 398px;
-        }
-
-        .new-header-description-location {
-          font-size: 28px;
-          font-weight: 300;
-          color: #252627;
-          letter-spacing: 1px;
-          width: 398px;
-        }
-
-        .new-header-contact-scroll-button p {
-          margin-top: 24px;
-          height: 32px;
-          width: 128px;
-          border: 2px solid #252627;
-          border-radius: 4px;
-          color: #252627;
-
-
-          transition: background-color 0.4s;
-          font-size: 24px;
-          font-weight: 300;
-          text-align: center;
-          line-height: 1.4;
-        }
-
-        .new-header-contact-scroll-button p:hover {
-          cursor: pointer;
-          background-color: rgba(249,246,241,0.9);
-          box-shadow: 0 5px 15px rgba(42, 73, 199,.25);
-        }
-
-        .new-contact-logo {
-          height: 32px;
-          width: 32px;
-
-          margin-left: 5px;
-          margin-right: 5px;
-        }
-
-
-        .new-contact-links {
-          font-weight: 300;
-          margin-top: 24px;
-        }
-
-        .new-projects-title-border-container {
-          height: 90px;
-          width: 100%;
-        }
-
-        .new-projects-title-border {
-          padding-top: 16px;
-          margin: 0 auto;
-          height: 43px;
-          width: 240px;
-        }
-
-        .new-projects-title {
-          font-family: "Source Sans Pro", Helvetica, sans-serif;
-          font-weight: 300;
-          font-size: 32px;
-          color: #252627;
-          text-align: center;
-          width: 100%;
-        }
-
-        .new-single-project-frame {
-          font-family: "Source Sans Pro", Helvetica, sans-serif;
-          width: 100%;
-          height: 292px;
-        }
-
-        .new-single-project-container {
-          font-family: "Source Sans Pro", Helvetica, sans-serif;
-          height: 100%;
-          width: 90%;
-          min-width: 912px;
-          border-radius: 5px;
-          transition: background-color 0.4s;
-          background-color: rgba(244,239,231,0.6);
-          margin: 0 auto;
-        }
-
-        .new-single-project-container:hover {
-          background-color: rgba(249,246,241,0.9);
-        }
-
-        .new-single-project {
-          display: flex;
-          justify-content: space-evenly;
-          width: 83%;
-          padding-top: 34px;
-          margin: 0 auto;
-        }
-
-        .new-single-project-screenshot-container {
-          height: 100%;
-          border-radius: 2px;
-          display: inline-block;
-          margin-bottom: 15px;
-        }
-
-        .new-external-link-image {
-          display: none;
-        }
-
-        .new-single-project-screenshot-container:hover .new-external-link-overlay-green {
-          border-radius: 4px;
-          position: absolute;
-          background-color: rgba(39, 70, 144, 0.6);
-          cursor: pointer;
-          opacity: .6;
-          height: 100%;
-          width: 100%;
-          max-width: 360px;
-          max-height: 224px;
-        }
-
-        .new-single-project-screenshot-container:hover .new-external-link-overlay-red {
-          border-radius: 4px;
-          position: absolute;
-          background-color: rgba(242, 66, 19, 0.6);
-          cursor: pointer;
-          opacity: .6;
-          height: 100%;
-          width: 100%;
-          max-width: 360px;
-          max-height: 224px;
-        }
-
-        .new-single-project-screenshot-container:hover .new-external-link-image {
-          border-radius: 4px;
-          position: absolute;
-          opacity: .6;
-          height: 150px;
-          width: 150px;
-          display: inline;
-          cursor: pointer;
-          left: 29%;
-          top: 15%;
-        }
-
-        .new-single-project-screenshot {
-          border-radius: 4px;
-          height: 224px;
-          width: 360px;
-        }
-
-        .new-single-project-description {
-          height: 185px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          margin-left: 34px;
-          margin-top: 24px;
-        }
-
-        .new-single-project-description-link {
-          color: #252627;
-          text-decoration: none;
-        }
-
-        .new-single-project-description-link :hover {
-          cursor: pointer;
-        }
-
-        .new-single-project-description-link h3 {
-          font-size: 32px;
-          font-weight: 300;
-          font-style: normal;
-          transform: color 0.2s;
-        }
-
-        .new-single-project-description-link h3:hover {
-          color: #274690;
-        }
-
-
-        .new-single-project-description p {
-          letter-spacing: 0.25px;
-          line-height: 24px;
-          font-size: 16px;
-          margin-left: 1px;
-        }
-
-        .new-banner-row-container {
-          padding-top: 5px;
-          padding-bottom: 5px;
-          width: 100%;
-        }
-
-        .new-banner-row {
-          display: flex;
-          justify-content: space-around;
-          width: 90%;
-          margin: 0 auto;
-          margin-top: 27px;
-          margin-bottom: 27px;
-        }
-
-        .new-banner-row-divider {
-          width: 90%;
-        }
-
-        .new-footer-container {
-          padding-top: 32px;
-          padding-bottom: 32px;
-           margin: 0 auto;
-          width: 90%;
-          margin-top: 32px;
-          margin-bottom: 32px;
-          border-radius: 5px;
-        }
-
-        .new-contact-info {
-          font-family: "Source Sans Pro", Helvetica, sans-serif;
-          height: 100%;
-          width: 93%;
-          display: flex;
-          justify-content: space-around;
-          margin: 0 auto;
-        }
-
-        .new-contact-info div p {
-          border: 2px solid #252627;
-          border-radius: 4px;
-          color: #252627;
-          transition: box-shadow 0.3s ease 0s, background-color 0.4s;
-          background-color: rgba(244,239,231,0.8);
-          box-shadow: transparent -8px 4px 20px;
-
-          font-size: 24px;
-          font-weight: 300;
-          text-align: center;
-          line-height: 2.1;
-          height: 48px;
-        }
-
-        .new-contact-info div p:hover {
-          cursor: pointer;
-          background-color: rgba(249,246,241,0.9);
-          box-shadow: 0 5px 15px rgba(42, 73, 199, .25);
-        }
-
-        .new-email {
-          width: 143px;
-        }
-
-
-        @media only screen and (max-device-width:812px) {
-        .project-body-container{
-          height: auto;
-        }
-        .new-project-body-background {
-          height: auto;
-        }
-        .new-header-container {
-            font-family: "Source Sans Pro", Helvetica, sans-serif;
-            padding-top: 32px;
-            width: 85%;
-            display: flex;
-            flex-direction: column-reverse;
-            margin: 0 auto;
-        }
-        .new-header-info-container {
-          text-align: left;
-          display: flex;
-          justify-content: space-between;
-          margin-top: 8px;
-        }
-        .new-header-name {
-          font-size: 5em;
-          font-weight: lighter;
-        }
-        .new-header-description-position {
-          font-size: 4em;
-          font-weight: 300;
-          color: #252627;
-          letter-spacing: 1px;
-          width: 75%;
-          margin-top: 14%;
-          margin-left: 4%;
-        }
-        .new-header-description-location {
-          font-size: 4em;
-          font-weight: 300;
-          color: #252627;
-          letter-spacing: 1px;
-          width: 75%;
-          margin-top: 5%;
-          margin-left: 4%;
-        }
-        .new-header-profile-photo-container {
-          height: 100%;
-          max-width: 350px;
-          align-self: flex-end;
-
-        }
-        .new-header-profile-photo {
-          height: 100%;
-          width: 100%;
-        }
-        .new-contact-logo {
-            height: 23%;
-            width: 23%;
-            margin-left: 10px;
-            margin-right: 10px;
-        }
-        .new-header-contact-scroll-button {
-          display: none;
-        }
-        .new-single-project-container {
-            font-family: "Source Sans Pro", Helvetica, sans-serif;
-            height: 100%;
-            width: 90%;
-            min-width: 912px;
-            border-radius: 7px;
-            transition: background-color 0.4s;
-            background-color: rgba(244,239,231,0.6);
-            margin: 0 auto;
-        }
-        .new-single-project-frame {
-          font-family: "Source Sans Pro", Helvetica, sans-serif;
-          width: 100%;
-          height: 100%;
-          height: auto;	
-        }
-        .new-single-project {
-            display: flex;
-            flex-direction: column;
-            margin: 0 auto;
-        }
-        .new-single-project-screenshot {
-            border-radius: 4px;
-            height: 100%; 
-            width: 100%;
-        }
-        .new-single-project-description {
-          height: 400px;
-
-          margin-left: 0px;
-          margin-top: 40px;
-          margin-bottom: 40px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-
-        }
-        .new-single-project-description-link h3 {
-            font-size: 4em;
-            font-weight: 500;
-        }
-        .new-single-project-description p {
-            font-size: 3em;
-            font-weight: lighter;
-            letter-spacing: initial;
-            line-height: initial;
-        }
-        .single-project-tech-used {
-          height: 80px;
-          width: 65%;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-around;
-        }
-        .single-project-tech-logo {
-          height: 90px;
-          width: 90px;
-          margin-right: 12px;
-        }
-        .matter-js-logo {
-          height: 75px;
-        }
-        .new-contact-info div p {
-          font-size: 3em;
-          line-height: 1.5;
-          height: 70px;
-        }
-        .new-email {
-          width: 275px;
-
-        }
-        .new-resume {
-          width: 275px;
-        }
-      }
-    </style>
-
-    <link rel="icon" type="image/png" href="favicon.ico">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Adrian Lobdill - Solutions Architect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css"></head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="header-text">
+                    <h1>Adrian Lobdill</h1>
+                    <div class="subtitle">Solutions Architect at Fastly</div>
+                    <div class="location">📍 San Francisco</div>
+                    <div class="social-links">
+                        <a href="http://www.linkedin.com/in/lobdill" target="_blank" class="social-link" title="LinkedIn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/buh_dill/" target="_blank" class="social-link" title="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/slolobdill44" target="_blank" class="social-link" title="GitHub">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <img src="https://cdn.glitch.global/c68331b2-6cdb-46b0-82d0-f32594ec0945/circular_headshot.png?v=1689385009972" alt="Adrian Lobdill" class="profile-photo">
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <div class="nav-content">
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Desktop Two-Column Layout -->
+        <div class="main-content">
+            <div class="container">
+                <div class="content-column">
+                    <h2>Work Experience</h2>
+                    
+                    <div class="highlights-grid">
+                        <div class="highlight-card fade-in">
+                            <div class="highlight-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2L2 7v10c0 5.55 3.84 9.739 9 9.899C16.16 26.739 20 22.55 20 17V7l-8-5z"/>
+                                </svg>
+                            </div>
+                            <div class="highlight-title">Solutions Architect</div>
+                            <div class="highlight-company">Fastly</div>
+                            <div class="highlight-period">Jan 2024 - Present</div>
+                            <div class="highlight-description">
+                                Leading implementation projects to design and deploy complex service-chained CDN (VCL) and edge computing (JS, Rust) configurations. Managing up to 8 multi-million dollar enterprise cases with Fortune 500 customers, ranging from 8-hour onboardings to 18-month engagements.
+                            </div>
+                        </div>
+
+
+                        <div class="highlight-card fade-in">
+                            <div class="highlight-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 14l9-5-9-5-9 5 9 5z M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+                                </svg>
+                            </div>
+                            <div class="highlight-title">Education & Training</div>
+                            <div class="highlight-company">UC Berkeley & App Academy</div>
+                            <div class="highlight-period">2016-2017</div>
+                            <div class="highlight-description">
+                                B.A. in Peace and Conflict Studies from UC Berkeley. Completed intensive 1,000-hour web development course at App Academy, focusing on full-stack development and modern programming practices.
+                            </div>
+                        </div>
+
+                        <div class="highlight-card fade-in">
+                            <div class="highlight-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                                </svg>
+                            </div>
+                            <div class="highlight-title">Leadership & Training</div>
+                            <div class="highlight-company">Fastly</div>
+                            <div class="highlight-period">2018-2023</div>
+                            <div class="highlight-description">
+                                Conducted technical interviews and trained 11 new hires. Achieved 99.5% customer satisfaction rate and 100%+ quota attainment. Q4 2020 Client Services All-Star Award Winner with 24/7 on-call executive escalation support.
+                            </div>
+                        </div>
+
+                        <div class="highlight-card fade-in">
+                            <div class="highlight-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div class="highlight-title">International Experience</div>
+                            <div class="highlight-company">Fastly Japan</div>
+                            <div class="highlight-period">2018-2020</div>
+                            <div class="highlight-description">
+                                Trained and worked as SOC Engineer in Japan, gaining valuable international experience and cross-cultural technical collaboration skills in a global technology environment.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-column">
+                    <h2>Projects</h2>
+                    
+                    <div class="projects-grid">
+                        <!-- Ham Huckin' Project -->
+                        <div class="project-card fade-in">
+                            <div class="project-image">
+                                <img src="hamhuckinscreenshot.png" alt="Ham Huckin' Game Screenshot">
+                                <div class="project-overlay">
+                                    <a href="https://slolobdill44.github.io/hamhuckin/" target="_blank" class="project-link">
+                                        View Live Demo
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">Ham Huckin'</h3>
+                                <p class="project-description">
+                                    A physics-based projectile game built with JavaScript and Matter.js. Features realistic 2D physics simulation, collision detection, and an engaging gameplay experience with smooth animations.
+                                </p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">Matter.js</span>
+                                    <span class="tech-tag">HTML5 Canvas</span>
+                                    <span class="tech-tag">Physics Engine</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://slolobdill44.github.io/hamhuckin/" target="_blank" class="btn btn-primary">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M10 6v2H5v11h11v-5h2v6a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1h6zM21 3v8h-2V6.413l-7.793 7.794-1.414-1.414L17.585 5H13V3h8z"/>
+                                        </svg>
+                                        Live Demo
+                                    </a>
+                                    <a href="https://github.com/slolobdill44" target="_blank" class="btn btn-outline">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                        </svg>
+                                        View Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- New Project Template 1 -->
+                        <div class="project-card fade-in">
+                            <div class="project-content">
+                                <h3 class="project-title">New Project Title</h3>
+                                <p class="project-description">
+                                    Add description of your new project here. This could be a recent work project, side project, or open source contribution. Highlight the problem you solved and the technologies used.
+                                </p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">PostgreSQL</span>
+                                    <span class="tech-tag">AWS</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" target="_blank" class="btn btn-primary">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M10 6v2H5v11h11v-5h2v6a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1h6zM21 3v8h-2V6.413l-7.793 7.794-1.414-1.414L17.585 5H13V3h8z"/>
+                                        </svg>
+                                        Live Demo
+                                    </a>
+                                    <a href="#" target="_blank" class="btn btn-outline">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                        </svg>
+                                        View Code
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-image">
+                                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; font-weight: 500;">
+                                    Project Screenshot
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- New Project Template 2 -->
+                        <div class="project-card fade-in">
+                            <div class="project-image">
+                                <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; font-weight: 500;">
+                                    Project Screenshot
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">Another Project</h3>
+                                <p class="project-description">
+                                    Add description of another project here. This template alternates the layout for visual variety. Replace with your actual project details.
+                                </p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">TypeScript</span>
+                                    <span class="tech-tag">Next.js</span>
+                                    <span class="tech-tag">Tailwind CSS</span>
+                                    <span class="tech-tag">Vercel</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" target="_blank" class="btn btn-primary">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M10 6v2H5v11h11v-5h2v6a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1h6zM21 3v8h-2V6.413l-7.793 7.794-1.414-1.414L17.585 5H13V3h8z"/>
+                                        </svg>
+                                        Live Demo
+                                    </a>
+                                    <a href="#" target="_blank" class="btn btn-outline">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                        </svg>
+                                        View Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile-only sections -->
+        <section id="experience">
+            <div class="container">
+                <h2 class="section-title">Work Experience</h2>
+                
+                <div class="highlights-grid">
+                    <div class="highlight-card fade-in">
+                        <div class="highlight-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L2 7v10c0 5.55 3.84 9.739 9 9.899C16.16 26.739 20 22.55 20 17V7l-8-5z"/>
+                            </svg>
+                        </div>
+                        <div class="highlight-title">Solutions Architect</div>
+                        <div class="highlight-company">Fastly</div>
+                        <div class="highlight-period">Jan 2024 - Present</div>
+                        <div class="highlight-description">
+                            Leading implementation projects to design and deploy complex service-chained CDN (VCL) and edge computing (JS, Rust) configurations. Managing up to 8 multi-million dollar enterprise cases with Fortune 500 customers, ranging from 8-hour onboardings to 18-month engagements.
+                        </div>
+                    </div>
+
+                    <div class="highlight-card fade-in">
+                        <div class="highlight-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div class="highlight-title">Principal Support Engineer</div>
+                        <div class="highlight-company">Fastly</div>
+                        <div class="highlight-period">Sep 2023 - Jan 2024</div>
+                        <div class="highlight-description">
+                            Highest level of Support escalation for Delivery Services. Utilized diagnostic tools to trace, log, and debug end-to-end network connections, HTTP and WebSockets requests. Nominated for 12 total All-Star Awards since 2019.
+                        </div>
+                    </div>
+
+                    <div class="highlight-card fade-in">
+                        <div class="highlight-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <div class="highlight-title">Technical Expertise</div>
+                        <div class="highlight-company">Core Competencies</div>
+                        <div class="highlight-period">Continuously Evolving</div>
+                        <div class="highlight-description">
+                            CDN/Caching, Cloud Architecture, Varnish Configuration Language (VCL), REST APIs, DNS/Anycast, HTTP/TLS, Bash/Shell scripting, Terraform/IaC, Ruby/Javascript, WAF/DDoS protection, Edge Computing.
+                        </div>
+                    </div>
+
+                    <div class="highlight-card fade-in">
+                        <div class="highlight-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 14l9-5-9-5-9 5 9 5z M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+                            </svg>
+                        </div>
+                        <div class="highlight-title">Education & Training</div>
+                        <div class="highlight-company">UC Berkeley & App Academy</div>
+                        <div class="highlight-period">2016-2017</div>
+                        <div class="highlight-description">
+                            B.A. in Peace and Conflict Studies from UC Berkeley. Completed intensive 1,000-hour web development course at App Academy, focusing on full-stack development and modern programming practices.
+                        </div>
+                    </div>
+
+                    <div class="highlight-card fade-in">
+                        <div class="highlight-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                            </svg>
+                        </div>
+                        <div class="highlight-title">Leadership & Training</div>
+                        <div class="highlight-company">Fastly</div>
+                        <div class="highlight-period">2018-2023</div>
+                        <div class="highlight-description">
+                            Conducted technical interviews and trained 11 new hires. Achieved 99.5% customer satisfaction rate and 100%+ quota attainment. Q4 2020 Client Services All-Star Award Winner with 24/7 on-call executive escalation support.
+                        </div>
+                    </div>
+
+                    <div class="highlight-card fade-in">
+                        <div class="highlight-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div class="highlight-title">International Experience</div>
+                        <div class="highlight-company">Fastly Japan</div>
+                        <div class="highlight-period">2018-2020</div>
+                        <div class="highlight-description">
+                            Trained and worked as SOC Engineer in Japan, gaining valuable international experience and cross-cultural technical collaboration skills in a global technology environment.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                
+                <div class="projects-grid">
+                    <!-- Ham Huckin' Project (keeping this one) -->
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <img src="hamhuckinscreenshot.png" alt="Ham Huckin' Game Screenshot">
+                            <div class="project-overlay">
+                                <a href="https://slolobdill44.github.io/hamhuckin/" target="_blank" class="project-link">
+                                    View Live Demo
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Ham Huckin'</h3>
+                            <p class="project-description">
+                                A physics-based projectile game built with JavaScript and Matter.js. Features realistic 2D physics simulation, collision detection, and an engaging gameplay experience with smooth animations.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Matter.js</span>
+                                <span class="tech-tag">HTML5 Canvas</span>
+                                <span class="tech-tag">Physics Engine</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://slolobdill44.github.io/hamhuckin/" target="_blank" class="btn btn-primary">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M10 6v2H5v11h11v-5h2v6a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1h6zM21 3v8h-2V6.413l-7.793 7.794-1.414-1.414L17.585 5H13V3h8z"/>
+                                    </svg>
+                                    Live Demo
+                                </a>
+                                <a href="https://github.com/slolobdill44" target="_blank" class="btn btn-outline">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                    View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- New Project Template 1 -->
+                    <div class="project-card fade-in">
+                        <div class="project-content">
+                            <h3 class="project-title">New Project Title</h3>
+                            <p class="project-description">
+                                Add description of your new project here. This could be a recent work project, side project, or open source contribution. Highlight the problem you solved and the technologies used.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">AWS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" target="_blank" class="btn btn-primary">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M10 6v2H5v11h11v-5h2v6a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1h6zM21 3v8h-2V6.413l-7.793 7.794-1.414-1.414L17.585 5H13V3h8z"/>
+                                    </svg>
+                                    Live Demo
+                                </a>
+                                <a href="#" target="_blank" class="btn btn-outline">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                    View Code
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-image">
+                            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; font-weight: 500;">
+                                Project Screenshot
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- New Project Template 2 -->
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; font-weight: 500;">
+                                Project Screenshot
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Another Project</h3>
+                            <p class="project-description">
+                                Add description of another project here. This template alternates the layout for visual variety. Replace with your actual project details.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">Next.js</span>
+                                <span class="tech-tag">Tailwind CSS</span>
+                                <span class="tech-tag">Vercel</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" target="_blank" class="btn btn-primary">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M10 6v2H5v11h11v-5h2v6a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1h6zM21 3v8h-2V6.413l-7.793 7.794-1.414-1.414L17.585 5H13V3h8z"/>
+                                    </svg>
+                                    Live Demo
+                                </a>
+                                <a href="#" target="_blank" class="btn btn-outline">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.239 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                    View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Desktop Contact Section -->
+    <section class="contact-section" id="contact-desktop">
+        <div class="container">
+            <div class="contact-card">
+                <h2 class="contact-title">Want To Connect?</h2>
+                <p class="contact-description">
+                </p>
+                <a href="mailto:slolobdill44@gmail.com" class="contact-email">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.382l-8 4.546-8-4.546V4z"/>
+                        <path d="M3 8.118l8 4.546 8-4.546V20a1 1 0 01-1 1H4a1 1 0 01-1-1V8.118z"/>
+                    </svg>
+                    slolobdill44@gmail.com
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Contact Section -->
+    <footer>
+        <section id="contact">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <div class="contact-card">
+                    <h3 class="contact-title">Want To Connect?</h3>
+                    <p class="contact-description">
+                    </p>
+                    <a href="mailto:slolobdill44@gmail.com" class="contact-email">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.382l-8 4.546-8-4.546V4z"/>
+                            <path d="M3 8.118l8 4.546 8-4.546V20a1 1 0 01-1 1H4a1 1 0 01-1-1V8.118z"/>
+                        </svg>
+                        slolobdill44@gmail.com
+                    </a>
+                </div>
+            </div>
+        </section>
+    </footer>
 
     <script>
-        function scrollToBottom () {
-            document.getElementById("new-footer").scrollIntoView({behavior: "smooth"})
-        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section[id]');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    let targetSection = null;
+                    
+                    // Special handling for contact section
+                    if (targetId === '#contact') {
+                        // On mobile, contact is in footer
+                        if (window.innerWidth <= 900) {
+                            targetSection = document.querySelector('footer section[id="contact"]');
+                        } else {
+                            // On desktop, use desktop contact section
+                            targetSection = document.querySelector('#contact-desktop');
+                        }
+                    } else {
+                        targetSection = document.querySelector(targetId);
+                    }
+                    
+                    console.log('Clicking:', targetId, 'Found section:', targetSection, 'Screen width:', window.innerWidth);
+                    
+                    if (targetSection) {
+                        const nav = document.querySelector('nav');
+                        const navHeight = nav ? nav.offsetHeight : 0;
+                        const headerOffset = navHeight + 10;
+                        
+                        // Scroll to show the section title
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        
+                        // Adjust for sticky nav after scroll
+                        setTimeout(() => {
+                            const currentScroll = window.pageYOffset;
+                            window.scrollTo({
+                                top: currentScroll - headerOffset,
+                                behavior: 'smooth'
+                            });
+                        }, 100);
+                        
+                        navLinks.forEach(navLink => navLink.classList.remove('active'));
+                        this.classList.add('active');
+                    } else {
+                        console.error('Could not find target section for:', targetId);
+                    }
+                });
+            });
+            
+            function updateActiveNavLink() {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.getBoundingClientRect().top;
+                    const sectionHeight = section.offsetHeight;
+                    if (sectionTop <= 100 && sectionTop + sectionHeight > 100) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+            
+            let ticking = false;
+            function handleScroll() {
+                if (\!ticking) {
+                    requestAnimationFrame(() => {
+                        updateActiveNavLink();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            }
+            
+            window.addEventListener('scroll', handleScroll);
+            
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('.highlight-card, .project-card, .contact-card').forEach(card => {
+                observer.observe(card);
+            });
+            
+            if (window.navigator.maxTouchPoints > 0) {
+                document.body.classList.add('touch-device');
+                
+                const interactiveElements = document.querySelectorAll('.btn, .nav-link, .social-link, .contact-email');
+                interactiveElements.forEach(element => {
+                    element.addEventListener('touchstart', function() {
+                        this.style.transform = 'scale(0.95)';
+                    });
+                    
+                    element.addEventListener('touchend', function() {
+                        setTimeout(() => {
+                            this.style.transform = '';
+                        }, 150);
+                    });
+                });
+            }
+        });
     </script>
-  </head>
-
-  <body>
-    <div id="main">
-        <div>
-            <div class="project-body-container">
-              <main class="new-project-body-background">
-                <header class="new-header-container">
-                    <div class="new-header-profile-photo-container">
-                      <img class="new-header-profile-photo" src="https://cdn.glitch.global/c68331b2-6cdb-46b0-82d0-f32594ec0945/circular_headshot.png?v=1689385009972" />
-                      <div class="new-contact-links">
-                        <a href="https://github.com/slolobdill44" target="_blank"><img class="new-contact-logo" src="GitHub-Mark-64px.png" /></a>
-                        <a href="http://www.linkedin.com/in/lobdill" target="_blank"><img class="new-contact-logo" src="linked_in.png" /></a>
-                        <a href="https://www.instagram.com/buh_dill/" target="_blank"><img class="new-contact-logo" src="ig_black.png" /></a>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="new-header-info-container">
-                        <h1 class="new-header-name">ADRIAN LOBDILL</h1>
-                        <h4 class="new-header-description-position">Currently: Solutions Architect</h4>
-                        <h4 class="new-header-description-location">At: Fastly</h4>
-                      </div>
-                      <div class="new-header-contact-scroll-button" >
-                        <p onclick="scrollToBottom()">Contact</p>
-                      </div>
-                    </div>
-                  </header>
-                <section class="projects-section">
-                    <div class="projects-title-container">
-                        <div class="new-projects-title-border-container">
-                            <div class="new-projects-title-border">
-                                <h4 class="new-projects-title"> </h4>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="new-single-project-frame">
-                        <div class="new-single-project-container">
-                          <div class="new-single-project">
-                            <a class="new-single-project-screenshot-container" href="https://slolobdill44.github.io/hamhuckin/" target="_blank">
-                              <div class="new-external-link-overlay-green">
-                                <img class="new-external-link-image" src="new_tab.png" />
-                              </div>
-                              <img class="new-single-project-screenshot" src="hamhuckinscreenshot.png?quality=70&auto=webp"  />
-                            </a>
-                            <div class="new-single-project-description">
-                              <a class="new-single-project-description-link" href="https://slolobdill44.github.io/hamhuckin/" target="_blank">
-                                <h3>Ham Huckin'</h3>
-                              </a>
-                              <p>
-                                A simple JavaScript projectile game that employs the matter.js library to render realistic 2D physics.
-                              </p>
-                              <div class="single-project-tech-used">
-                                <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">
-                                    <img class="single-project-tech-logo" src="js_logo.png?quality=70&auto=webp">
-                                </a>
-                                <a href="https://brm.io/matter-js/" target="_blank">
-                                    <img class="matter-js-logo" src="matter-js.svg">
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                    <div class="new-banner-row-container">
-                        <div class="new-banner-row">
-                          <div class="new-banner-row-divider"></div>
-                        </div>
-                    </div>
-                    <div class="new-single-project-frame">
-                        <div class="new-single-project-container">
-                            <div class="new-single-project">
-                            <a class="new-single-project-screenshot-container" target="_blank">
-                                <div class="new-external-link-overlay-red">
-                                <img class="new-external-link-image" src="maintenance.svg" />
-                                </div>
-                                <img class="new-single-project-screenshot" src="hamcampscreenshot.png?quality=70&auto=webp"  />
-                            </a>
-                            <div class="new-single-project-description">
-                                <a class="new-single-project-description-link" target="_blank">
-                                <h3>Hamcamp</h3>
-                                </a>
-                                <p>
-                                Full-stack Bandcamp clone that allows users to upload albums and play them in a convenient music player.
-                                </p>
-                                <div class="single-project-tech-used">
-                                <a href="https://facebook.github.io/react/" target="_blank">
-                                    <img class="single-project-tech-logo" src="react.svg">
-                                </a>
-                                <a href="http://redux.js.org/" target="_blank">
-                                    <img class="single-project-tech-logo" src="redux_logo.png?quality=70&auto=webp">
-                                </a>
-                                <a href="http://rubyonrails.org/" target="_blank">
-                                    <img class="single-project-tech-logo" src="Ruby_on_Rails_logo.png?quality=70&auto=webp">
-                                </a>
-                                <a href="https://www.postgresql.org/" target="_blank">
-                                    <img class="single-project-tech-logo" src="PostgreSQL-96.png?quality=70&auto=webp">
-                                </a>
-                                <a href="https://en.wikipedia.org/wiki/HTML5" target="_blank">
-                                    <img class="single-project-tech-logo" src="HTML5_Logo_64.png?quality=70&auto=webp">
-                                </a>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="new-banner-row-container">
-                        <div class="new-banner-row">
-                          <div class="new-banner-row-divider"></div>
-                        </div>
-                    </div>
-                    <div class="new-single-project-frame">
-                        <div class="new-single-project-container">
-                        <div class="new-single-project">
-                            <a class="new-single-project-screenshot-container" target="_blank">
-                                <div class="new-external-link-overlay-red">
-                                    <img class="new-external-link-image" src="maintenance.svg" />
-                                </div>
-                            <img class="new-single-project-screenshot" src="tweetthebaycropped.png?quality=70&auto=webp"  />
-                            </a>
-                            <div class="new-single-project-description">
-                            <a class="new-single-project-description-link" target="_blank">
-                                <h3>Tweet The Bay</h3>
-                            </a>
-                            <p>
-                            Mapping application that places live tweets on a map and allows geo-searching by keyword.               
-                            </p>
-                            <div class="single-project-tech-used">
-                                <a href="https://facebook.github.io/react/" target="_blank">
-                                    <img class="single-project-tech-logo" src="react.svg">
-                                </a>
-                                <a href="http://redux.js.org/" target="_blank">
-                                    <img class="single-project-tech-logo" src="redux_logo.png?quality=70&auto=webp">
-                                </a>
-                                <a href="http://rubyonrails.org/" target="_blank">
-                                    <img class="single-project-tech-logo" src="Ruby_on_Rails_logo.png?quality=70&auto=webp">
-                                </a>
-                                <a href="https://www.postgresql.org/" target="_blank">
-                                    <img class="single-project-tech-logo" src="PostgreSQL-96.png?quality=70&auto=webp">
-                                </a>
-                                <a href="https://en.wikipedia.org/wiki/HTML5" target="_blank">
-                                    <img class="single-project-tech-logo" src="HTML5_Logo_64.png?quality=70&auto=webp">
-                                </a>
-                            </div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-    
-                </section>
-    
-                <div id="new-footer" class="new-footer-container">
-                    <section class="new-contact-info">
-                      <a href="mailto:adrian@lobdill.com" target="_top">
-                        <div class="new-email">
-                          <p>E-Mail</p>
-                        </div>
-                      </a>
-                    </section>
-                </div>
-              </main>
-            </div>
-          </div>
-    </div>
-  </body>
-
-  <!-- new tab by Danil Polshin from the Noun Project -->
+</body>
 </html>
