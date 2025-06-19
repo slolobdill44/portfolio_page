@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Adrian Lobdill</title>
+    
+    <style>
+          html, body, div, span, applet, object, iframe,
+          h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+          a, abbr, acronym, address, big, cite, code,
+          del, dfn, em, img, ins, kbd, q, s, samp,
+          small, strike, strong, sub, sup, tt, var,
+          b, u, i, center,
+          dl, dt, dd, ol, ul, li,
+          fieldset, form, label, legend,
+          table, caption, tbody, tfoot, thead, tr, th, td,
+          article, aside, canvas, details, embed,
+          figure, figcaption, footer, header, hgroup,
+          menu, nav, output, ruby, section, summary,
+          time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+          }
+          /* HTML5 display-role reset for older browsers */
+          article, aside, details, figcaption, figure,
+          footer, header, hgroup, menu, nav, section {
+            display: block;
+          }
+          body {
+            line-height: 1;
+          }
+          ol, ul {
+            list-style: none;
+          }
+          blockquote, q {
+            quotes: none;
+          }
+          blockquote:before, blockquote:after,
+          q:before, q:after {
+            content: '';
+            content: none;
+          }
+          table {
+            border-collapse: collapse;
+            border-spacing: 0;
+          }
+
+          body {
+        margin: 0;
+        color: black;
+        background-color: rgba(252,252,252,0.5);
+
+        }
+
+        header {
+          text-align: center;
+        }
+
+        p {
+          font-size: 18px;
+        }
+
+        header p {
+          font-weight: bold;
+        }
+
+        a {
+          cursor: pointer;
+          text-decoration: none;
+        }
+
+        .fade-enter {
+          top: 0px;
+          opacity: 0.01;
+        }
+
+        .fade-enter.fade-enter-active {
+          opacity: 1;
+          transition: opacity 500ms ease-in;
+        }
+
+        .fade-leave {
+          opacity: 1;
+          display: none;
+        }
+
+        .fade-leave.fade-leave-active {
+          opacity: 0.01;
+          display: none;
+          transition: opacity 300ms ease-in;
+        }
+
+        .fade-appear {
+          opacity: 0.01;
+          display: none;
+        }
+
+        .fade-appear.fade-appear-active {
+          opacity: 1;
+          display: none;
+          transition: opacity .5s ease-in;
+        }
+
+        .page-clear {
+          height: 27px;
+        }
+
+        .project-body-container {
+          background-position: center center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          height: 100%;
+          -webkit-transform: translateZ(0);
+        }
+
+        /* .style-switch-button {
+          position: fixed;
+          height: 30px;
+          width: 140px;
+          margin-left: 36px;
+          margin-top: 36px;
+          z-index: 5;
+        } */
+
+        .single-project-tech-used {
+          height: 55px;
+        /*   width: 65%; */
+          /*display: flex;*/
+          /*flex-direction: row;*/
+          /*justify-content: space-around;*/
+        }
+
+        .single-project-tech-logo {
+          height: 48px;
+          width: 48px;
+          margin-right: 25px;
+        }
+
+        .matter-js-logo {
+          height: 30px;
+          width: auto;
+          margin-top: 16px;
+          margin-left: 7px;
+        }
+
+
+        .new-project-body-background {
+          position: relative;
+          /*border-radius: 4px;*/
+          margin: 0 auto;
+          width: 90%;
+          min-width: 1140px;
+          height: 100%;
+        }
+
+        .new-header-container {
+          font-family: "Source Sans Pro", Helvetica, sans-serif;
+          padding-top: 32px;
+          width: 55%;
+
+          display: flex;
+          justify-content: space-between;
+          margin: 0 auto;
+          margin-left: 30%;
+        }
+
+        .new-header-profile-photo-container {
+          height: 100%;
+          max-width: 150px;
+        }
+
+        .new-header-profile-photo {
+          height: 100%;
+          width: 100%;
+        }
+
+        .new-header-info-container {
+          text-align: left;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          /*margin-top: 8px;*/
+          height: 144px;
+        }
+
+        .new-header-name {
+          color: #252627;
+          font-size: 48px;
+          font-weight: 300;
+          letter-spacing: 3px;
+          text-align: center;
+          padding: 0;
+        }
+
+        .new-header-description-position {
+          font-size: 28px;
+          font-weight: 300;
+          color: #252627;
+          letter-spacing: 1px;
+          width: 398px;
+        }
+
+        .new-header-description-location {
+          font-size: 28px;
+          font-weight: 300;
+          color: #252627;
+          letter-spacing: 1px;
+          width: 398px;
+        }
+
+        .new-header-contact-scroll-button p {
+          margin-top: 24px;
+          height: 32px;
+          width: 128px;
+          border: 2px solid #252627;
+          border-radius: 4px;
+          color: #252627;
+
+
+          transition: background-color 0.4s;
+          font-size: 24px;
+          font-weight: 300;
+          text-align: center;
+          line-height: 1.4;
+        }
+
+        .new-header-contact-scroll-button p:hover {
+          cursor: pointer;
+          background-color: rgba(249,246,241,0.9);
+          box-shadow: 0 5px 15px rgba(42, 73, 199,.25);
+        }
+
+        .new-contact-logo {
+          height: 32px;
+          width: 32px;
+
+          margin-left: 5px;
+          margin-right: 5px;
+        }
+
+        .new-contact-logo hover {
+          box-shadow: 0 5px 15px rgba(42, 73, 199, .25);
+        }
+
+        .new-contact-links {
+          font-weight: 300;
+          margin-top: 24px;
+        }
+
+        .new-projects-title-border-container {
+          height: 90px;
+          width: 100%;
+        }
+
+        .new-projects-title-border {
+          padding-top: 16px;
+          margin: 0 auto;
+          height: 43px;
+          width: 240px;
+        }
+
+        .new-projects-title {
+          font-family: "Source Sans Pro", Helvetica, sans-serif;
+          font-weight: 300;
+          font-size: 32px;
+          color: #252627;
+          text-align: center;
+          width: 100%;
+        }
+
+        .new-single-project-frame {
+          font-family: "Source Sans Pro", Helvetica, sans-serif;
+          width: 100%;
+          height: 292px;
+        }
+
+        .new-single-project-container {
+          font-family: "Source Sans Pro", Helvetica, sans-serif;
+          height: 100%;
+          width: 90%;
+          min-width: 912px;
+          border-radius: 5px;
+          transition: background-color 0.4s;
+          background-color: rgba(244,239,231,0.6);
+          margin: 0 auto;
+        }
+
+        .new-single-project-container:hover {
+          background-color: rgba(249,246,241,0.9);
+        }
+
+        .new-single-project {
+          display: flex;
+          justify-content: space-evenly;
+          width: 83%;
+          padding-top: 34px;
+          margin: 0 auto;
+        }
+
+        .new-single-project-screenshot-container {
+          height: 100%;
+          border-radius: 2px;
+          display: inline-block;
+          margin-bottom: 15px;
+        }
+
+        .new-external-link-image {
+          display: none;
+        }
+
+        .new-single-project-screenshot-container:hover .new-external-link-overlay-green {
+          border-radius: 4px;
+          position: absolute;
+          background-color: rgba(39, 70, 144, 0.6);
+          cursor: pointer;
+          opacity: .6;
+          height: 100%;
+          width: 100%;
+          max-width: 360px;
+          max-height: 224px;
+        }
+
+        .new-single-project-screenshot-container:hover .new-external-link-overlay-red {
+          border-radius: 4px;
+          position: absolute;
+          background-color: rgba(242, 66, 19, 0.6);
+          cursor: pointer;
+          opacity: .6;
+          height: 100%;
+          width: 100%;
+          max-width: 360px;
+          max-height: 224px;
+        }
+
+        .new-single-project-screenshot-container:hover .new-external-link-image {
+          border-radius: 4px;
+          position: absolute;
+          opacity: .6;
+          height: 150px;
+          width: 150px;
+          display: inline;
+          cursor: pointer;
+          left: 29%;
+          top: 15%;
+        }
+
+        .new-single-project-screenshot {
+          border-radius: 4px;
+          height: 224px;
+          width: 360px;
+        }
+
+        .new-single-project-description {
+          height: 185px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+      /*     width: 52%; */
+          margin-left: 34px;
+          margin-top: 24px;
+        }
+
+        .new-single-project-description-link {
+          color: #252627;
+          text-decoration: none;
+        }
+
+        .new-single-project-description-link :hover {
+          cursor: pointer;
+        }
+
+        .new-single-project-description-link h3 {
+          font-size: 32px;
+          font-weight: 300;
+          font-style: normal;
+          transform: color 0.2s;
+        }
+
+        .new-single-project-description-link h3:hover {
+          color: #274690;
+        }
+
+        .new-single-project-description-link-maintenance {
+          color: #252627;
+          text-decoration: none;
+        }
+
+        .new-single-project-description-link-maintenance :hover {
+          cursor: pointer;
+        }
+
+        .new-single-project-description-link-maintenance h3 {
+          font-size: 32px;
+          font-weight: 300;
+          font-style: normal;
+          transform: color 0.2s;
+        }
+
+        .new-single-project-description-link-maintenance h3:hover {
+          color: rgba(242, 66, 19);
+        }
+
+        .new-single-project-description p {
+          letter-spacing: 0.25px;
+          line-height: 24px;
+          font-size: 16px;
+          margin-left: 1px;
+        }
+
+        .new-banner-row-container {
+          padding-top: 5px;
+          padding-bottom: 5px;
+          width: 100%;
+        }
+
+        .new-banner-row {
+          display: flex;
+          justify-content: space-around;
+          width: 90%;
+          margin: 0 auto;
+          margin-top: 27px;
+          margin-bottom: 27px;
+        }
+
+        .new-banner-row-divider {
+          width: 90%;
+        }
+
+        .new-footer-container {
+          padding-top: 32px;
+          padding-bottom: 32px;
+           margin: 0 auto;
+          width: 90%;
+          margin-top: 32px;
+          margin-bottom: 32px;
+          border-radius: 5px;
+        }
+
+        .new-contact-info {
+          font-family: "Source Sans Pro", Helvetica, sans-serif;
+          height: 100%;
+          width: 93%;
+          display: flex;
+          justify-content: space-around;
+          margin: 0 auto;
+        }
+
+        .new-contact-info div p {
+          border: 2px solid #252627;
+          border-radius: 4px;
+          color: #252627;
+          transition: box-shadow 0.3s ease 0s, background-color 0.4s;
+          background-color: rgba(244,239,231,0.8);
+          box-shadow: transparent -8px 4px 20px;
+
+          font-size: 24px;
+          font-weight: 300;
+          text-align: center;
+          line-height: 2.1;
+          height: 48px;
+        }
+
+        .new-contact-info div p:hover {
+          cursor: pointer;
+          background-color: rgba(249,246,241,0.9);
+          box-shadow: 0 5px 15px rgba(42, 73, 199, .25);
+        }
+
+        .new-email {
+          width: 143px;
+        }
+
+        .new-resume {
+          width: 143px;
+        }
+
+        .new-guest-book {
+          width: 170px;
+        }
+
+        .new-guest-book p {
+          text-decoration: none;
+        }
+
+        @media only screen and (max-device-width:812px) {
+        .project-body-container{
+          height: none;
+        }
+        .new-project-body-background {
+          height: none;
+        }
+        .new-header-container {
+            font-family: "Source Sans Pro", Helvetica, sans-serif;
+            padding-top: 32px;
+            width: 85%;
+            display: flex;
+            flex-direction: column-reverse;
+            /* justify-content: space-between; */
+            margin: 0 auto;
+        }
+        .new-header-info-container {
+          text-align: left;
+          display: flex;
+          /*flex-direction: column;*/
+          justify-content: space-between;
+          margin-top: 8px;
+          /*border: 2px solid red;*/
+        }
+        .new-header-name {
+          font-size: 5em;
+          font-weight: lighter;
+        }
+        .new-header-description-position {
+          /*align-self: flex-end;*/
+          font-size: 4em;
+          font-weight: 300;
+          color: #252627;
+          letter-spacing: 1px;
+          width: 75%;
+          margin-top: 14%;
+          margin-left: 4%;
+        }
+        .new-header-description-location {
+          /*align-self: flex-end;*/
+          font-size: 4em;
+          font-weight: 300;
+          color: #252627;
+          letter-spacing: 1px;
+          width: 75%;
+          margin-top: 5%;
+          margin-left: 4%;
+        }
+        .new-header-profile-photo-container {
+          height: 100%;
+          max-width: 350px;
+          align-self: flex-end;
+
+        }
+        .new-header-profile-photo {
+          height: 100%;
+          width: 100%;
+        }
+        .new-contact-logo {
+            height: 23%;
+            width: 23%;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .new-header-contact-scroll-button {
+          display: none;
+        }
+        .new-single-project-container {
+            font-family: "Source Sans Pro", Helvetica, sans-serif;
+            height: 100%;
+            width: 90%;
+            min-width: 912px;
+            border-radius: 7px;
+            transition: background-color 0.4s;
+            background-color: rgba(244,239,231,0.6);
+            margin: 0 auto;
+        }
+        .new-single-project-frame {
+          font-family: "Source Sans Pro", Helvetica, sans-serif;
+          width: 100%;
+          height: 100%;
+          height: none;	
+        }
+        .new-single-project {
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-between; */
+            /*width: 83%;*/
+            /*padding-top: 34px;*/
+            margin: 0 auto;
+        }
+        .new-single-project-screenshot {
+            border-radius: 4px;
+            height: 100%; 
+            width: 100%;
+        }
+        .new-single-project-description {
+          height: 400px;
+
+          margin-left: 0px;
+          margin-top: 40px;
+          margin-bottom: 40px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+        }
+        .new-single-project-description-link h3 {
+            font-size: 4em;
+            font-weight: 500;
+        }
+        .new-single-project-description-link-maintenance h3 {
+            font-size: 4em;
+            font-weight: 500;
+        }
+        .new-single-project-description p {
+            font-size: 3em;
+            font-weight: lighter;
+            letter-spacing: initial;
+            line-height: initial;
+        }
+        .single-project-tech-used {
+          height: 80px;
+          width: 65%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+        }
+        .single-project-tech-logo {
+          height: 90px;
+          width: 90px;
+          margin-right: 12px;
+        }
+        .matter-js-logo {
+          height: 75px;
+        }
+        .new-contact-info div p {
+          font-size: 3em;
+          line-height: 1.5;
+          height: 70px;
+        }
+        .new-email {
+          width: 275px;
+
+        }
+        .new-resume {
+          width: 275px;
+        }
+      }
+    </style>
+
+    <link rel="icon" type="image/png" href="favicon.ico">
+
+<!--     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet"> -->
+
+    <script>
+        function scrollToBottom () {
+            document.getElementById("new-footer").scrollIntoView({behavior: "smooth"})
+        }
+    </script>
+  </head>
+
+  <body>
+    <div id="main">
+        <div>
+            <div class="project-body-container">
+              <main class="new-project-body-background">
+                <header class="new-header-container">
+                    <div class="new-header-profile-photo-container">
+                      <img class="new-header-profile-photo" src="https://cdn.glitch.global/c68331b2-6cdb-46b0-82d0-f32594ec0945/circular_headshot.png?v=1689385009972" />
+                      <div class="new-contact-links">
+                        <a href="https://github.com/slolobdill44" target="_blank"><img class="new-contact-logo" src="GitHub-Mark-64px.png" /></a>
+                        <a href="http://www.linkedin.com/in/lobdill" target="_blank"><img class="new-contact-logo" src="linked_in.png" /></a>
+                        <a href="https://www.instagram.com/buh_dill/" target="_blank"><img class="new-contact-logo" src="ig_black.png" /></a>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="new-header-info-container">
+                        <h1 class="new-header-name">ADRIAN LOBDILL</h1>
+                        <h4 class="new-header-description-position">Currently: Solutions Architect</h4>
+                        <h4 class="new-header-description-location">At: Fastly</h4>
+                      </div>
+                      <div class="new-header-contact-scroll-button" >
+                        <p onclick="scrollToBottom()">Contact</p>
+                      </div>
+                    </div>
+                  </header>
+                <section class="projects-section">
+                    <div class="projects-title-container">
+                        <div class="new-projects-title-border-container">
+                            <div class="new-projects-title-border">
+                                <h4 class="new-projects-title"> </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="new-single-project-frame">
+                        <div class="new-single-project-container">
+                          <div class="new-single-project">
+                            <a class="new-single-project-screenshot-container" href="https://slolobdill44.github.io/hamhuckin/" target="_blank">
+                              <div class="new-external-link-overlay-green">
+                                <img class="new-external-link-image" src="new_tab.png" />
+                              </div>
+                              <img class="new-single-project-screenshot" src="hamhuckinscreenshot.png?quality=70&auto=webp"  />
+                            </a>
+                            <div class="new-single-project-description">
+                              <a class="new-single-project-description-link" href="https://slolobdill44.github.io/hamhuckin/" target="_blank">
+                                <h3>Ham Huckin'</h3>
+                              </a>
+                              <p>
+                                A simple JavaScript projectile game that employs the matter.js library to render realistic 2D physics.
+                              </p>
+                              <div class="single-project-tech-used">
+                                <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">
+                                    <img class="single-project-tech-logo" src="js_logo.png?quality=70&auto=webp">
+                                </a>
+                                <a href="https://brm.io/matter-js/" target="_blank">
+                                    <img class="matter-js-logo" src="matter-js.svg">
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="new-banner-row-container">
+                        <div class="new-banner-row">
+                          <div class="new-banner-row-divider"></div>
+                        </div>
+                    </div>
+                    <div class="new-single-project-frame">
+                        <div class="new-single-project-container">
+                            <div class="new-single-project">
+                            <a class="new-single-project-screenshot-container" target="_blank">
+                                <div class="new-external-link-overlay-red">
+                                <img class="new-external-link-image" src="maintenance.svg" />
+                                </div>
+                                <img class="new-single-project-screenshot" src="hamcampscreenshot.png?quality=70&auto=webp"  />
+                            </a>
+                            <div class="new-single-project-description">
+                                <a class="new-single-project-description-link" target="_blank">
+                                <h3>Hamcamp</h3>
+                                </a>
+                                <p>
+                                Full-stack Bandcamp clone that allows users to upload albums and play them in a convenient music player.
+                                </p>
+                                <div class="single-project-tech-used">
+                                <a href="https://facebook.github.io/react/" target="_blank">
+                                    <img class="single-project-tech-logo" src="react.svg">
+                                </a>
+                                <a href="http://redux.js.org/" target="_blank">
+                                    <img class="single-project-tech-logo" src="redux_logo.png?quality=70&auto=webp">
+                                </a>
+                                <a href="http://rubyonrails.org/" target="_blank">
+                                    <img class="single-project-tech-logo" src="Ruby_on_Rails_logo.png?quality=70&auto=webp">
+                                </a>
+                                <a href="https://www.postgresql.org/" target="_blank">
+                                    <img class="single-project-tech-logo" src="PostgreSQL-96.png?quality=70&auto=webp">
+                                </a>
+                                <a href="https://en.wikipedia.org/wiki/HTML5" target="_blank">
+                                    <img class="single-project-tech-logo" src="HTML5_Logo_64.png?quality=70&auto=webp">
+                                </a>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-banner-row-container">
+                        <div class="new-banner-row">
+                          <div class="new-banner-row-divider"></div>
+                        </div>
+                    </div>
+                    <div class="new-single-project-frame">
+                        <div class="new-single-project-container">
+                        <div class="new-single-project">
+                            <a class="new-single-project-screenshot-container" target="_blank">
+                                <div class="new-external-link-overlay-red">
+                                    <img class="new-external-link-image" src="maintenance.svg" />
+                                </div>
+                            <img class="new-single-project-screenshot" src="tweetthebaycropped.png?quality=70&auto=webp"  />
+                            </a>
+                            <div class="new-single-project-description">
+                            <a class="new-single-project-description-link" target="_blank">
+                                <h3>Tweet The Bay</h3>
+                            </a>
+                            <p>
+                            Mapping application that places live tweets on a map and allows geo-searching by keyword.               
+                            </p>
+                            <div class="single-project-tech-used">
+                                <a href="https://facebook.github.io/react/" target="_blank">
+                                    <img class="single-project-tech-logo" src="react.svg">
+                                </a>
+                                <a href="http://redux.js.org/" target="_blank">
+                                    <img class="single-project-tech-logo" src="redux_logo.png?quality=70&auto=webp">
+                                </a>
+                                <a href="http://rubyonrails.org/" target="_blank">
+                                    <img class="single-project-tech-logo" src="Ruby_on_Rails_logo.png?quality=70&auto=webp">
+                                </a>
+                                <a href="https://www.postgresql.org/" target="_blank">
+                                    <img class="single-project-tech-logo" src="PostgreSQL-96.png?quality=70&auto=webp">
+                                </a>
+                                <a href="https://en.wikipedia.org/wiki/HTML5" target="_blank">
+                                    <img class="single-project-tech-logo" src="HTML5_Logo_64.png?quality=70&auto=webp">
+                                </a>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+    
+                </section>
+    
+                <div id="new-footer" class="new-footer-container">
+                    <section class="new-contact-info">
+                      <a href="mailto:adrian@lobdill.com" target="_top">
+                        <div class="new-email">
+                          <p>E-Mail</p>
+                        </div>
+                      </a>
+                    </section>
+                </div>
+              </main>
+            </div>
+          </div>
+    </div>
+  </body>
+
+  <!-- new tab by Danil Polshin from the Noun Project -->
+</html>
