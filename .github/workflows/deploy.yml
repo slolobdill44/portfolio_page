@@ -21,4 +21,9 @@ jobs:
 
       - name: "Upload to Cloud Storage"
         run: |
-          gsutil -m rsync -d -c -r dist gs://portfolio_bucket_bubsy
+          gsutil -m rsync -d -c -r dist gs://portfolio-bucket-bubsy
+
+      - name: "Purge Fastly Cache via API"
+        run: |
+          curl -X POST -H "Fastly-Key: ${{ secrets.FASTLY_API_TOKEN }}" \
+               "https://api.fastly.com/service/2F667ncNaph0agDFKdbE4a/purge_all"
