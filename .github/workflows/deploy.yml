@@ -1,0 +1,24 @@
+name: Deploy to Google Cloud Storage
+
+on:
+  push:
+    branches:
+      - main # Or your main branch name
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: "auth"
+        uses: "google-github-actions/auth@v2"
+        with:
+          credentials_json: "${{ secrets.GCP_SA_KEY }}"
+
+      - name: "Set up Cloud SDK"
+        uses: "google-github-actions/setup-gcloud@v2"
+
+      - name: "Upload to Cloud Storage"
+        run: |
+          gsutil -m rsync -d -c -r dist gs://portfolio_bucket_bubsy
