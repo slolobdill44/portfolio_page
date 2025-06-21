@@ -640,6 +640,15 @@ section {
     transition: transform 0.3s ease;
 }
 
+/* Special handling for Fastly logo - only on small devices */
+@media (max-width: 900px) {
+    .project-image img[src*="Fastly_logo_2.svg"] {
+        object-fit: contain;
+        object-position: center;
+        padding: 20px;
+    }
+}
+
 .project-card:hover .project-image img {
     transform: scale(1.05);
 }
