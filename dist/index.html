@@ -493,7 +493,6 @@
         document.addEventListener('DOMContentLoaded', function() {
             // Simplified experience toggle functionality
             function setupExperienceToggle() {
-                console.log('Setting up experience toggle...');
                 
                 // Experience toggle - specific event listeners to avoid nav conflicts
                 function attachExperienceToggleListeners() {
@@ -518,7 +517,6 @@
                         btn.addEventListener('click', function(e) {
                             e.preventDefault();
                             e.stopPropagation();
-                            console.log('Show more clicked!');
                             
                             const toggle = btn.closest('.experience-toggle');
                             const showLessBtn = toggle.querySelector('.show-less-btn');
@@ -526,8 +524,6 @@
                             // Find all additional experience items in the same section
                             const section = toggle.closest('section, .content-column, .container');
                             const additionalItems = section.querySelectorAll('.additional-experience');
-                            
-                            console.log('Found ' + additionalItems.length + ' items to show');
                             
                             // Show items
                             additionalItems.forEach(item => {
@@ -549,7 +545,6 @@
                         btn.addEventListener('click', function(e) {
                             e.preventDefault();
                             e.stopPropagation();
-                            console.log('Show less clicked!');
                             
                             const toggle = btn.closest('.experience-toggle');
                             const showMoreBtn = toggle.querySelector('.show-more-btn');
@@ -557,8 +552,6 @@
                             // Find all additional experience items in the same section
                             const section = toggle.closest('section, .content-column, .container');
                             const additionalItems = section.querySelectorAll('.additional-experience');
-                            
-                            console.log('Found ' + additionalItems.length + ' items to hide');
                             
                             // Hide items
                             additionalItems.forEach(item => {
@@ -583,8 +576,6 @@
                 // Test if elements exist
                 const showMoreBtns = document.querySelectorAll('.show-more-btn');
                 const additionalItems = document.querySelectorAll('.additional-experience');
-                console.log('Found ' + showMoreBtns.length + ' show-more buttons');
-                console.log('Found ' + additionalItems.length + ' additional experience items');
                 
                 if (showMoreBtns.length === 0) {
                     console.error('ERROR: No show-more buttons found!');
@@ -608,7 +599,6 @@
                         btn.style.display = 'inline-flex';
                     });
                     
-                    console.log('Button states initialized - Show More visible, Show Less hidden');
                 }, 200);
             }
             
@@ -629,7 +619,6 @@
                     const targetId = this.getAttribute('href');
                     let targetSection = null;
                     
-                    console.log('Nav clicked:', targetId);
                     
                     // Find the target section
                     if (targetId === '#contact') {
@@ -640,7 +629,6 @@
                     }
                     
                     if (targetSection) {
-                        console.log('Scrolling to section:', targetSection);
                         
                         // Simple scroll - no smooth scrolling, just jump to section
                         const nav = document.querySelector('nav');
@@ -656,7 +644,6 @@
                         navLinks.forEach(navLink => navLink.classList.remove('active'));
                         this.classList.add('active');
                         
-                        console.log('Navigation completed');
                     } else {
                         console.error('Target section not found:', targetId);
                     }
