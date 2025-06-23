@@ -208,7 +208,7 @@ nav {
     box-shadow: var(--shadow-sm);
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover {
     color: var(--primary-color);
     background: var(--background-accent);
     border-color: var(--primary-color);

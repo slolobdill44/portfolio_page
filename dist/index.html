@@ -663,9 +663,6 @@ A Lobster Designers, Inc. Production
                             behavior: 'auto' // Instant scroll
                         });
                         
-                        // Update active state
-                        navLinks.forEach(navLink => navLink.classList.remove('active'));
-                        this.classList.add('active');
                         
                     } else {
                         console.error('Target section not found:', targetId);
@@ -673,36 +670,6 @@ A Lobster Designers, Inc. Production
                 });
             });
             
-            function updateActiveNavLink() {
-                let current = '';
-                sections.forEach(section => {
-                    const sectionTop = section.getBoundingClientRect().top;
-                    const sectionHeight = section.offsetHeight;
-                    if (sectionTop <= 100 && sectionTop + sectionHeight > 100) {
-                        current = section.getAttribute('id');
-                    }
-                });
-                
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === '#' + current) {
-                        link.classList.add('active');
-                    }
-                });
-            }
-            
-            let ticking = false;
-            function handleScroll() {
-                if (!ticking) {
-                    requestAnimationFrame(() => {
-                        updateActiveNavLink();
-                        ticking = false;
-                    });
-                    ticking = true;
-                }
-            }
-            
-            window.addEventListener('scroll', handleScroll);
             
             const observerOptions = {
                 threshold: 0.1,
