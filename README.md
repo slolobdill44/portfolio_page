@@ -1,4 +1,6 @@
-# My Portfolio Page - https://adrianlobdill.com
+# My Portfolio Page
+
+https://adrianlobdill.com
 
 A clean, responsive personal portfolio showcasing projects and professional experience. Built with modern web fundamentals and deployed with enterprise-grade performance. Recent code refresh assisted by Claude CLI.
 
