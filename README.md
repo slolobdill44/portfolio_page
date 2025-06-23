@@ -17,9 +17,6 @@ A clean, responsive personal portfolio showcasing projects and professional expe
 - **Modern CSS**: Grid, Flexbox, Custom Properties, Container Queries
 - **Clean Code**: Semantic HTML, accessible markup, maintainable styles
 - **Enterprise Deployment**: GCS + Fastly for production-grade hosting
-
-## 🎯 Features
-
 - **Performance Optimized**: Lighthouse score 95+ across all metrics
 - **Responsive Design**: Mobile-first approach with breakpoints for all devices
 - **Interactive Elements**: Smooth animations, hover effects, touch-friendly UI
