@@ -21,6 +21,8 @@ A Lobster Designers, Inc. Production
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Adrian Lobdill - Solutions Architect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico"></head>
@@ -51,7 +53,12 @@ A Lobster Designers, Inc. Production
                         </a>
                     </div>
                 </div>
-                <img src="assets/circular_headshot.png" alt="Adrian Lobdill" class="profile-photo">
+                <img src="assets/circular_headshot.png"
+                    srcset="assets/circular_headshot.png?width=150 150w,
+                            assets/circular_headshot.png?width=250 250w"
+                    sizes="(max-width: 900px) 150px, 250px"
+                    alt="Adrian Lobdill"
+                    class="profile-photo">
             </div>
         </div>
     </header>
@@ -162,7 +169,11 @@ A Lobster Designers, Inc. Production
                     <div id="desktop-pets" class="pets-section">
                         <div class="pet-card fade-in">
                             <div class="pet-image">
-                                <img src="assets/bubsy.jpg" alt="Bubbles the hamster">
+                                <img src="assets/bubsy.jpg?quality=medium"
+                                    srcset="assets/bubsy.jpg?quality=medium&width=350 350w,
+                                            assets/bubsy.jpg?quality=medium&width=500 500w"
+                                    sizes="(max-width: 900px) 350px, 500px"
+                                    alt="Bubbles the hammy">
                             </div>
                             <div class="pet-content">
                                 <h3 class="pet-name">Bubbles</h3>
@@ -505,7 +516,7 @@ A Lobster Designers, Inc. Production
         </section>
     </footer>
 
-    <script>
+    <script defer>
         document.addEventListener('DOMContentLoaded', function() {
             console.log(
                 "%cThis page is best viewed in Chrome. Have a great day!%c :)",
