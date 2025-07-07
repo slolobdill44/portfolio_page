@@ -11,6 +11,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: Infisical/secrets-action@v1.0.12
+        with:
+          method: "universal"
+          identity-id: "09a0eecd-f311-49c8-9eea-5f930a42c5b7"
+          domain: "https://app.infisical.com" # Update to the instance URL when using EU (https://eu.infisical.com), a dedicated instance, or a self-hosted instance
+          env-slug: "prod"
+          project-slug: "portfolio-site-gha-egv6"
+
       - id: "auth"
         uses: "google-github-actions/auth@v2"
         with:
