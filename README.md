@@ -13,7 +13,7 @@ A clean, responsive personal portfolio showcasing projects and professional expe
 - **CI/CD**: GitHub Actions for automated deployment. Each deployment updates the static objects in the GCS bucket and performs a "purge all" action within the Fastly service
 
 
-## Key Highlights
+## Highlights
 
 - **Zero Dependencies**: No frameworks or build tools required
 - **Modern CSS**: Grid, Flexbox, Custom Properties, Container Queries
