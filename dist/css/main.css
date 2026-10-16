@@ -142,7 +142,7 @@ header::after {
     border-radius: 12px;
     color: white;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: transform .25s ease, box-shadow .25s ease;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     position: relative;
@@ -215,7 +215,7 @@ nav {
     font-weight: 500;
     padding: 12px 20px;
     border-radius: 25px;
-    transition: all 0.3s ease;
+    transition: transform .25s ease, box-shadow .25s ease;
     position: relative;
     min-height: 44px;
     display: flex;
@@ -631,13 +631,13 @@ section {
     border-radius: 20px;
     overflow: hidden;
     box-shadow: var(--shadow-lg);
-    transition: all 0.3s ease;
+    transition: transform .25s ease, box-shadow .25s ease;
     border: 1px solid var(--border-color);
     min-height: 400px;
 }
 
 .project-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-4px);
     box-shadow: var(--shadow-xl);
 }
 
@@ -660,13 +660,12 @@ section {
     transition: transform 0.3s ease;
 }
 
-/* Special handling for Fastly logo - only on small devices */
-@media (max-width: 900px) {
-    .project-image img[src*="Fastly_logo_2.svg"] {
-        object-fit: contain;
-        object-position: center;
-        padding: 20px;
-    }
+/* Logo-style images: contain with inner padding on a neutral background */
+.project-image img[src*="Fastly_logo_2.svg"] {
+    object-fit: contain;
+    object-position: center;
+    padding: 24px;
+    background: var(--background-accent);
 }
 
 .project-card:hover .project-image img {
@@ -746,13 +745,7 @@ section {
     font-size: 0.9rem;
     font-weight: 500;
     border: 1px solid var(--border-color);
-    transition: all 0.2s ease;
-}
-
-.tech-tag:hover {
-    background: var(--primary-color);
-    color: white;
-    border-color: var(--primary-color);
+    cursor: default;
 }
 
 .project-links {
@@ -769,7 +762,7 @@ section {
     border-radius: 25px;
     text-decoration: none;
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: transform .25s ease, box-shadow .25s ease;
     border: 2px solid transparent;
     position: relative;
     min-height: 44px;
