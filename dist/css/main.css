@@ -9,8 +9,8 @@
     --secondary-color: #1e40af;
     --accent-color: #3b82f6;
     --text-primary: #1f2937;
-    --text-secondary: #6b7280;
-    --text-light: #9ca3af;
+    --text-secondary: #4b5563;
+    --text-light: #5b6472;
     --background: #ffffff;
     --background-secondary: #f8fafc;
     --background-accent: #f1f5f9;
@@ -108,13 +108,13 @@ header::after {
 .header-text .subtitle {
     font-size: 1.5rem;
     font-weight: 400;
-    opacity: 0.9;
+    opacity: 1;
     margin-bottom: 8px;
 }
 
 .header-text .location {
     font-size: 1.1rem;
-    opacity: 0.8;
+    opacity: 1;
     margin-bottom: 32px;
 }
 
@@ -780,7 +780,7 @@ section {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
     border-color: var(--primary-color);
 }
