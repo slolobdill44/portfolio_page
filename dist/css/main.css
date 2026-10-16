@@ -125,10 +125,10 @@ header::after {
     flex-wrap: wrap;
 }
 
-/* Desktop only - shift social links left */
+/* Desktop only - left-align social links with the heading */
 @media (min-width: 901px) {
     .social-links {
-        transform: translateX(-20%);
+        justify-content: flex-start;
     }
 }
 
