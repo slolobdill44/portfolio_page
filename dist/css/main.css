@@ -420,6 +420,139 @@ section {
     font-size: 0.95rem;
 }
 
+/* Experience vertical timeline (desktop and mobile markup share these rules) */
+.highlights-grid {
+    --node-top: calc(var(--space-5) + 1.12rem + var(--space-1) + 0.715rem - 7px);
+    position: relative;
+    padding-left: var(--space-8);
+}
+
+.highlights-grid::before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: calc(var(--node-top) + 7px);
+    bottom: var(--space-5);
+    width: 2px;
+    background: var(--border-color);
+}
+
+/* Additional cards must stay flex columns so the period sits above the title */
+.highlights-grid .highlight-card.additional-experience {
+    display: flex;
+}
+
+/* Stop the line above the Show More toggle (button height + its top margin + card padding) */
+@media (max-width: 900px) {
+    .highlights-grid::before {
+        bottom: calc(var(--space-8) + 3.5rem + var(--space-5));
+    }
+
+    /* Keep the toggle centred in the page column, outside the timeline gutter */
+    .highlights-grid .experience-toggle {
+        margin-left: calc(-1 * var(--space-8));
+    }
+
+    .highlights-grid .highlight-card.additional-experience {
+        display: none;
+    }
+
+    .highlights-grid .highlight-card.additional-experience.show {
+        display: flex;
+    }
+}
+
+.highlights-grid .highlight-card {
+    position: relative;
+    border-bottom: none;
+    padding: var(--space-5) 0;
+    text-align: left;
+    align-items: stretch;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.highlights-grid .highlight-card > * {
+    transition: transform .25s ease;
+}
+
+.highlights-grid .highlight-card::before {
+    content: "";
+    position: absolute;
+    left: calc(2px - var(--space-8));
+    top: var(--node-top);
+    width: 14px;
+    height: 14px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+    background: #fff;
+    z-index: 1;
+    transition: background-color .25s ease;
+}
+
+.highlights-grid .highlight-card:first-child::before {
+    background: var(--primary-color);
+    animation: timeline-pulse 2.4s ease-out infinite;
+}
+
+@keyframes timeline-pulse {
+    0% {
+        box-shadow: 0 0 0 0 color-mix(in srgb, var(--primary-color) 45%, transparent);
+    }
+    70%, 100% {
+        box-shadow: 0 0 0 8px color-mix(in srgb, var(--primary-color) 0%, transparent);
+    }
+}
+
+.highlights-grid .highlight-header {
+    order: 1;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.highlights-grid .highlight-company {
+    order: 2;
+}
+
+.highlights-grid .highlight-description {
+    order: 3;
+    text-align: left;
+}
+
+.highlights-grid .highlight-period {
+    order: 0;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-light);
+    margin-bottom: var(--space-1);
+    text-align: left;
+}
+
+@media (max-width: 900px) {
+    .highlights-grid .highlight-period {
+        font-size: 0.75rem;
+    }
+}
+
+@media (hover: hover) {
+    .highlights-grid .highlight-card:hover::before {
+        background: var(--primary-color);
+    }
+
+    .highlights-grid .highlight-card:hover > * {
+        transform: translateX(4px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .highlights-grid .highlight-card:first-child::before {
+        animation: none;
+    }
+}
+
 /* Experience Toggle Buttons - Hidden on desktop, shown on mobile */
 .experience-toggle {
     display: none;
