@@ -1,0 +1,11 @@
+{
+  "images": [
+    {
+      "file": "dist/channels/pixel-arcade/img/pixel-lobster.png",
+      "where": "Title screen (header), in the square frame beside the name and headshot, captioned 'pixel lobster'.",
+      "what": "A crisp 16x16-style pixel-art lobster sprite, facing front, claws raised, on a transparent background.",
+      "size": "256x256 px PNG (16x16 pixel grid scaled 16x, nearest-neighbour), displayed at about 160-220 px square.",
+      "claude_design_prompt": "Design a single 16x16-style pixel-art lobster sprite for a dark, modern arcade-themed portfolio website. Export it as a 256x256 PNG with a transparent background, where each of the 16x16 grid cells is a crisp 16x16 px block (no anti-aliasing, no blur, no gradients). The lobster faces the viewer with both claws raised in a cheerful 'ready player one' pose, two small eyes, short antennae, a segmented tail and little legs. Use only this palette: hot pink #ff4fa3 for the body and claws, a darker pink #b8296f for shading and outline details, neon mint #5cffc4 for the eyes and one small highlight, and charcoal #14151b for the outline. Keep the silhouette simple, centred and symmetrical with a one-cell margin around it. Clean and modern, not cluttered. No text, no background, no drop shadow."
+    }
+  ]
+}
